@@ -4,6 +4,9 @@
 
 <python-installation-dir>\Scripts\pyside6-uic input.ui -o output.py.
 
+* or install tools: pip install pyqt5-tools
+pyuic5 -x yourform.ui -o file.py
+
 ===================================================================
 
 * resource.qrc to resource_rc.py
