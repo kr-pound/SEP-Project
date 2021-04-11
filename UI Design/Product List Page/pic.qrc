@@ -1,0 +1,19 @@
+<RCC>
+  <qresource prefix="search">
+    <file>search--v2.png</file>
+  </qresource>
+  <qresource prefix="real product">
+    <file>cabbage_PNG8803.png</file>
+    <file>carrot_PNG4985.png</file>
+    <file>wheat_PNG85.png</file>
+  </qresource>
+  <qresource prefix="cart"/>
+  <qresource prefix="product">
+    <file>carrot_0.png</file>
+    <file>Bee_Nest_Honey_(S)_JE1.png</file>
+    <file>GoldenCarrotNew.png</file>
+  </qresource>
+  <qresource prefix="bg">
+    <file>green-slate.jpg</file>
+  </qresource>
+</RCC>
