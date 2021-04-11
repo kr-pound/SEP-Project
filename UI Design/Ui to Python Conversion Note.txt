@@ -1,0 +1,12 @@
+///cd to source dir first
+
+* input.ui to output.py (with python dir)
+
+<python-installation-dir>\Scripts\pyside6-uic input.ui -o output.py.
+
+===================================================================
+
+* resource.qrc to resource_rc.py
+* install first: pip install pyqt5-tools
+
+pyrcc5 resource.qrc -o resource_rc.py
