@@ -12,3 +12,10 @@ if __name__ == "__main__":
     suppress_qt_warnings()
 
 ====================================================
+
+#get rid of libpng warning: iCCP: known incorrect sRGB profile
+
+https://stackoverflow.com/questions/22745076/libpng-warning-iccp-known-incorrect-srgb-profile
+
+====================================================
+

@@ -9,7 +9,13 @@
 
 
 from PyQt5 import QtCore, QtGui, QtWidgets
+from os import environ
 
+def suppress_qt_warnings():
+    environ["QT_DEVICE_PIXEL_RATIO"] = "0"
+    environ["QT_AUTO_SCREEN_SCALE_FACTOR"] = "1"
+    environ["QT_SCREEN_SCALE_FACTORS"] = "1"
+    environ["QT_SCALE_FACTOR"] = "1"
 
 class Ui_UserForm(object):
     def setupUi(self, UserForm):
@@ -401,10 +407,12 @@ import pic_rc
 
 
 if __name__ == "__main__":
-    import sys
-    app = QtWidgets.QApplication(sys.argv)
-    UserForm = QtWidgets.QWidget()
-    ui = Ui_UserForm()
-    ui.setupUi(UserForm)
-    UserForm.show()
-    sys.exit(app.exec_())
+        suppress_qt_warnings()
+
+        import sys
+        app = QtWidgets.QApplication(sys.argv)
+        UserForm = QtWidgets.QWidget()
+        ui = Ui_UserForm()
+        ui.setupUi(UserForm)
+        UserForm.show()
+        sys.exit(app.exec_())
