@@ -114,7 +114,7 @@
      <string>...</string>
     </property>
     <property name="icon">
-     <iconset resource="pic.qrc">
+     <iconset>
       <normaloff>:/search/search--v2.png</normaloff>:/search/search--v2.png</iconset>
     </property>
    </widget>
@@ -234,7 +234,7 @@
     </property>
     <property name="styleSheet">
      <string notr="true">QLabel {
-	image: url(:/real product/carrot_PNG4985.png);
+	image: url(:/product/carrot.png)
 }</string>
     </property>
     <property name="text">
@@ -454,8 +454,7 @@ QPushButton:hover {
     </property>
     <property name="styleSheet">
      <string notr="true">QLabel {
-	
-	image: url(:/real product/wheat_PNG85.png);
+	image: url(:/product/wheat.png)
 }</string>
     </property>
     <property name="text">
@@ -643,8 +642,7 @@ QPushButton:hover {
     </property>
     <property name="styleSheet">
      <string notr="true">QLabel {
-	
-	image: url(:/real product/cabbage_PNG8803.png);
+	image: url(:/product/cabbage.png)
 }</string>
     </property>
     <property name="text">
