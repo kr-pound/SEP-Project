@@ -15,6 +15,9 @@ if __name__ == "__main__":
 
 #get rid of libpng warning: iCCP: known incorrect sRGB profile
 
+just command line to the png file: mogrify *.png
+
+More Info:
 https://stackoverflow.com/questions/22745076/libpng-warning-iccp-known-incorrect-srgb-profile
 https://stackoverflow.com/questions/38825008/how-to-use-imagemagick-command-line-on-windows
 
