@@ -150,6 +150,7 @@ class Ui_LoginForm(object):
 
 
 if __name__ == "__main__":
+        #to get rid of QT_DEICE_PIXEL_RATIO warnings.
         suppress_qt_warnings()
 
         import sys
