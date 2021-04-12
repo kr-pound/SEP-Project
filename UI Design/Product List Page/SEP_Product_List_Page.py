@@ -291,7 +291,7 @@ class Ui_UserForm(object):
         self.ProductPicture3.setGeometry(QtCore.QRect(10, 10, 131, 91))
         self.ProductPicture3.setStyleSheet("QLabel {\n"
 "    \n"
-"    image: url(https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png);\n"
+"    image: url(:/real product/cabbage_PNG8803.png);\n"
 "}")
         self.ProductPicture3.setText("")
         self.ProductPicture3.setObjectName("ProductPicture3")
