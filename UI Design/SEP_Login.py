@@ -11,6 +11,8 @@
 from PyQt5 import QtCore, QtGui, QtWidgets
 from os import environ
 
+import SEP_Product_List_Page
+
 #to get rid of QT_DEICE_PIXEL_RATIO warnings.
 def suppress_qt_warnings():
     environ["QT_DEVICE_PIXEL_RATIO"] = "0"
@@ -154,9 +156,21 @@ if __name__ == "__main__":
 
         import sys
 
+        
         app = QtWidgets.QApplication(sys.argv)
         LoginForm = QtWidgets.QWidget()
         ui = Ui_LoginForm()
         ui.setupUi(LoginForm)
         LoginForm.show()
+
         sys.exit(app.exec_())
+
+        '''
+        app2 = SEP_Product_List_Page.QtWidgets.QApplication(sys.argv)
+        UserForm = SEP_Product_List_Page.QtWidgets.QWidget()
+        ui2 = SEP_Product_List_Page.Ui_UserForm()
+        ui2.setupUi(UserForm)
+        UserForm.show()
+
+        
+        sys.exit(app2.exec_()) '''
