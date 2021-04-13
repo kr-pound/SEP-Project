@@ -402,8 +402,8 @@ class Ui_UserForm(object):
         self.ProductAmount3.setText(_translate("UserForm", "Buy: 1"))
         self.ProductIncrease3.setText(_translate("UserForm", "+"))
         self.ProductDecrease3.setText(_translate("UserForm", "-"))
-import pic_rc
 
+import pic_rc
 
 if __name__ == "__main__":
         #to get rid of QT_DEICE_PIXEL_RATIO warnings.

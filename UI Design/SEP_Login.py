@@ -155,15 +155,20 @@ if __name__ == "__main__":
         suppress_qt_warnings()
 
         import sys
-
+        import main
         
+        '''
         app = QtWidgets.QApplication(sys.argv)
         LoginForm = QtWidgets.QWidget()
         ui = Ui_LoginForm()
         ui.setupUi(LoginForm)
         LoginForm.show()
 
-        sys.exit(app.exec_())
+        sys.exit(app.exec_())'''
+
+        main.widgetConstructor("SEP_Login.py")
+        main.widgetConstructor("SEP_Product_List_Page.py")
+        #ยังไม่ได้
 
         '''
         app2 = SEP_Product_List_Page.QtWidgets.QApplication(sys.argv)
