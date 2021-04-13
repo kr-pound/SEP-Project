@@ -168,7 +168,7 @@ if __name__ == "__main__":
 
         main.widgetConstructor("SEP_Login.py")
         main.widgetConstructor("SEP_Product_List_Page.py")
-        #ยังไม่ได้
+        #ยังไม่ได้ - ได้หน้าเดียว
 
         '''
         app2 = SEP_Product_List_Page.QtWidgets.QApplication(sys.argv)
