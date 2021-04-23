@@ -1,6 +1,6 @@
 ///cd to source dir first
 
-* input.ui to output.py (with python dir)
+* input.ui to output.py (with python dir - sometimes contain errors)
 
 <python-installation-dir>\Scripts\pyside6-uic input.ui -o output.py.
 

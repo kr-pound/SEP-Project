@@ -9,7 +9,14 @@
 
 
 from PyQt5 import QtCore, QtGui, QtWidgets
+from os import environ
 
+#to get rid of QT_DEICE_PIXEL_RATIO warnings.
+def suppress_qt_warnings():
+    environ["QT_DEVICE_PIXEL_RATIO"] = "0"
+    environ["QT_AUTO_SCREEN_SCALE_FACTOR"] = "1"
+    environ["QT_SCREEN_SCALE_FACTORS"] = "1"
+    environ["QT_SCALE_FACTOR"] = "1"
 
 class Ui_UserForm(object):
     def setupUi(self, UserForm):
@@ -105,7 +112,7 @@ class Ui_UserForm(object):
         self.ProductPicture1 = QtWidgets.QLabel(self.ProductFrame1)
         self.ProductPicture1.setGeometry(QtCore.QRect(10, 10, 131, 91))
         self.ProductPicture1.setStyleSheet("QLabel {\n"
-"    image: url(:/real product/carrot_PNG4985.png);\n"
+"    image: url(:/product/carrot.png)\n"
 "}")
         self.ProductPicture1.setText("")
         self.ProductPicture1.setObjectName("ProductPicture1")
@@ -203,8 +210,7 @@ class Ui_UserForm(object):
         self.ProductPicture2 = QtWidgets.QLabel(self.ProductFrame2)
         self.ProductPicture2.setGeometry(QtCore.QRect(10, 10, 131, 91))
         self.ProductPicture2.setStyleSheet("QLabel {\n"
-"    \n"
-"    image: url(:/real product/wheat_PNG85.png);\n"
+"    image: url(:/product/wheat.png)\n"
 "}")
         self.ProductPicture2.setText("")
         self.ProductPicture2.setObjectName("ProductPicture2")
@@ -284,8 +290,7 @@ class Ui_UserForm(object):
         self.ProductPicture3 = QtWidgets.QLabel(self.ProductFrame3)
         self.ProductPicture3.setGeometry(QtCore.QRect(10, 10, 131, 91))
         self.ProductPicture3.setStyleSheet("QLabel {\n"
-"    \n"
-"    image: url(:/real product/cabbage_PNG8803.png);\n"
+"    image: url(:/product/cabbage.png)\n"
 "}")
         self.ProductPicture3.setText("")
         self.ProductPicture3.setObjectName("ProductPicture3")
@@ -397,14 +402,17 @@ class Ui_UserForm(object):
         self.ProductAmount3.setText(_translate("UserForm", "Buy: 1"))
         self.ProductIncrease3.setText(_translate("UserForm", "+"))
         self.ProductDecrease3.setText(_translate("UserForm", "-"))
+
 import pic_rc
 
-
 if __name__ == "__main__":
-    import sys
-    app = QtWidgets.QApplication(sys.argv)
-    UserForm = QtWidgets.QWidget()
-    ui = Ui_UserForm()
-    ui.setupUi(UserForm)
-    UserForm.show()
-    sys.exit(app.exec_())
+        #to get rid of QT_DEICE_PIXEL_RATIO warnings.
+        suppress_qt_warnings()
+
+        import sys
+        app = QtWidgets.QApplication(sys.argv)
+        UserForm = QtWidgets.QWidget()
+        ui = Ui_UserForm()
+        ui.setupUi(UserForm)
+        UserForm.show()
+        sys.exit(app.exec_())
