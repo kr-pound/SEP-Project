@@ -10,15 +10,17 @@ def suppress_qt_warnings():
     environ["QT_SCREEN_SCALE_FACTORS"] = "1"
     environ["QT_SCALE_FACTOR"] = "1"
 
-class Main_Window(QtWidgets.QMainWindow, Ui_SearchWindow):
+class SearchWindow(QtWidgets.QMainWindow, Ui_SearchWindow):
     def __init__(self, parent=None):
-        super(Main_Window, self).__init__(parent)
+        #super the class to setup the Ui
+        super(SearchWindow, self).__init__(parent)
         self.setupUi(self)
 
 class LoginWindow(QtWidgets.QMainWindow, Ui_LoginWindow):
     logged = QtCore.pyqtSignal()
 
     def __init__(self, parent=None):
+        #super the class to setup the Ui
         super(LoginWindow, self).__init__(parent)
         self.setupUi(self)
         #after push the button --> check user id
@@ -26,7 +28,7 @@ class LoginWindow(QtWidgets.QMainWindow, Ui_LoginWindow):
 
     @QtCore.pyqtSlot()
     def authenticate(self):
-        #true if window can be closed
+        #login and close the previous window
         self.logged.emit()
         self.close()
 
@@ -37,24 +39,23 @@ class LoginWindow(QtWidgets.QMainWindow, Ui_LoginWindow):
             self.logged.emit()
             self.close()
         '''
-        
+    
 
-def main():
-    import sys
-
-    app = QtWidgets.QApplication(sys.argv)
-    login = LoginWindow()
-    w = Main_Window()
-    login.logged.connect(w.show)
-    login.show()
-    sys.exit(app.exec_())
-
+    
 
 if __name__ == "__main__":
     import sys
     suppress_qt_warnings()
 
-    main()
+    app = QtWidgets.QApplication(sys.argv)
+    login = LoginWindow()
+    search = SearchWindow()
+    #connect login with the search page
+    login.logged.connect(search.show)
+    #show login page
+    login.show()
+    sys.exit(app.exec_())
+
 
     '''
     app = QtWidgets.QApplication(sys.argv)
