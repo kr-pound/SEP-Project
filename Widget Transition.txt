@@ -1,0 +1,6 @@
+Login <--> Register [close after]
+
+Search (Each Category)
+//open another window
+Cart --> Checkout --> Ship
+Ship
