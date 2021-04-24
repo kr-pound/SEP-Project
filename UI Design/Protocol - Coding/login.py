@@ -2,6 +2,8 @@ from PyQt5 import QtCore, QtGui, QtWidgets
 from _login_design import Ui_MainWindow as Ui_LoginWindow
 from search import Ui_MainWindow as Ui_SearchWindow
 
+import pyrebase
+
 from os import environ
 
 def suppress_qt_warnings():
