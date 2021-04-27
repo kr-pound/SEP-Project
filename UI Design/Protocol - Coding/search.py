@@ -12,7 +12,7 @@ def suppress_qt_warnings():
 if __name__ == "__main__":
     import sys
     suppress_qt_warnings()
-
+    
     app = QtWidgets.QApplication(sys.argv)
     MainWindow = QtWidgets.QMainWindow()
     ui = Ui_MainWindow()
