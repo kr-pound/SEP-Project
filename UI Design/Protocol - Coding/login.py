@@ -1,7 +1,7 @@
 from PyQt5 import QtCore, QtGui, QtWidgets
 from _login_design import Ui_MainWindow as Ui_LoginWindow
 from register import Ui_RegisterWindow
-from search import Ui_MainWindow as Ui_SearchWindow
+from search import Ui_SearchWindow
 
 from os import environ
 
@@ -10,18 +10,6 @@ def suppress_qt_warnings():
     environ["QT_AUTO_SCREEN_SCALE_FACTOR"] = "1"
     environ["QT_SCREEN_SCALE_FACTORS"] = "1"
     environ["QT_SCALE_FACTOR"] = "1"
-
-class RegisterWindow(QtWidgets.QMainWindow, Ui_RegisterWindow):
-    def __init__(self, parent=None):
-        #super the class to setup the Ui
-        super(RegisterWindow, self).__init__(parent)
-        self.setupUi(self)
-
-class SearchWindow(QtWidgets.QMainWindow, Ui_SearchWindow):
-    def __init__(self, parent=None):
-        #super the class to setup the Ui
-        super(SearchWindow, self).__init__(parent)
-        self.setupUi(self)
 
 class LoginWindow(QtWidgets.QMainWindow, Ui_LoginWindow):
     logged = QtCore.pyqtSignal()
@@ -57,17 +45,4 @@ class LoginWindow(QtWidgets.QMainWindow, Ui_LoginWindow):
 
     
 
-if __name__ == "__main__":
-    import sys
-    suppress_qt_warnings()
 
-    app = QtWidgets.QApplication(sys.argv)
-    login = LoginWindow()
-    search = SearchWindow()
-    register = RegisterWindow()
-    #connect login with the search page
-    login.logged.connect(search.show)
-    login.register.connect(register.show)
-    #show login page
-    login.show()
-    sys.exit(app.exec_())

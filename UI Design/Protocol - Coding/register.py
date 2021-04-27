@@ -10,12 +10,6 @@ def suppress_qt_warnings():
     environ["QT_SCREEN_SCALE_FACTORS"] = "1"
     environ["QT_SCALE_FACTOR"] = "1"
 
-class LoginWindow(QtWidgets.QMainWindow, Ui_LoginWindow):
-    def __init__(self, parent=None):
-        #super the class to setup the Ui
-        super(LoginWindow, self).__init__(parent)
-        self.setupUi(self)
-
 class RegisterWindow(QtWidgets.QMainWindow, Ui_RegisterWindow):
     login = QtCore.pyqtSignal()
 
@@ -31,16 +25,3 @@ class RegisterWindow(QtWidgets.QMainWindow, Ui_RegisterWindow):
         self.login.emit()
         self.close()
 
-
-if __name__ == "__main__":
-    import sys
-    suppress_qt_warnings()
-
-    app = QtWidgets.QApplication(sys.argv)
-    register = RegisterWindow()
-    login = LoginWindow()
-    #connect login with the search page
-    register.login.connect(login.show)
-    #show login page
-    register.show()
-    sys.exit(app.exec_())
