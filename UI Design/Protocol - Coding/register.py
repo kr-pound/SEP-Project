@@ -1,5 +1,6 @@
 from PyQt5 import QtCore, QtGui, QtWidgets
-from _register_design import Ui_MainWindow
+from _register_design import Ui_MainWindow as Ui_RegisterWindow
+from login import Ui_LoginWindow
 
 from os import environ
 
@@ -9,13 +10,18 @@ def suppress_qt_warnings():
     environ["QT_SCREEN_SCALE_FACTORS"] = "1"
     environ["QT_SCALE_FACTOR"] = "1"
 
-if __name__ == "__main__":
-    import sys
-    suppress_qt_warnings()
+class RegisterWindow(QtWidgets.QMainWindow, Ui_RegisterWindow):
+    login = QtCore.pyqtSignal()
 
-    app = QtWidgets.QApplication(sys.argv)
-    MainWindow = QtWidgets.QMainWindow()
-    ui = Ui_MainWindow()
-    ui.setupUi(MainWindow)
-    MainWindow.show()
-    sys.exit(app.exec_())
+    def __init__(self, parent=None):
+        #super the class to setup the Ui
+        super(RegisterWindow, self).__init__(parent)
+        self.setupUi(self)
+        #after push the button --> go back
+        self.pushButton.clicked.connect(self.loginTransfer)
+
+    @QtCore.pyqtSlot()
+    def loginTransfer(self):
+        self.login.emit()
+        self.close()
+
