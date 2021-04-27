@@ -1,6 +1,6 @@
 from PyQt5 import QtCore, QtGui, QtWidgets
 from _login_design import Ui_MainWindow as Ui_LoginWindow
-from register import Ui_MainWindow as Ui_RegisterWindow
+from register import Ui_RegisterWindow
 from search import Ui_MainWindow as Ui_SearchWindow
 
 from os import environ
