@@ -1,4 +1,6 @@
 from PyQt5 import QtCore, QtGui, QtWidgets
+from PyQt5.uic import loadUi
+
 from _login_design import Ui_MainWindow as Ui_LoginWindow
 from register import Ui_RegisterWindow
 from search import Ui_SearchWindow

@@ -13,7 +13,6 @@ def suppress_qt_warnings():
     environ["QT_SCALE_FACTOR"] = "1"
 
 
-
 if __name__ == "__main__":
     import sys
     suppress_qt_warnings()

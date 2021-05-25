@@ -1,0 +1,9 @@
+use Designer to embed widget
+
+https://stackoverflow.com/questions/53544446/create-a-widget-to-embed-into-qmainwindow
+
+ไฟล์ที่ทดสอบ
+Widget:	SEP_Login.ui --> file.py
+Window:	test.ui --> test.py
+
+(ยังไม่ได้)
