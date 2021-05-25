@@ -23,3 +23,7 @@ https://stackoverflow.com/questions/38825008/how-to-use-imagemagick-command-line
 
 ====================================================
 
+#cannot import with pylance (problem with directory in VS Code)
+
+Open setting (Ctrl + ,) and add extra path with the directory
+

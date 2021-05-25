@@ -1,4 +1,5 @@
 from PyQt5 import QtCore, QtGui, QtWidgets
+
 from login import LoginWindow
 from register import RegisterWindow
 from search import SearchWindow
