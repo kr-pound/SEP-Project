@@ -7,3 +7,8 @@ Widget:	SEP_Login.ui --> file.py
 Window:	test.ui --> test.py
 
 (ยังไม่ได้)
+
+
+Firebase
+
+https://www.freecodecamp.org/news/how-to-get-started-with-firebase-using-python/
