@@ -5,6 +5,7 @@ from register import RegisterWindow
 from search import SearchWindow
 
 from os import environ
+from __database import database
 
 
 def suppress_qt_warnings():

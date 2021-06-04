@@ -1,17 +1,18 @@
 from PyQt5 import QtCore, QtGui, QtWidgets
-from PyQt5.uic import loadUi
 
 from _login_design import Ui_MainWindow as Ui_LoginWindow
 from register import Ui_RegisterWindow
 from search import Ui_SearchWindow
 
 from os import environ
+from __database import database
 
 def suppress_qt_warnings():
     environ["QT_DEVICE_PIXEL_RATIO"] = "0"
     environ["QT_AUTO_SCREEN_SCALE_FACTOR"] = "1"
     environ["QT_SCREEN_SCALE_FACTORS"] = "1"
     environ["QT_SCALE_FACTOR"] = "1"
+
 
 class LoginWindow(QtWidgets.QMainWindow, Ui_LoginWindow):
     logged = QtCore.pyqtSignal()
@@ -32,18 +33,24 @@ class LoginWindow(QtWidgets.QMainWindow, Ui_LoginWindow):
 
     @QtCore.pyqtSlot()
     def authenticate(self):
-        #login and close the previous window
-        self.logged.emit()
-        self.close()
+        #user & pass entered
+        local_username = self.Username.text()
+        local_password = self.Password.text()
 
-        '''
-        db_user = self.username_ldt.text()
-        db_pass = self.password_ldt.text()
-        if db_user == 'admin' and db_pass=='admin':
+        #user & pass get from db
+        database.get_username_password(database, 'username', local_username, '/users')
+        print(database.username)
+        print(database.password)
+
+        #login and close the previous window
+        if database.username == local_username and database.password == local_password:
             self.logged.emit()
             self.close()
-        '''
-    
+
+
+        
+        
+
 
     
 

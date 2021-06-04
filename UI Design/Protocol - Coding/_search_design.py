@@ -388,33 +388,33 @@ class Ui_MainWindow(object):
         self.CoverLabel.setText(_translate("MainWindow", "Agricultural products"))
         self.DescriptionLabel.setText(_translate("MainWindow", "100+ Fresh Item for you"))
         self.BrandLabel.setText(_translate("MainWindow", "Fresh"))
-        self.ProductLabel1.setText(_translate("MainWindow", "Carrot"))
+        self.ProductLabel1.setText(_translate("MainWindow", "C"))
         self.ProductDescription1.setHtml(_translate("MainWindow", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
 "<html><head><meta name=\"qrichtext\" content=\"1\" /><meta charset=\"utf-8\" /><style type=\"text/css\">\n"
 "p, li { white-space: pre-wrap; }\n"
 "</style></head><body style=\" font-family:\'Franklin Gothic Medium Cond\'; font-size:10pt; font-weight:400; font-style:normal;\">\n"
-"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-family:\'Segoe UI\';\">      Carrot, carrot and carots. So many carrots.</span></p></body></html>"))
-        self.BuyingButton1.setText(_translate("MainWindow", "10 Bath"))
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-family:\'Segoe UI\';\">C</span></p></body></html>"))
+        self.BuyingButton1.setText(_translate("MainWindow", "0 Bath"))
         self.ProductAmount1.setText(_translate("MainWindow", "Buy: 1"))
         self.ProductIncrease1.setText(_translate("MainWindow", "+"))
         self.ProductDecrease1.setText(_translate("MainWindow", "-"))
-        self.ProductLabel3.setText(_translate("MainWindow", "Cabbage"))
+        self.ProductLabel3.setText(_translate("MainWindow", "C"))
         self.ProductDescription3.setHtml(_translate("MainWindow", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
 "<html><head><meta name=\"qrichtext\" content=\"1\" /><meta charset=\"utf-8\" /><style type=\"text/css\">\n"
 "p, li { white-space: pre-wrap; }\n"
 "</style></head><body style=\" font-family:\'Franklin Gothic Medium Cond\'; font-size:10pt; font-weight:400; font-style:normal;\">\n"
-"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-family:\'Segoe UI\';\">      Vegetable for health!!!</span></p></body></html>"))
-        self.BuyingButton3.setText(_translate("MainWindow", "15 Bath"))
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-family:\'Segoe UI\';\">V</span></p></body></html>"))
+        self.BuyingButton3.setText(_translate("MainWindow", "0 Bath"))
         self.ProductAmount3.setText(_translate("MainWindow", "Buy: 1"))
         self.ProductIncrease3.setText(_translate("MainWindow", "+"))
         self.ProductDecrease3.setText(_translate("MainWindow", "-"))
-        self.ProductLabel2.setText(_translate("MainWindow", "Wheat"))
+        self.ProductLabel2.setText(_translate("MainWindow", "W"))
         self.ProductDescription2.setHtml(_translate("MainWindow", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
 "<html><head><meta name=\"qrichtext\" content=\"1\" /><meta charset=\"utf-8\" /><style type=\"text/css\">\n"
 "p, li { white-space: pre-wrap; }\n"
 "</style></head><body style=\" font-family:\'Franklin Gothic Medium Cond\'; font-size:10pt; font-weight:400; font-style:normal;\">\n"
-"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-family:\'Segoe UI\';\">      cereal from wheat. &gt;=&lt;</span></p></body></html>"))
-        self.BuyingButton2.setText(_translate("MainWindow", "5 Bath"))
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-family:\'Segoe UI\';\">c</span></p></body></html>"))
+        self.BuyingButton2.setText(_translate("MainWindow", "0 Bath"))
         self.ProductAmount2.setText(_translate("MainWindow", "Buy: 1"))
         self.ProductIncrease2.setText(_translate("MainWindow", "+"))
         self.ProductDecrease2.setText(_translate("MainWindow", "-"))
