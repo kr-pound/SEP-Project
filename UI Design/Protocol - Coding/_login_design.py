@@ -15,64 +15,137 @@ class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
         MainWindow.setObjectName("MainWindow")
         MainWindow.resize(1011, 684)
+        MainWindow.setStyleSheet("QWidget {\n"
+"    background: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 #07C25C, stop:1 rgba(255, 255, 255, 255))\n"
+"}\n"
+"\n"
+"QLineEdit {\n"
+"    background: transparent;\n"
+"    border: none;\n"
+"    color: #717072;\n"
+"    border-bottom: 1px solid #717072;\n"
+"}")
         self.centralwidget = QtWidgets.QWidget(MainWindow)
         self.centralwidget.setObjectName("centralwidget")
         self.label = QtWidgets.QLabel(self.centralwidget)
-        self.label.setGeometry(QtCore.QRect(390, 0, 231, 131))
+        self.label.setGeometry(QtCore.QRect(390, 30, 231, 131))
         font = QtGui.QFont()
         font.setPointSize(72)
         self.label.setFont(font)
         self.label.setObjectName("label")
         self.label_2 = QtWidgets.QLabel(self.centralwidget)
-        self.label_2.setGeometry(QtCore.QRect(280, 120, 451, 61))
+        self.label_2.setGeometry(QtCore.QRect(280, 150, 451, 61))
         font = QtGui.QFont()
         font.setPointSize(16)
         self.label_2.setFont(font)
         self.label_2.setObjectName("label_2")
         self.label_3 = QtWidgets.QLabel(self.centralwidget)
-        self.label_3.setGeometry(QtCore.QRect(190, 180, 711, 71))
+        self.label_3.setGeometry(QtCore.QRect(190, 210, 711, 71))
         font = QtGui.QFont()
         font.setPointSize(16)
         self.label_3.setFont(font)
         self.label_3.setObjectName("label_3")
-        self.label_4 = QtWidgets.QLabel(self.centralwidget)
-        self.label_4.setGeometry(QtCore.QRect(70, 260, 111, 51))
+        self.LoginFrame = QtWidgets.QFrame(self.centralwidget)
+        self.LoginFrame.setGeometry(QtCore.QRect(390, 320, 251, 281))
+        self.LoginFrame.setFocusPolicy(QtCore.Qt.NoFocus)
+        self.LoginFrame.setStyleSheet("QFrame {\n"
+"    background: black;\n"
+"    border-radius: 20px;\n"
+"}")
+        self.LoginFrame.setFrameShape(QtWidgets.QFrame.StyledPanel)
+        self.LoginFrame.setFrameShadow(QtWidgets.QFrame.Raised)
+        self.LoginFrame.setObjectName("LoginFrame")
+        self.LoginButton = QtWidgets.QPushButton(self.LoginFrame)
+        self.LoginButton.setGeometry(QtCore.QRect(110, 190, 111, 31))
         font = QtGui.QFont()
-        font.setPointSize(16)
-        self.label_4.setFont(font)
-        self.label_4.setObjectName("label_4")
-        self.lineEdit = QtWidgets.QLineEdit(self.centralwidget)
-        self.lineEdit.setGeometry(QtCore.QRect(190, 270, 231, 41))
-        self.lineEdit.setObjectName("lineEdit")
-        self.label_5 = QtWidgets.QLabel(self.centralwidget)
-        self.label_5.setGeometry(QtCore.QRect(70, 360, 111, 51))
+        font.setFamily("Franklin Gothic Medium Cond")
+        font.setPointSize(12)
+        font.setBold(False)
+        font.setKerning(True)
+        font.setStyleStrategy(QtGui.QFont.PreferDefault)
+        self.LoginButton.setFont(font)
+        self.LoginButton.setStyleSheet("QPushButton {\n"
+"    color: white;\n"
+"    background: #64AB25;\n"
+"    border-radius: 15px;\n"
+"}\n"
+"\n"
+"QPushButton:hover {\n"
+"    color: #64AB25;\n"
+"    background: #333;\n"
+"    border-radius: 15px;\n"
+"}\n"
+"\n"
+"\n"
+"")
+        self.LoginButton.setObjectName("LoginButton")
+        self.Password = QtWidgets.QLineEdit(self.LoginFrame)
+        self.Password.setGeometry(QtCore.QRect(30, 140, 191, 21))
         font = QtGui.QFont()
-        font.setPointSize(16)
-        self.label_5.setFont(font)
-        self.label_5.setObjectName("label_5")
-        self.lineEdit_2 = QtWidgets.QLineEdit(self.centralwidget)
-        self.lineEdit_2.setGeometry(QtCore.QRect(190, 360, 231, 41))
-        self.lineEdit_2.setObjectName("lineEdit_2")
-        self.pushButton = QtWidgets.QPushButton(self.centralwidget)
-        self.pushButton.setGeometry(QtCore.QRect(540, 440, 131, 51))
-        self.pushButton.setObjectName("pushButton")
-        self.pushButton_2 = QtWidgets.QPushButton(self.centralwidget)
-        self.pushButton_2.setGeometry(QtCore.QRect(350, 440, 131, 51))
-        self.pushButton_2.setObjectName("pushButton_2")
-        self.label_6 = QtWidgets.QLabel(self.centralwidget)
-        self.label_6.setGeometry(QtCore.QRect(50, 530, 431, 31))
+        font.setPointSize(10)
+        self.Password.setFont(font)
+        self.Password.setStyleSheet("QLineEdit {\n"
+"    background: transparent;\n"
+"    border: none;\n"
+"    color: #717072;\n"
+"    border-bottom: 1px solid #717072;\n"
+"}")
+        self.Password.setInputMask("")
+        self.Password.setEchoMode(QtWidgets.QLineEdit.Password)
+        self.Password.setDragEnabled(True)
+        self.Password.setClearButtonEnabled(True)
+        self.Password.setObjectName("Password")
+        self.Username = QtWidgets.QLineEdit(self.LoginFrame)
+        self.Username.setGeometry(QtCore.QRect(30, 100, 191, 21))
         font = QtGui.QFont()
-        font.setPointSize(14)
-        self.label_6.setFont(font)
-        self.label_6.setObjectName("label_6")
-        self.pushButton_3 = QtWidgets.QPushButton(self.centralwidget)
-        self.pushButton_3.setGeometry(QtCore.QRect(480, 540, 75, 24))
-        self.pushButton_3.setObjectName("pushButton_3")
+        font.setPointSize(10)
+        self.Username.setFont(font)
+        self.Username.setFocusPolicy(QtCore.Qt.StrongFocus)
+        self.Username.setContextMenuPolicy(QtCore.Qt.DefaultContextMenu)
+        self.Username.setStyleSheet("")
+        self.Username.setEchoMode(QtWidgets.QLineEdit.Normal)
+        self.Username.setCursorPosition(8)
+        self.Username.setDragEnabled(True)
+        self.Username.setReadOnly(False)
+        self.Username.setPlaceholderText("")
+        self.Username.setClearButtonEnabled(True)
+        self.Username.setObjectName("Username")
+        self.CreateAccountButton = QtWidgets.QPushButton(self.LoginFrame)
+        self.CreateAccountButton.setGeometry(QtCore.QRect(110, 230, 111, 31))
+        font = QtGui.QFont()
+        font.setFamily("Franklin Gothic Medium Cond")
+        font.setPointSize(12)
+        self.CreateAccountButton.setFont(font)
+        self.CreateAccountButton.setStyleSheet("QPushButton {\n"
+"    color: white;\n"
+"    background: #64AB25;\n"
+"    border-radius: 15px;\n"
+"}\n"
+"\n"
+"QPushButton:hover {\n"
+"    color: #64AB25;\n"
+"    background: #333;\n"
+"    border-radius: 15px;\n"
+"}")
+        self.CreateAccountButton.setObjectName("CreateAccountButton")
+        self.LoginLabel = QtWidgets.QLabel(self.LoginFrame)
+        self.LoginLabel.setGeometry(QtCore.QRect(0, 30, 251, 31))
+        font = QtGui.QFont()
+        font.setFamily("Rockwell Condensed")
+        font.setPointSize(22)
+        font.setBold(False)
+        self.LoginLabel.setFont(font)
+        self.LoginLabel.setStyleSheet("QLabel {\n"
+"    color: white\n"
+"}")
+        self.LoginLabel.setAlignment(QtCore.Qt.AlignCenter)
+        self.LoginLabel.setObjectName("LoginLabel")
+        self.LoginButton.raise_()
+        self.Password.raise_()
+        self.CreateAccountButton.raise_()
+        self.LoginLabel.raise_()
+        self.Username.raise_()
         MainWindow.setCentralWidget(self.centralwidget)
-        self.menubar = QtWidgets.QMenuBar(MainWindow)
-        self.menubar.setGeometry(QtCore.QRect(0, 0, 1011, 22))
-        self.menubar.setObjectName("menubar")
-        MainWindow.setMenuBar(self.menubar)
         self.statusbar = QtWidgets.QStatusBar(MainWindow)
         self.statusbar.setObjectName("statusbar")
         MainWindow.setStatusBar(self.statusbar)
@@ -86,12 +159,12 @@ class Ui_MainWindow(object):
         self.label.setText(_translate("MainWindow", "Fresh"))
         self.label_2.setText(_translate("MainWindow", "Welcome to Fresh! We only sell fresh stuff here. "))
         self.label_3.setText(_translate("MainWindow", "Please log in or register an account if you don\'t have one before start using."))
-        self.label_4.setText(_translate("MainWindow", "Username:"))
-        self.label_5.setText(_translate("MainWindow", "Password:"))
-        self.pushButton.setText(_translate("MainWindow", "Log in"))
-        self.pushButton_2.setText(_translate("MainWindow", "Forget Password"))
-        self.label_6.setText(_translate("MainWindow", "If you do not have an account, please click register."))
-        self.pushButton_3.setText(_translate("MainWindow", "Register"))
+        self.LoginButton.setText(_translate("MainWindow", "Login"))
+        self.Password.setText(_translate("MainWindow", "Password"))
+        self.Username.setWhatsThis(_translate("MainWindow", "<html><head/><body><p><br/></p></body></html>"))
+        self.Username.setText(_translate("MainWindow", "Username"))
+        self.CreateAccountButton.setText(_translate("MainWindow", "Create Account"))
+        self.LoginLabel.setText(_translate("MainWindow", "Account Login"))
 
 
 if __name__ == "__main__":

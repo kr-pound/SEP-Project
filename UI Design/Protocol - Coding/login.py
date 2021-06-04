@@ -22,8 +22,8 @@ class LoginWindow(QtWidgets.QMainWindow, Ui_LoginWindow):
         super(LoginWindow, self).__init__(parent)
         self.setupUi(self)
         #after push the button --> check user id
-        self.pushButton.clicked.connect(self.authenticate)
-        self.pushButton_3.clicked.connect(self.registerTransfer)
+        self.LoginButton.clicked.connect(self.authenticate)
+        self.CreateAccountButton.clicked.connect(self.registerTransfer)
 
     @QtCore.pyqtSlot()
     def registerTransfer(self):
