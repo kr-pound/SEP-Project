@@ -72,8 +72,3 @@ class database:
 
         #implementation
         #print(database().show_list('/users'))
-
-
-print(database().get_username_password('username', 'AB', '/users'))
-
-#print(database().is_visible('/users'))
