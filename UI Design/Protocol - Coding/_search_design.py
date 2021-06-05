@@ -551,6 +551,54 @@ class Ui_MainWindow(object):
 "\n"
 "")
         self.CartButton.setObjectName("CartButton")
+        self.RightButton = QtWidgets.QPushButton(self.centralwidget)
+        self.RightButton.setGeometry(QtCore.QRect(950, 420, 41, 41))
+        font = QtGui.QFont()
+        font.setFamily("Franklin Gothic Medium Cond")
+        font.setPointSize(12)
+        font.setBold(False)
+        font.setKerning(True)
+        font.setStyleStrategy(QtGui.QFont.PreferDefault)
+        self.RightButton.setFont(font)
+        self.RightButton.setStyleSheet("QPushButton {\n"
+"    background: lightgray;\n"
+"    border-radius: 20px;\n"
+"    image: url(:/others/Arrow/rightArrow.png);\n"
+"}\n"
+"\n"
+"QPushButton:hover {\n"
+"    background: lightgreen;\n"
+"    border-radius: 20px;\n"
+"}\n"
+"\n"
+"\n"
+"")
+        self.RightButton.setText("")
+        self.RightButton.setObjectName("RightButton")
+        self.LeftButton = QtWidgets.QPushButton(self.centralwidget)
+        self.LeftButton.setGeometry(QtCore.QRect(20, 420, 41, 41))
+        font = QtGui.QFont()
+        font.setFamily("Franklin Gothic Medium Cond")
+        font.setPointSize(12)
+        font.setBold(False)
+        font.setKerning(True)
+        font.setStyleStrategy(QtGui.QFont.PreferDefault)
+        self.LeftButton.setFont(font)
+        self.LeftButton.setStyleSheet("QPushButton {\n"
+"    background: lightgray;\n"
+"    border-radius: 20px;\n"
+"    image: url(:/others/Arrow/leftArrow.png);\n"
+"}\n"
+"\n"
+"QPushButton:hover {\n"
+"    background: lightgreen;\n"
+"    border-radius: 20px;\n"
+"}\n"
+"\n"
+"\n"
+"")
+        self.LeftButton.setText("")
+        self.LeftButton.setObjectName("LeftButton")
         MainWindow.setCentralWidget(self.centralwidget)
         self.menubar = QtWidgets.QMenuBar(MainWindow)
         self.menubar.setGeometry(QtCore.QRect(0, 0, 1014, 22))
@@ -623,6 +671,7 @@ class Ui_MainWindow(object):
         self.ProductIncrease5.setText(_translate("MainWindow", "+"))
         self.ProductDecrease5.setText(_translate("MainWindow", "-"))
         self.CartButton.setText(_translate("MainWindow", "View Cart"))
+import pic_rc
 
 
 if __name__ == "__main__":
