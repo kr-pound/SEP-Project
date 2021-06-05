@@ -18,6 +18,6 @@ pyrcc5 resource.qrc -o resource_rc.py
 
 
 
-Firebase
+Image to pixmap pyqt5
 
-https://www.freecodecamp.org/news/how-to-get-started-with-firebase-using-python/
+https://learndataanalysis.org/how-to-display-image-from-the-web-with-qlabel-widget-in-pyqt5/

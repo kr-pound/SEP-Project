@@ -1,5 +1,6 @@
 from PyQt5 import QtCore, QtGui, QtWidgets
-from _cart_design import Ui_MainWindow
+from _cart_design import Ui_MainWindow as Ui_CartWindow
+from search import SearchWindow
 
 from os import environ
 
@@ -9,13 +10,17 @@ def suppress_qt_warnings():
     environ["QT_SCREEN_SCALE_FACTORS"] = "1"
     environ["QT_SCALE_FACTOR"] = "1"
 
-if __name__ == "__main__":
-    import sys
-    suppress_qt_warnings()
+class CartWindow(QtWidgets.QMainWindow, Ui_CartWindow):
+    search = QtCore.pyqtSignal()
 
-    app = QtWidgets.QApplication(sys.argv)
-    MainWindow = QtWidgets.QMainWindow()
-    ui = Ui_MainWindow()
-    ui.setupUi(MainWindow)
-    MainWindow.show()
-    sys.exit(app.exec_())
+    def __init__(self, parent=None):
+        #super the class to setup the Ui
+        super(CartWindow, self).__init__(parent)
+        self.setupUi(self)
+        #after push the button --> go back
+        self.SearchButton.clicked.connect(self.searchTransfer)
+        
+    @QtCore.pyqtSlot()
+    def searchTransfer(self):
+        self.search.emit()
+        self.close()

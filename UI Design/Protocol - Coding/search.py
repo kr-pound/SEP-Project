@@ -1,5 +1,6 @@
 from PyQt5 import QtCore, QtGui, QtWidgets
 from _search_design import Ui_MainWindow as Ui_SearchWindow
+from __product import ProductClass
 
 from os import environ
 from __database import database
@@ -10,34 +11,25 @@ def suppress_qt_warnings():
     environ["QT_SCREEN_SCALE_FACTORS"] = "1"
     environ["QT_SCALE_FACTOR"] = "1"
 
-#class of each product info
-class productClass():
-    id = None
-    name = None
-    price = None
-    detail = None
-
-    def __init__(self, id, name, price, detail):
-        self.id = id
-        self.name = name
-        self.price = price
-        self.detail = detail
-
-
 class SearchWindow(QtWidgets.QMainWindow, Ui_SearchWindow):
-    product = None
+    cart = QtCore.pyqtSignal()
+
+    product = [None] * 5
 
     def __init__(self, parent=None):
         #super the class to setup the Ui
         super(SearchWindow, self).__init__(parent)
         self.setupUi(self)
+        #after push the button --> view cart
+        self.CartButton.clicked.connect(self.cartTransfer)
 
         db = database()
 
         #receive product dictionary from database
         product_list = db.get_product('/product')
-        #create list of each product object
-        self.product = [None] * len(product_list)
+        #create list of each product object in page
+        while(len(self.product) < len(product_list)):
+            self.product += [None] * 5
         
         #store product objects in the list
         id_count = 0
@@ -49,26 +41,54 @@ class SearchWindow(QtWidgets.QMainWindow, Ui_SearchWindow):
             detail = self.product[id_count] = product["detail"]
 
             #store the object within a list
-            self.product[id_count] = productClass(id, name, price, detail)
+            self.product[id_count] = ProductClass(id, name, price, detail)
             id_count += 1
 
-        self.label_product_detail(1)
+        #product label color
+        self.ProductLabel1.setStyleSheet("color: darkgreen;")
+        self.ProductLabel2.setStyleSheet("color: darkgreen;")
+        self.ProductLabel3.setStyleSheet("color: darkgreen;")
+
+        #insert product info
+        self.label_product_detail(1, 5)
+
+        self.ProductIncrease1.clicked.connect(self.increment)
+
+    @QtCore.pyqtSlot()
+    def cartTransfer(self):
+        self.cart.emit()
+        self.close()
 
 
     #label product information
-    def label_product_detail(self, page):
-        page_index = page - 1
+    def label_product_detail(self, current_page, amount_per_page):
+        page_index = current_page - 1
 
-        self.ProductLabel1.setText(self.product[0 + (4 * page_index)].name)
-        self.ProductLabel2.setText(self.product[1 + (4 * page_index)].name)
-        self.ProductLabel3.setText(self.product[2 + (4 * page_index)].name)
+        if (self.product[0 + (amount_per_page * page_index)] != None):
+            self.ProductLabel1.setText(self.product[0 + (amount_per_page * page_index)].name)
+            self.BuyingButton1.setText(str(self.product[0 + (amount_per_page * page_index)].price) + " Baht")
+            self.ProductDescription1.setText("   " + self.product[0 + (amount_per_page * page_index)].detail)
 
-        self.BuyingButton1.setText(str(self.product[0 + (4 * page_index)].price) + " Baht")
-        self.BuyingButton2.setText(str(self.product[1 + (4 * page_index)].price) + " Baht")
-        self.BuyingButton3.setText(str(self.product[2 + (4 * page_index)].price) + " Baht")
+        if (self.product[1 + (amount_per_page * page_index)] != None):
+            self.ProductLabel2.setText(self.product[1 + (amount_per_page * page_index)].name)
+            self.BuyingButton2.setText(str(self.product[1 + (amount_per_page * page_index)].price) + " Baht")
+            self.ProductDescription2.setText("   " + self.product[1 + (amount_per_page * page_index)].detail)
 
-        self.ProductDescription1.setText("   " + self.product[0 + (4 * page_index)].detail)
-        self.ProductDescription2.setText("   " + self.product[1 + (4 * page_index)].detail)
-        self.ProductDescription3.setText("   " + self.product[2 + (4 * page_index)].detail)
+        if (self.product[2 + (amount_per_page * page_index)] != None):
+            self.ProductLabel3.setText(self.product[2 + (amount_per_page * page_index)].name)
+            self.BuyingButton3.setText(str(self.product[2 + (amount_per_page * page_index)].price) + " Baht")
+            self.ProductDescription3.setText("   " + self.product[2 + (amount_per_page * page_index)].detail)
 
+        if (self.product[3 + (amount_per_page * page_index)] != None):
+            self.ProductLabel4.setText(self.product[3 + (amount_per_page * page_index)].name)
+            self.BuyingButton4.setText(str(self.product[3 + (amount_per_page * page_index)].price) + " Baht")
+            self.ProductDescription4.setText("   " + self.product[3 + (amount_per_page * page_index)].detail)
+
+        if (self.product[4 + (amount_per_page * page_index)] != None):
+            self.ProductLabel5.setText(self.product[4 + (amount_per_page * page_index)].name)
+            self.BuyingButton5.setText(str(self.product[4 + (amount_per_page * page_index)].price) + " Baht")
+            self.ProductDescription5.setText("   " + self.product[4 + (amount_per_page * page_index)].detail)
+        
+    def increment(self, id):
+        pass
         

@@ -23,44 +23,118 @@ class Ui_MainWindow(object):
         font.setPointSize(36)
         self.label.setFont(font)
         self.label.setObjectName("label")
-        self.graphicsView = QtWidgets.QGraphicsView(self.centralwidget)
-        self.graphicsView.setGeometry(QtCore.QRect(20, 100, 111, 101))
-        self.graphicsView.setObjectName("graphicsView")
-        self.label_2 = QtWidgets.QLabel(self.centralwidget)
-        self.label_2.setGeometry(QtCore.QRect(180, 110, 311, 51))
-        font = QtGui.QFont()
-        font.setPointSize(16)
-        self.label_2.setFont(font)
-        self.label_2.setObjectName("label_2")
-        self.spinBox = QtWidgets.QSpinBox(self.centralwidget)
-        self.spinBox.setGeometry(QtCore.QRect(530, 120, 121, 51))
-        font = QtGui.QFont()
-        font.setPointSize(16)
-        self.spinBox.setFont(font)
-        self.spinBox.setObjectName("spinBox")
-        self.label_3 = QtWidgets.QLabel(self.centralwidget)
-        self.label_3.setGeometry(QtCore.QRect(720, 120, 161, 51))
-        font = QtGui.QFont()
-        font.setPointSize(16)
-        self.label_3.setFont(font)
-        self.label_3.setObjectName("label_3")
-        self.pushButton = QtWidgets.QPushButton(self.centralwidget)
-        self.pushButton.setGeometry(QtCore.QRect(930, 140, 75, 24))
-        self.pushButton.setObjectName("pushButton")
         self.pushButton_2 = QtWidgets.QPushButton(self.centralwidget)
         self.pushButton_2.setGeometry(QtCore.QRect(800, 560, 201, 61))
         font = QtGui.QFont()
         font.setPointSize(18)
         self.pushButton_2.setFont(font)
         self.pushButton_2.setObjectName("pushButton_2")
+        self.ProductFrame1 = QtWidgets.QFrame(self.centralwidget)
+        self.ProductFrame1.setGeometry(QtCore.QRect(50, 90, 441, 121))
+        self.ProductFrame1.setStyleSheet("QFrame {\n"
+"    background: lightgray;\n"
+"    border-radius: 30px;\n"
+"}")
+        self.ProductFrame1.setFrameShape(QtWidgets.QFrame.StyledPanel)
+        self.ProductFrame1.setFrameShadow(QtWidgets.QFrame.Raised)
+        self.ProductFrame1.setObjectName("ProductFrame1")
+        self.BuyingButton1 = QtWidgets.QPushButton(self.ProductFrame1)
+        self.BuyingButton1.setGeometry(QtCore.QRect(310, 80, 111, 31))
+        font = QtGui.QFont()
+        font.setFamily("Franklin Gothic Medium Cond")
+        font.setPointSize(12)
+        font.setBold(False)
+        font.setKerning(True)
+        font.setStyleStrategy(QtGui.QFont.PreferDefault)
+        self.BuyingButton1.setFont(font)
+        self.BuyingButton1.setStyleSheet("QPushButton {\n"
+"    color: white;\n"
+"    background: red;\n"
+"    border-radius: 15px;\n"
+"}\n"
+"\n"
+"QPushButton:hover {\n"
+"    color: darkred;\n"
+"    background: white;\n"
+"    border-radius: 15px;\n"
+"}\n"
+"\n"
+"\n"
+"")
+        self.BuyingButton1.setObjectName("BuyingButton1")
+        self.ProductAmount1 = QtWidgets.QLabel(self.ProductFrame1)
+        self.ProductAmount1.setGeometry(QtCore.QRect(310, 50, 111, 16))
+        font = QtGui.QFont()
+        font.setFamily("Franklin Gothic Medium Cond")
+        font.setPointSize(12)
+        self.ProductAmount1.setFont(font)
+        self.ProductAmount1.setAlignment(QtCore.Qt.AlignCenter)
+        self.ProductAmount1.setObjectName("ProductAmount1")
+        self.ProductIncrease1 = QtWidgets.QPushButton(self.ProductFrame1)
+        self.ProductIncrease1.setGeometry(QtCore.QRect(400, 40, 21, 24))
+        font = QtGui.QFont()
+        font.setBold(True)
+        self.ProductIncrease1.setFont(font)
+        self.ProductIncrease1.setStyleSheet("QPushButton {\n"
+"    background: lightgray;\n"
+"}")
+        self.ProductIncrease1.setObjectName("ProductIncrease1")
+        self.ProductDecrease1 = QtWidgets.QPushButton(self.ProductFrame1)
+        self.ProductDecrease1.setGeometry(QtCore.QRect(310, 40, 21, 24))
+        font = QtGui.QFont()
+        font.setBold(True)
+        self.ProductDecrease1.setFont(font)
+        self.ProductDecrease1.setStyleSheet("QPushButton {\n"
+"    background: lightgray;\n"
+"}")
+        self.ProductDecrease1.setObjectName("ProductDecrease1")
+        self.ProductLabel1 = QtWidgets.QLabel(self.ProductFrame1)
+        self.ProductLabel1.setGeometry(QtCore.QRect(170, 30, 121, 16))
+        font = QtGui.QFont()
+        font.setFamily("Franklin Gothic Medium Cond")
+        font.setPointSize(12)
+        self.ProductLabel1.setFont(font)
+        self.ProductLabel1.setText("")
+        self.ProductLabel1.setObjectName("ProductLabel1")
+        self.ProductPicture1 = QtWidgets.QLabel(self.ProductFrame1)
+        self.ProductPicture1.setGeometry(QtCore.QRect(20, 20, 131, 91))
+        self.ProductPicture1.setStyleSheet("QLabel {\n"
+"    image: url(:/)\n"
+"}")
+        self.ProductPicture1.setText("")
+        self.ProductPicture1.setObjectName("ProductPicture1")
+        self.SearchButton = QtWidgets.QPushButton(self.centralwidget)
+        self.SearchButton.setGeometry(QtCore.QRect(40, 570, 111, 31))
+        font = QtGui.QFont()
+        font.setFamily("Franklin Gothic Medium Cond")
+        font.setPointSize(12)
+        font.setBold(False)
+        font.setKerning(True)
+        font.setStyleStrategy(QtGui.QFont.PreferDefault)
+        self.SearchButton.setFont(font)
+        self.SearchButton.setStyleSheet("QPushButton {\n"
+"    color: white;\n"
+"    background: #64AB25;\n"
+"    border-radius: 15px;\n"
+"}\n"
+"\n"
+"QPushButton:hover {\n"
+"    color: #64AB25;\n"
+"    background: #333;\n"
+"    border-radius: 15px;\n"
+"}\n"
+"\n"
+"\n"
+"")
+        self.SearchButton.setObjectName("SearchButton")
         MainWindow.setCentralWidget(self.centralwidget)
+        self.statusbar = QtWidgets.QStatusBar(MainWindow)
+        self.statusbar.setObjectName("statusbar")
+        MainWindow.setStatusBar(self.statusbar)
         self.menubar = QtWidgets.QMenuBar(MainWindow)
         self.menubar.setGeometry(QtCore.QRect(0, 0, 1013, 22))
         self.menubar.setObjectName("menubar")
         MainWindow.setMenuBar(self.menubar)
-        self.statusbar = QtWidgets.QStatusBar(MainWindow)
-        self.statusbar.setObjectName("statusbar")
-        MainWindow.setStatusBar(self.statusbar)
 
         self.retranslateUi(MainWindow)
         QtCore.QMetaObject.connectSlotsByName(MainWindow)
@@ -69,10 +143,12 @@ class Ui_MainWindow(object):
         _translate = QtCore.QCoreApplication.translate
         MainWindow.setWindowTitle(_translate("MainWindow", "MainWindow"))
         self.label.setText(_translate("MainWindow", "Cart:"))
-        self.label_2.setText(_translate("MainWindow", "Name of item"))
-        self.label_3.setText(_translate("MainWindow", "TextLabel"))
-        self.pushButton.setText(_translate("MainWindow", "Delete"))
         self.pushButton_2.setText(_translate("MainWindow", "Check out"))
+        self.BuyingButton1.setText(_translate("MainWindow", "Delete"))
+        self.ProductAmount1.setText(_translate("MainWindow", "Buy: 1"))
+        self.ProductIncrease1.setText(_translate("MainWindow", "+"))
+        self.ProductDecrease1.setText(_translate("MainWindow", "-"))
+        self.SearchButton.setText(_translate("MainWindow", "Go Back"))
 
 
 if __name__ == "__main__":
