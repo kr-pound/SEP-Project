@@ -3,6 +3,7 @@ from PyQt5 import QtCore, QtGui, QtWidgets
 from login import LoginWindow
 from register import RegisterWindow
 from search import SearchWindow
+from cart import CartWindow
 
 from os import environ
 from __database import database
@@ -23,10 +24,15 @@ if __name__ == "__main__":
     login = LoginWindow()
     search = SearchWindow()
     register = RegisterWindow()
+    cart = CartWindow()
+    
     #connect login with the search page
     login.logged.connect(search.show)
     login.register.connect(register.show)
     register.login.connect(login.show)
+    search.cart.connect(cart.show)
+    cart.search.connect(search.show)
+    
     #show login page
     login.show()
     sys.exit(app.exec_())

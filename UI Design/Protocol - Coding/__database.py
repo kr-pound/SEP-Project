@@ -6,7 +6,6 @@ import firebase_admin
 from firebase_admin import credentials
 from firebase_admin import db
 
-
 class database:
     username = None
     password = None
@@ -92,5 +91,4 @@ class database:
         #implementation
         #print(database().show_list('/users'))
 
-
-#print(database().get_product('/product'))
+#database().push({'name' : 'Carrot6', 'id' : '6', 'price': '6', 'detail': 'Any carrot6 is good.'}, 'product')

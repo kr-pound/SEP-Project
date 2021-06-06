@@ -1,8 +1,8 @@
 from PyQt5 import QtCore, QtGui, QtWidgets
 from _search_design import Ui_MainWindow as Ui_SearchWindow
+from __product import CartProductClass
 
 from os import environ
-from __database import database
 
 def suppress_qt_warnings():
     environ["QT_DEVICE_PIXEL_RATIO"] = "0"
@@ -10,65 +10,117 @@ def suppress_qt_warnings():
     environ["QT_SCREEN_SCALE_FACTORS"] = "1"
     environ["QT_SCALE_FACTOR"] = "1"
 
-#class of each product info
-class productClass():
-    id = None
-    name = None
-    price = None
-    detail = None
-
-    def __init__(self, id, name, price, detail):
-        self.id = id
-        self.name = name
-        self.price = price
-        self.detail = detail
-
-
 class SearchWindow(QtWidgets.QMainWindow, Ui_SearchWindow):
-    product = None
+    cart = QtCore.pyqtSignal()
+
+    page = 1
+    #the buying of product id
+    buy_index = None
+
+    cpClass = CartProductClass()
 
     def __init__(self, parent=None):
         #super the class to setup the Ui
         super(SearchWindow, self).__init__(parent)
         self.setupUi(self)
 
-        db = database()
-
-        #receive product dictionary from database
-        product_list = db.get_product('/product')
-        #create list of each product object
-        self.product = [None] * len(product_list)
+        #after push the button --> view cart
+        self.CartButton.clicked.connect(self.cartTransfer)
         
-        #store product objects in the list
-        id_count = 0
-        for product in product_list:
-            #get any data from dictionary
-            id = self.product[id_count] = product["id"]
-            name = self.product[id_count] = product["name"]
-            price = self.product[id_count] = product["price"]
-            detail = self.product[id_count] = product["detail"]
+        #product label color
+        self.ProductLabel1.setStyleSheet("color: darkgreen;")
+        self.ProductLabel2.setStyleSheet("color: darkgreen;")
+        self.ProductLabel3.setStyleSheet("color: darkgreen;")
+        self.ProductLabel4.setStyleSheet("color: darkgreen;")
+        self.ProductLabel5.setStyleSheet("color: darkgreen;")
 
-            #store the object within a list
-            self.product[id_count] = productClass(id, name, price, detail)
-            id_count += 1
+        #change pages to show product info
+        self.RightButton.clicked.connect(self.rightTransfer)
+        self.LeftButton.clicked.connect(self.leftTransfer)
 
-        self.label_product_detail(1)
+        #buying button push --> send object to buy method
+        self.BuyingButton1.clicked.connect(self.buy_index0)
+        self.BuyingButton2.clicked.connect(self.buy_index1)
+        self.BuyingButton3.clicked.connect(self.buy_index2)
+        self.BuyingButton4.clicked.connect(self.buy_index3)
+        self.BuyingButton5.clicked.connect(self.buy_index4)
 
+        #insert product info
+        self.cpClass.label_product_detail(1, 5, self.cpClass.product)
+        self.set_product_detail()
+
+
+    @QtCore.pyqtSlot()
+    def cartTransfer(self):
+        self.cart.emit()
+        self.close()
+
+    #change the page of product show
+    def rightTransfer(self):
+        if (self.page * 5 < len(self.cpClass.product_list)):
+            self.page += 1
+
+            #reset product info
+            self.cpClass.clear_label_product_detail()
+            self.set_product_detail()
+            self.cpClass.label_product_detail(self.page, 5, self.cpClass.product)
+            self.set_product_detail()
+    
+    def leftTransfer(self):
+        if (self.page > 1):
+            self.page -= 1
+
+            #reset product info
+            self.cpClass.clear_label_product_detail()
+            self.set_product_detail()
+            self.cpClass.label_product_detail(self.page, 5, self.cpClass.product)
+            self.set_product_detail()
+
+    #generated buy id & set buy_amount in each product object
+    def buy_index0(self):
+        self.buy_index = ((self.page - 1) * 5) + 0
+        if (self.buy_index < len(self.cpClass.product_list)):
+            self.cpClass.product[self.buy_index].buy_amount = 1
+    def buy_index1(self):
+        self.buy_index = ((self.page - 1) * 5) + 1
+        if (self.buy_index < len(self.cpClass.product_list)):
+            self.cpClass.product[self.buy_index].buy_amount = 1
+    def buy_index2(self):
+        self.buy_index = ((self.page - 1) * 5) + 2
+        if (self.buy_index < len(self.cpClass.product_list)):
+            self.cpClass.product[self.buy_index].buy_amount = 1
+    def buy_index3(self):
+        self.buy_index = ((self.page - 1) * 5) + 3
+        if (self.buy_index < len(self.cpClass.product_list)):
+            self.cpClass.product[self.buy_index].buy_amount = 1
+    def buy_index4(self):
+        self.buy_index = ((self.page - 1) * 5) + 4
+        if (self.buy_index < len(self.cpClass.product_list)):
+            self.cpClass.product[self.buy_index].buy_amount = 1
 
     #label product information
-    def label_product_detail(self, page):
-        page_index = page - 1
+    def set_product_detail(self):
+        self.ProductLabel1.setText(self.cpClass.productLabel1)
+        self.BuyingButton1.setText(self.cpClass.buyingButton1)
+        self.ProductDescription1.setText(self.cpClass.productDescription1)
 
-        self.ProductLabel1.setText(self.product[0 + (4 * page_index)].name)
-        self.ProductLabel2.setText(self.product[1 + (4 * page_index)].name)
-        self.ProductLabel3.setText(self.product[2 + (4 * page_index)].name)
+        self.ProductLabel2.setText(self.cpClass.productLabel2)
+        self.BuyingButton2.setText(self.cpClass.buyingButton2)
+        self.ProductDescription2.setText(self.cpClass.productDescription2)
 
-        self.BuyingButton1.setText(str(self.product[0 + (4 * page_index)].price) + " Baht")
-        self.BuyingButton2.setText(str(self.product[1 + (4 * page_index)].price) + " Baht")
-        self.BuyingButton3.setText(str(self.product[2 + (4 * page_index)].price) + " Baht")
+        self.ProductLabel3.setText(self.cpClass.productLabel3)
+        self.BuyingButton3.setText(self.cpClass.buyingButton3)
+        self.ProductDescription3.setText(self.cpClass.productDescription3)
 
-        self.ProductDescription1.setText("   " + self.product[0 + (4 * page_index)].detail)
-        self.ProductDescription2.setText("   " + self.product[1 + (4 * page_index)].detail)
-        self.ProductDescription3.setText("   " + self.product[2 + (4 * page_index)].detail)
+        self.ProductLabel4.setText(self.cpClass.productLabel4)
+        self.BuyingButton4.setText(self.cpClass.buyingButton4)
+        self.ProductDescription4.setText(self.cpClass.productDescription4)
 
+        self.ProductLabel5.setText(self.cpClass.productLabel5)
+        self.BuyingButton5.setText(self.cpClass.buyingButton5)
+        self.ProductDescription5.setText(self.cpClass.productDescription5)
+
+    
+    def increment(self, id):
+        pass
         
