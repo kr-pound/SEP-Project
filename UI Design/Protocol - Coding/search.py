@@ -3,7 +3,6 @@ from _search_design import Ui_MainWindow as Ui_SearchWindow
 from __product import CartProductClass
 
 from os import environ
-from __database import database
 
 def suppress_qt_warnings():
     environ["QT_DEVICE_PIXEL_RATIO"] = "0"
@@ -27,9 +26,7 @@ class SearchWindow(QtWidgets.QMainWindow, Ui_SearchWindow):
 
         #after push the button --> view cart
         self.CartButton.clicked.connect(self.cartTransfer)
-        #loading cart data
-        self.CartButton.clicked.connect(self.cpClass.cart_view)
-
+        
         #product label color
         self.ProductLabel1.setStyleSheet("color: darkgreen;")
         self.ProductLabel2.setStyleSheet("color: darkgreen;")

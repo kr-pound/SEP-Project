@@ -25,12 +25,14 @@ if __name__ == "__main__":
     search = SearchWindow()
     register = RegisterWindow()
     cart = CartWindow()
+    
     #connect login with the search page
     login.logged.connect(search.show)
     login.register.connect(register.show)
     register.login.connect(login.show)
     search.cart.connect(cart.show)
     cart.search.connect(search.show)
+    
     #show login page
     login.show()
     sys.exit(app.exec_())

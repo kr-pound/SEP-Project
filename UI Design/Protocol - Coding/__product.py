@@ -1,5 +1,4 @@
 from PyQt5 import QtCore, QtGui, QtWidgets
-from cart import CartWindow
 
 from os import environ
 from __database import database
@@ -11,7 +10,6 @@ class CartProductClass():
 
     #buying product list
     buy_list = [None] * 5
-    cWin = CartWindow()
 
     #product information
     productLabel1 = None
@@ -109,28 +107,6 @@ class CartProductClass():
         self.productDescription3 = description_cleared
         self.productDescription4 = description_cleared
         self.productDescription5 = description_cleared
-
-    #generate cart product list
-    def cart_view(self):
-        buy_count = 0
-        for product in self.product:
-            #add more cart space
-            if (buy_count % 5) and (buy_count > 0):
-                self.buy_list += [None] * 5
-
-            if (product != None):
-                if (product.buy_amount > 0):
-                    #put product object into buy_list
-                    self.buy_list[buy_count] = product
-                    buy_count += 1
-            else:
-                break
-
-        
-        self.label_product_detail(1, 5, self.buy_list)
-        self.cWin.listCartProduct()
-
-
 
 
 #class of each product info

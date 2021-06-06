@@ -38,16 +38,16 @@ class Ui_MainWindow(object):
         self.ProductFrame1.setFrameShape(QtWidgets.QFrame.StyledPanel)
         self.ProductFrame1.setFrameShadow(QtWidgets.QFrame.Raised)
         self.ProductFrame1.setObjectName("ProductFrame1")
-        self.BuyingButton1 = QtWidgets.QPushButton(self.ProductFrame1)
-        self.BuyingButton1.setGeometry(QtCore.QRect(310, 80, 111, 31))
+        self.DeleteButton1 = QtWidgets.QPushButton(self.ProductFrame1)
+        self.DeleteButton1.setGeometry(QtCore.QRect(310, 80, 111, 31))
         font = QtGui.QFont()
         font.setFamily("Franklin Gothic Medium Cond")
         font.setPointSize(12)
         font.setBold(False)
         font.setKerning(True)
         font.setStyleStrategy(QtGui.QFont.PreferDefault)
-        self.BuyingButton1.setFont(font)
-        self.BuyingButton1.setStyleSheet("QPushButton {\n"
+        self.DeleteButton1.setFont(font)
+        self.DeleteButton1.setStyleSheet("QPushButton {\n"
 "    color: white;\n"
 "    background: red;\n"
 "    border-radius: 15px;\n"
@@ -61,7 +61,7 @@ class Ui_MainWindow(object):
 "\n"
 "\n"
 "")
-        self.BuyingButton1.setObjectName("BuyingButton1")
+        self.DeleteButton1.setObjectName("DeleteButton1")
         self.CartProductAmount1 = QtWidgets.QLabel(self.ProductFrame1)
         self.CartProductAmount1.setGeometry(QtCore.QRect(310, 50, 111, 16))
         font = QtGui.QFont()
@@ -103,16 +103,16 @@ class Ui_MainWindow(object):
 "}")
         self.CartProductPicture1.setText("")
         self.CartProductPicture1.setObjectName("CartProductPicture1")
-        self.SearchButton = QtWidgets.QPushButton(self.centralwidget)
-        self.SearchButton.setGeometry(QtCore.QRect(40, 570, 111, 31))
+        self.BackButton = QtWidgets.QPushButton(self.centralwidget)
+        self.BackButton.setGeometry(QtCore.QRect(40, 570, 111, 31))
         font = QtGui.QFont()
         font.setFamily("Franklin Gothic Medium Cond")
         font.setPointSize(12)
         font.setBold(False)
         font.setKerning(True)
         font.setStyleStrategy(QtGui.QFont.PreferDefault)
-        self.SearchButton.setFont(font)
-        self.SearchButton.setStyleSheet("QPushButton {\n"
+        self.BackButton.setFont(font)
+        self.BackButton.setStyleSheet("QPushButton {\n"
 "    color: white;\n"
 "    background: #64AB25;\n"
 "    border-radius: 15px;\n"
@@ -126,7 +126,31 @@ class Ui_MainWindow(object):
 "\n"
 "\n"
 "")
-        self.SearchButton.setObjectName("SearchButton")
+        self.BackButton.setObjectName("BackButton")
+        self.ReloadButton = QtWidgets.QPushButton(self.centralwidget)
+        self.ReloadButton.setGeometry(QtCore.QRect(890, 510, 111, 31))
+        font = QtGui.QFont()
+        font.setFamily("Franklin Gothic Medium Cond")
+        font.setPointSize(12)
+        font.setBold(False)
+        font.setKerning(True)
+        font.setStyleStrategy(QtGui.QFont.PreferDefault)
+        self.ReloadButton.setFont(font)
+        self.ReloadButton.setStyleSheet("QPushButton {\n"
+"    color: black;\n"
+"    background: lightgray;\n"
+"    border-radius: 15px;\n"
+"}\n"
+"\n"
+"QPushButton:hover {\n"
+"    color: gray;\n"
+"    background: lightblue;\n"
+"    border-radius: 15px;\n"
+"}\n"
+"\n"
+"\n"
+"")
+        self.ReloadButton.setObjectName("ReloadButton")
         MainWindow.setCentralWidget(self.centralwidget)
         self.statusbar = QtWidgets.QStatusBar(MainWindow)
         self.statusbar.setObjectName("statusbar")
@@ -144,11 +168,12 @@ class Ui_MainWindow(object):
         MainWindow.setWindowTitle(_translate("MainWindow", "MainWindow"))
         self.label.setText(_translate("MainWindow", "Cart:"))
         self.pushButton_2.setText(_translate("MainWindow", "Check out"))
-        self.BuyingButton1.setText(_translate("MainWindow", "Delete"))
+        self.DeleteButton1.setText(_translate("MainWindow", "Delete"))
         self.CartProductAmount1.setText(_translate("MainWindow", "Buy: 1"))
         self.CartProductIncrease1.setText(_translate("MainWindow", "+"))
         self.CartProductDecrease1.setText(_translate("MainWindow", "-"))
-        self.SearchButton.setText(_translate("MainWindow", "Go Back"))
+        self.BackButton.setText(_translate("MainWindow", "Go Back"))
+        self.ReloadButton.setText(_translate("MainWindow", "Reload"))
 
 
 if __name__ == "__main__":
