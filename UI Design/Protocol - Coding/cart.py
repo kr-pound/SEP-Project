@@ -1,6 +1,6 @@
 from PyQt5 import QtCore, QtGui, QtWidgets
 from _cart_design import Ui_MainWindow as Ui_CartWindow
-from __product import ProductClass
+
 
 
 from os import environ
@@ -31,4 +31,5 @@ class CartWindow(QtWidgets.QMainWindow, Ui_CartWindow):
 
     def listCartProduct(self):
         pass
+        #self.CartProductLabel1.setText(self.produc)
 

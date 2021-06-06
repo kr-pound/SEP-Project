@@ -1,5 +1,5 @@
 from PyQt5 import QtCore, QtGui, QtWidgets
-from _search_design import Ui_MainWindow as Ui_SearchWindow
+from cart import CartWindow
 
 from os import environ
 from __database import database
@@ -8,6 +8,10 @@ from __database import database
 class CartProductClass():
     product = [None] * 5
     product_list = None
+
+    #buying product list
+    buy_list = [None] * 5
+    cWin = CartWindow()
 
     #product information
     productLabel1 = None
@@ -53,33 +57,33 @@ class CartProductClass():
         print(self.product)
 
     #generate product information
-    def label_product_detail(self, current_page, amount_per_page):
+    def label_product_detail(self, current_page, amount_per_page, product_list):
         page_index = current_page - 1
 
-        if (self.product[0 + (amount_per_page * page_index)] != None):
-            self.productLabel1 = self.product[0 + (amount_per_page * page_index)].name
-            self.buyingButton1 = str(self.product[0 + (amount_per_page * page_index)].price) + " Baht"
-            self.productDescription1 = "   " + self.product[0 + (amount_per_page * page_index)].detail
+        if (product_list[0 + (amount_per_page * page_index)] != None):
+            self.productLabel1 = product_list[0 + (amount_per_page * page_index)].name
+            self.buyingButton1 = str(product_list[0 + (amount_per_page * page_index)].price) + " Baht"
+            self.productDescription1 = "   " + product_list[0 + (amount_per_page * page_index)].detail
 
-        if (self.product[1 + (amount_per_page * page_index)] != None):
-            self.productLabel2 = self.product[1 + (amount_per_page * page_index)].name
-            self.buyingButton2 = str(self.product[1 + (amount_per_page * page_index)].price) + " Baht"
-            self.productDescription2 = "   " + self.product[1 + (amount_per_page * page_index)].detail
+        if (product_list[1 + (amount_per_page * page_index)] != None):
+            self.productLabel2 = product_list[1 + (amount_per_page * page_index)].name
+            self.buyingButton2 = str(product_list[1 + (amount_per_page * page_index)].price) + " Baht"
+            self.productDescription2 = "   " + product_list[1 + (amount_per_page * page_index)].detail
 
-        if (self.product[2 + (amount_per_page * page_index)] != None):
-            self.productLabel3 = self.product[2 + (amount_per_page * page_index)].name
-            self.buyingButton3 = str(self.product[2 + (amount_per_page * page_index)].price) + " Baht"
-            self.productDescription3 = "   " + self.product[0 + (amount_per_page * page_index)].detail
+        if (product_list[2 + (amount_per_page * page_index)] != None):
+            self.productLabel3 = product_list[2 + (amount_per_page * page_index)].name
+            self.buyingButton3 = str(product_list[2 + (amount_per_page * page_index)].price) + " Baht"
+            self.productDescription3 = "   " + product_list[0 + (amount_per_page * page_index)].detail
 
-        if (self.product[3 + (amount_per_page * page_index)] != None):
-            self.productLabel4 = self.product[3 + (amount_per_page * page_index)].name
-            self.buyingButton4 = str(self.product[3 + (amount_per_page * page_index)].price) + " Baht"
-            self.productDescription4 = "   " + self.product[3 + (amount_per_page * page_index)].detail
+        if (product_list[3 + (amount_per_page * page_index)] != None):
+            self.productLabel4 = product_list[3 + (amount_per_page * page_index)].name
+            self.buyingButton4 = str(product_list[3 + (amount_per_page * page_index)].price) + " Baht"
+            self.productDescription4 = "   " + product_list[3 + (amount_per_page * page_index)].detail
 
-        if (self.product[4 + (amount_per_page * page_index)] != None):
-            self.productLabel5 = self.product[4 + (amount_per_page * page_index)].name
-            self.buyingButton5 = str(self.product[4 + (amount_per_page * page_index)].price) + " Baht"
-            self.productDescription5 = "   " + self.product[4 + (amount_per_page * page_index)].detail
+        if (product_list[4 + (amount_per_page * page_index)] != None):
+            self.productLabel5 = product_list[4 + (amount_per_page * page_index)].name
+            self.buyingButton5 = str(product_list[4 + (amount_per_page * page_index)].price) + " Baht"
+            self.productDescription5 = "   " + product_list[4 + (amount_per_page * page_index)].detail
 
 
     #clear any product show
@@ -105,6 +109,26 @@ class CartProductClass():
         self.productDescription3 = description_cleared
         self.productDescription4 = description_cleared
         self.productDescription5 = description_cleared
+
+    #generate cart product list
+    def cart_view(self):
+        buy_count = 0
+        for product in self.product:
+            #add more cart space
+            if (buy_count % 5) and (buy_count > 0):
+                self.buy_list += [None] * 5
+
+            if (product != None):
+                if (product.buy_amount > 0):
+                    #put product object into buy_list
+                    self.buy_list[buy_count] = product
+                    buy_count += 1
+            else:
+                break
+
+        
+        self.label_product_detail(1, 5, self.buy_list)
+        self.cWin.listCartProduct()
 
 
 

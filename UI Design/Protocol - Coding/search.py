@@ -24,8 +24,11 @@ class SearchWindow(QtWidgets.QMainWindow, Ui_SearchWindow):
         #super the class to setup the Ui
         super(SearchWindow, self).__init__(parent)
         self.setupUi(self)
+
         #after push the button --> view cart
         self.CartButton.clicked.connect(self.cartTransfer)
+        #loading cart data
+        self.CartButton.clicked.connect(self.cpClass.cart_view)
 
         #product label color
         self.ProductLabel1.setStyleSheet("color: darkgreen;")
@@ -46,7 +49,7 @@ class SearchWindow(QtWidgets.QMainWindow, Ui_SearchWindow):
         self.BuyingButton5.clicked.connect(self.buy_index4)
 
         #insert product info
-        self.cpClass.label_product_detail(1, 5)
+        self.cpClass.label_product_detail(1, 5, self.cpClass.product)
         self.set_product_detail()
 
 
@@ -63,7 +66,7 @@ class SearchWindow(QtWidgets.QMainWindow, Ui_SearchWindow):
             #reset product info
             self.cpClass.clear_label_product_detail()
             self.set_product_detail()
-            self.cpClass.label_product_detail(self.page, 5)
+            self.cpClass.label_product_detail(self.page, 5, self.cpClass.product)
             self.set_product_detail()
     
     def leftTransfer(self):
@@ -73,7 +76,7 @@ class SearchWindow(QtWidgets.QMainWindow, Ui_SearchWindow):
             #reset product info
             self.cpClass.clear_label_product_detail()
             self.set_product_detail()
-            self.cpClass.label_product_detail(self.page, 5)
+            self.cpClass.label_product_detail(self.page, 5, self.cpClass.product)
             self.set_product_detail()
 
     #generated buy id & set buy_amount in each product object
