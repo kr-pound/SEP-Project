@@ -1,6 +1,7 @@
 from PyQt5 import QtCore, QtGui, QtWidgets
 from _cart_design import Ui_MainWindow as Ui_CartWindow
-from search import SearchWindow
+from __product import ProductClass
+
 
 from os import environ
 
@@ -13,6 +14,9 @@ def suppress_qt_warnings():
 class CartWindow(QtWidgets.QMainWindow, Ui_CartWindow):
     search = QtCore.pyqtSignal()
 
+    #list of product object in the cart
+    buy_list = [None] * 5
+
     def __init__(self, parent=None):
         #super the class to setup the Ui
         super(CartWindow, self).__init__(parent)
@@ -24,3 +28,7 @@ class CartWindow(QtWidgets.QMainWindow, Ui_CartWindow):
     def searchTransfer(self):
         self.search.emit()
         self.close()
+
+    def listCartProduct(self):
+        pass
+
