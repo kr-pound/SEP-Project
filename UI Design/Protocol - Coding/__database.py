@@ -91,3 +91,4 @@ class database:
         #implementation
         #print(database().show_list('/users'))
 
+#database().push({'name' : 'Carrot6', 'id' : '6', 'price': '6', 'detail': 'Any carrot6 is good.'}, 'product')
