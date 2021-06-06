@@ -76,6 +76,7 @@ class SearchWindow(QtWidgets.QMainWindow, Ui_SearchWindow):
         self.cart.emit()
         self.close()
 
+    #change the page of product show
     def rightTransfer(self):
         if (self.page * 5 < len(self.product_list)):
             self.page += 1
@@ -88,22 +89,27 @@ class SearchWindow(QtWidgets.QMainWindow, Ui_SearchWindow):
             self.clear_label_product_detail()
             self.label_product_detail(self.page, 5)
 
-    #generated buy id
+    #generated buy id & set buy_amount in each product object
     def buy_id0(self):
         self.buy_id = ((self.page - 1) * 5) + 0
-        print(self.buy_id)
+        if (self.buy_id < len(self.product_list)):
+            self.product[self.buy_id].buy_amount = 1
     def buy_id1(self):
         self.buy_id = ((self.page - 1) * 5) + 1
-        print(self.buy_id)
+        if (self.buy_id < len(self.product_list)):
+            self.product[self.buy_id].buy_amount = 1
     def buy_id2(self):
         self.buy_id = ((self.page - 1) * 5) + 2
-        print(self.buy_id)
+        if (self.buy_id < len(self.product_list)):
+            self.product[self.buy_id].buy_amount = 1
     def buy_id3(self):
         self.buy_id = ((self.page - 1) * 5) + 3
-        print(self.buy_id)
+        if (self.buy_id < len(self.product_list)):
+            self.product[self.buy_id].buy_amount = 1
     def buy_id4(self):
         self.buy_id = ((self.page - 1) * 5) + 4
-        print(self.buy_id)
+        if (self.buy_id < len(self.product_list)):
+            self.product[self.buy_id].buy_amount = 1
 
 
     #label product information
