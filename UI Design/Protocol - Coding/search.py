@@ -120,8 +120,6 @@ class SearchWindow(QtWidgets.QMainWindow, Ui_SearchWindow):
         self.BuyingButton5.setText(self.cpClass.buyingButton5)
         self.ProductDescription5.setText(self.cpClass.productDescription5)
 
-        print("setting done")
-
     
     def increment(self, id):
         pass

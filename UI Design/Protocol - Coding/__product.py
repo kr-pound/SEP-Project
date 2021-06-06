@@ -56,8 +56,6 @@ class CartProductClass():
     def label_product_detail(self, current_page, amount_per_page):
         page_index = current_page - 1
 
-        print(self.productLabel5)
-
         if (self.product[0 + (amount_per_page * page_index)] != None):
             self.productLabel1 = self.product[0 + (amount_per_page * page_index)].name
             self.buyingButton1 = str(self.product[0 + (amount_per_page * page_index)].price) + " Baht"
@@ -83,8 +81,6 @@ class CartProductClass():
             self.buyingButton5 = str(self.product[4 + (amount_per_page * page_index)].price) + " Baht"
             self.productDescription5 = "   " + self.product[4 + (amount_per_page * page_index)].detail
 
-        print("labeled")
-        print(self.productLabel5)
 
     #clear any product show
     def clear_label_product_detail(self):
@@ -92,25 +88,24 @@ class CartProductClass():
         buying_button_cleaed = "0 Baht"
         description_cleared = ""
 
-        self.ProductLabel1 = lebel_cleared
-        self.ProductLabel2 = lebel_cleared
-        self.ProductLabel3 = lebel_cleared
-        self.ProductLabel4 = lebel_cleared
-        self.ProductLabel5 = lebel_cleared
+        self.productLabel1 = lebel_cleared
+        self.productLabel2 = lebel_cleared
+        self.productLabel3 = lebel_cleared
+        self.productLabel4 = lebel_cleared
+        self.productLabel5 = lebel_cleared
 
-        self.BuyingButton1 = buying_button_cleaed
-        self.BuyingButton2 = buying_button_cleaed
-        self.BuyingButton3 = buying_button_cleaed
-        self.BuyingButton4 = buying_button_cleaed
-        self.BuyingButton5 = buying_button_cleaed
+        self.buyingButton1 = buying_button_cleaed
+        self.buyingButton2 = buying_button_cleaed
+        self.buyingButton3 = buying_button_cleaed
+        self.buyingButton4 = buying_button_cleaed
+        self.buyingButton5 = buying_button_cleaed
 
-        self.ProductDescription1 = description_cleared
-        self.ProductDescription2 = description_cleared
-        self.ProductDescription3 = description_cleared
-        self.ProductDescription4 = description_cleared
-        self.ProductDescription5 = description_cleared
+        self.productDescription1 = description_cleared
+        self.productDescription2 = description_cleared
+        self.productDescription3 = description_cleared
+        self.productDescription4 = description_cleared
+        self.productDescription5 = description_cleared
 
-        print("cleared")
 
 
 
