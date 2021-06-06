@@ -9,7 +9,7 @@ class CartProductClass():
     product_list = None
 
     #buying product list
-    buy_list = [None] * 5
+    buy_list = [None] * 6
 
     #product information
     productLabel1 = None
