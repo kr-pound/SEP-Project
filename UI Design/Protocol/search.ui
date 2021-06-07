@@ -1254,7 +1254,7 @@ QPushButton:hover {
 }
 
 QPushButton:hover {
-	color: gray;
+	color: black;
 	background: lightblue;
 	border-radius: 15px;
 }
@@ -1338,6 +1338,44 @@ QPushButton:hover {
     </property>
     <property name="text">
      <string/>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="RefreshButton">
+    <property name="geometry">
+     <rect>
+      <x>880</x>
+      <y>70</y>
+      <width>111</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Franklin Gothic Medium Cond</family>
+      <pointsize>12</pointsize>
+      <bold>false</bold>
+      <stylestrategy>PreferDefault</stylestrategy>
+      <kerning>true</kerning>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton {
+	color: black;
+	background: lightgray;
+	border-radius: 15px;
+}
+
+QPushButton:hover {
+	color: black;
+	background: lightgreen;
+	border-radius: 15px;
+}
+
+
+</string>
+    </property>
+    <property name="text">
+     <string>Refresh</string>
     </property>
    </widget>
   </widget>

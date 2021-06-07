@@ -40,11 +40,16 @@ class CartWindow(QtWidgets.QMainWindow, Ui_CartWindow):
         self.DeleteButton3.clicked.connect(self.delete_index2)
         self.DeleteButton4.clicked.connect(self.delete_index3)
         self.DeleteButton5.clicked.connect(self.delete_index4)
-        self.DeleteButton5_2.clicked.connect(self.delete_index5)
+        self.DeleteButton6.clicked.connect(self.delete_index5)
+
+        self.clear_cart_label()
 
     
     @QtCore.pyqtSlot()
     def searchTransfer(self):
+        #clear cart
+        self.clear_cart_label()
+
         self.search.emit()
         self.close()
 
@@ -79,22 +84,37 @@ class CartWindow(QtWidgets.QMainWindow, Ui_CartWindow):
             self.page -= 1
 
         page_index = self.page - 1
+        delete_text = "Delete"
 
         if (self.cpClass.buy_list[0 + page_index * 6] != None):
             self.CartProductLabel1.setText(self.cpClass.buy_list[0 + page_index * 6].name)
+            self.CartProductAmount1.setText("Buy: " + str(self.cpClass.buy_list[0 + page_index * 6].buy_amount))
+            self.DeleteButton1.setText(delete_text)
         if (self.cpClass.buy_list[1 + page_index * 6] != None):
             self.CartProductLabel2.setText(self.cpClass.buy_list[1 + page_index * 6].name)
+            self.CartProductAmount2.setText("Buy: " + str(self.cpClass.buy_list[1 + page_index * 6].buy_amount))
+            self.DeleteButton2.setText(delete_text)
         if (self.cpClass.buy_list[2 + page_index * 6] != None):
             self.CartProductLabel3.setText(self.cpClass.buy_list[2 + page_index * 6].name)
+            self.CartProductAmount3.setText("Buy: " + str(self.cpClass.buy_list[2 + page_index * 6].buy_amount))
+            self.DeleteButton3.setText(delete_text)
         if (self.cpClass.buy_list[3 + page_index * 6] != None):
             self.CartProductLabel4.setText(self.cpClass.buy_list[3 + page_index * 6].name)
+            self.CartProductAmount4.setText("Buy: " + str(self.cpClass.buy_list[3 + page_index * 6].buy_amount))
+            self.DeleteButton4.setText(delete_text)
         if (self.cpClass.buy_list[4 + page_index * 6] != None):
             self.CartProductLabel5.setText(self.cpClass.buy_list[4 + page_index * 6].name)
+            self.CartProductAmount5.setText("Buy: " + str(self.cpClass.buy_list[4 + page_index * 6].buy_amount))
+            self.DeleteButton5.setText(delete_text)
         if (self.cpClass.buy_list[5 + page_index * 6] != None):
             self.CartProductLabel6.setText(self.cpClass.buy_list[5 + page_index * 6].name)
+            self.CartProductAmount6.setText("Buy: " + str(self.cpClass.buy_list[5 + page_index * 6].buy_amount))
+            self.DeleteButton6.setText(delete_text)
 
     def clear_cart_label(self):
         cleared_label = ""
+        cleared_amount = ""
+        cleared_button = ""
 
         self.CartProductLabel1.setText(cleared_label)
         self.CartProductLabel2.setText(cleared_label)
@@ -102,6 +122,20 @@ class CartWindow(QtWidgets.QMainWindow, Ui_CartWindow):
         self.CartProductLabel4.setText(cleared_label)
         self.CartProductLabel5.setText(cleared_label)
         self.CartProductLabel6.setText(cleared_label)
+
+        self.CartProductAmount1.setText(cleared_amount)
+        self.CartProductAmount2.setText(cleared_amount)
+        self.CartProductAmount3.setText(cleared_amount)
+        self.CartProductAmount4.setText(cleared_amount)
+        self.CartProductAmount5.setText(cleared_amount)
+        self.CartProductAmount6.setText(cleared_amount)
+
+        self.DeleteButton1.setText(cleared_button)
+        self.DeleteButton2.setText(cleared_button)
+        self.DeleteButton3.setText(cleared_button)
+        self.DeleteButton4.setText(cleared_button)
+        self.DeleteButton5.setText(cleared_button)
+        self.DeleteButton6.setText(cleared_button)
 
     #change the page of product show
     def rightTransfer(self):
