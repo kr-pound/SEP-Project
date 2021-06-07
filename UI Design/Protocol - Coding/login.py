@@ -29,7 +29,6 @@ class LoginWindow(QtWidgets.QMainWindow, Ui_LoginWindow):
     @QtCore.pyqtSlot()
     def registerTransfer(self):
         self.register.emit()
-        self.close()
 
     @QtCore.pyqtSlot()
     def authenticate(self):
