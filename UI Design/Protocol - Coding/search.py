@@ -191,6 +191,7 @@ class SearchWindow(QtWidgets.QMainWindow, Ui_SearchWindow):
         if (self.buy_index < len(self.cpClass.product_list)):
             self.buy_amount0 += 1
             self.amount_label0()
+            print(self.buy_amount0)
     def increment1(self):
         self.buy_index = ((self.page - 1) * 5) + 1
         if (self.buy_index < len(self.cpClass.product_list)):

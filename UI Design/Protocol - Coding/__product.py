@@ -62,6 +62,7 @@ class CartProductClass():
             id_count += 1
 
         print(self.product)
+        CartProductClass.label_product_detail(CartProductClass, 1, 5, self.product)
 
     #generate product information
     def label_product_detail(self, current_page, amount_per_page, product_list):
