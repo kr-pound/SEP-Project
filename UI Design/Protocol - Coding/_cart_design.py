@@ -24,13 +24,13 @@ class Ui_MainWindow(object):
         self.label.setFont(font)
         self.label.setObjectName("label")
         self.pushButton_2 = QtWidgets.QPushButton(self.centralwidget)
-        self.pushButton_2.setGeometry(QtCore.QRect(800, 560, 201, 61))
+        self.pushButton_2.setGeometry(QtCore.QRect(770, 560, 201, 61))
         font = QtGui.QFont()
         font.setPointSize(18)
         self.pushButton_2.setFont(font)
         self.pushButton_2.setObjectName("pushButton_2")
         self.ProductFrame1 = QtWidgets.QFrame(self.centralwidget)
-        self.ProductFrame1.setGeometry(QtCore.QRect(50, 90, 441, 121))
+        self.ProductFrame1.setGeometry(QtCore.QRect(50, 80, 441, 121))
         self.ProductFrame1.setStyleSheet("QFrame {\n"
 "    background: lightgray;\n"
 "    border-radius: 30px;\n"
@@ -128,7 +128,7 @@ class Ui_MainWindow(object):
 "")
         self.BackButton.setObjectName("BackButton")
         self.ReloadButton = QtWidgets.QPushButton(self.centralwidget)
-        self.ReloadButton.setGeometry(QtCore.QRect(890, 510, 111, 31))
+        self.ReloadButton.setGeometry(QtCore.QRect(860, 510, 111, 31))
         font = QtGui.QFont()
         font.setFamily("Franklin Gothic Medium Cond")
         font.setPointSize(12)
@@ -151,6 +151,424 @@ class Ui_MainWindow(object):
 "\n"
 "")
         self.ReloadButton.setObjectName("ReloadButton")
+        self.ProductFrame2 = QtWidgets.QFrame(self.centralwidget)
+        self.ProductFrame2.setGeometry(QtCore.QRect(530, 80, 441, 121))
+        self.ProductFrame2.setStyleSheet("QFrame {\n"
+"    background: lightgray;\n"
+"    border-radius: 30px;\n"
+"}")
+        self.ProductFrame2.setFrameShape(QtWidgets.QFrame.StyledPanel)
+        self.ProductFrame2.setFrameShadow(QtWidgets.QFrame.Raised)
+        self.ProductFrame2.setObjectName("ProductFrame2")
+        self.DeleteButton2 = QtWidgets.QPushButton(self.ProductFrame2)
+        self.DeleteButton2.setGeometry(QtCore.QRect(310, 80, 111, 31))
+        font = QtGui.QFont()
+        font.setFamily("Franklin Gothic Medium Cond")
+        font.setPointSize(12)
+        font.setBold(False)
+        font.setKerning(True)
+        font.setStyleStrategy(QtGui.QFont.PreferDefault)
+        self.DeleteButton2.setFont(font)
+        self.DeleteButton2.setStyleSheet("QPushButton {\n"
+"    color: white;\n"
+"    background: red;\n"
+"    border-radius: 15px;\n"
+"}\n"
+"\n"
+"QPushButton:hover {\n"
+"    color: darkred;\n"
+"    background: white;\n"
+"    border-radius: 15px;\n"
+"}\n"
+"\n"
+"\n"
+"")
+        self.DeleteButton2.setObjectName("DeleteButton2")
+        self.CartProductAmount2 = QtWidgets.QLabel(self.ProductFrame2)
+        self.CartProductAmount2.setGeometry(QtCore.QRect(310, 50, 111, 16))
+        font = QtGui.QFont()
+        font.setFamily("Franklin Gothic Medium Cond")
+        font.setPointSize(12)
+        self.CartProductAmount2.setFont(font)
+        self.CartProductAmount2.setAlignment(QtCore.Qt.AlignCenter)
+        self.CartProductAmount2.setObjectName("CartProductAmount2")
+        self.CartProductIncrease2 = QtWidgets.QPushButton(self.ProductFrame2)
+        self.CartProductIncrease2.setGeometry(QtCore.QRect(400, 40, 21, 24))
+        font = QtGui.QFont()
+        font.setBold(True)
+        self.CartProductIncrease2.setFont(font)
+        self.CartProductIncrease2.setStyleSheet("QPushButton {\n"
+"    background: lightgray;\n"
+"}")
+        self.CartProductIncrease2.setObjectName("CartProductIncrease2")
+        self.CartProductDecrease2 = QtWidgets.QPushButton(self.ProductFrame2)
+        self.CartProductDecrease2.setGeometry(QtCore.QRect(310, 40, 21, 24))
+        font = QtGui.QFont()
+        font.setBold(True)
+        self.CartProductDecrease2.setFont(font)
+        self.CartProductDecrease2.setStyleSheet("QPushButton {\n"
+"    background: lightgray;\n"
+"}")
+        self.CartProductDecrease2.setObjectName("CartProductDecrease2")
+        self.CartProductLabel2 = QtWidgets.QLabel(self.ProductFrame2)
+        self.CartProductLabel2.setGeometry(QtCore.QRect(170, 30, 121, 16))
+        font = QtGui.QFont()
+        font.setFamily("Franklin Gothic Medium Cond")
+        font.setPointSize(12)
+        self.CartProductLabel2.setFont(font)
+        self.CartProductLabel2.setText("")
+        self.CartProductLabel2.setObjectName("CartProductLabel2")
+        self.CartProductPicture2 = QtWidgets.QLabel(self.ProductFrame2)
+        self.CartProductPicture2.setGeometry(QtCore.QRect(20, 20, 131, 91))
+        self.CartProductPicture2.setStyleSheet("QLabel {\n"
+"    image: url(:/)\n"
+"}")
+        self.CartProductPicture2.setText("")
+        self.CartProductPicture2.setObjectName("CartProductPicture2")
+        self.ProductFrame3 = QtWidgets.QFrame(self.centralwidget)
+        self.ProductFrame3.setGeometry(QtCore.QRect(50, 220, 441, 121))
+        self.ProductFrame3.setStyleSheet("QFrame {\n"
+"    background: lightgray;\n"
+"    border-radius: 30px;\n"
+"}")
+        self.ProductFrame3.setFrameShape(QtWidgets.QFrame.StyledPanel)
+        self.ProductFrame3.setFrameShadow(QtWidgets.QFrame.Raised)
+        self.ProductFrame3.setObjectName("ProductFrame3")
+        self.DeleteButton3 = QtWidgets.QPushButton(self.ProductFrame3)
+        self.DeleteButton3.setGeometry(QtCore.QRect(310, 80, 111, 31))
+        font = QtGui.QFont()
+        font.setFamily("Franklin Gothic Medium Cond")
+        font.setPointSize(12)
+        font.setBold(False)
+        font.setKerning(True)
+        font.setStyleStrategy(QtGui.QFont.PreferDefault)
+        self.DeleteButton3.setFont(font)
+        self.DeleteButton3.setStyleSheet("QPushButton {\n"
+"    color: white;\n"
+"    background: red;\n"
+"    border-radius: 15px;\n"
+"}\n"
+"\n"
+"QPushButton:hover {\n"
+"    color: darkred;\n"
+"    background: white;\n"
+"    border-radius: 15px;\n"
+"}\n"
+"\n"
+"\n"
+"")
+        self.DeleteButton3.setObjectName("DeleteButton3")
+        self.CartProductAmount3 = QtWidgets.QLabel(self.ProductFrame3)
+        self.CartProductAmount3.setGeometry(QtCore.QRect(310, 50, 111, 16))
+        font = QtGui.QFont()
+        font.setFamily("Franklin Gothic Medium Cond")
+        font.setPointSize(12)
+        self.CartProductAmount3.setFont(font)
+        self.CartProductAmount3.setAlignment(QtCore.Qt.AlignCenter)
+        self.CartProductAmount3.setObjectName("CartProductAmount3")
+        self.CartProductIncrease3 = QtWidgets.QPushButton(self.ProductFrame3)
+        self.CartProductIncrease3.setGeometry(QtCore.QRect(400, 40, 21, 24))
+        font = QtGui.QFont()
+        font.setBold(True)
+        self.CartProductIncrease3.setFont(font)
+        self.CartProductIncrease3.setStyleSheet("QPushButton {\n"
+"    background: lightgray;\n"
+"}")
+        self.CartProductIncrease3.setObjectName("CartProductIncrease3")
+        self.CartProductDecrease3 = QtWidgets.QPushButton(self.ProductFrame3)
+        self.CartProductDecrease3.setGeometry(QtCore.QRect(310, 40, 21, 24))
+        font = QtGui.QFont()
+        font.setBold(True)
+        self.CartProductDecrease3.setFont(font)
+        self.CartProductDecrease3.setStyleSheet("QPushButton {\n"
+"    background: lightgray;\n"
+"}")
+        self.CartProductDecrease3.setObjectName("CartProductDecrease3")
+        self.CartProductLabel3 = QtWidgets.QLabel(self.ProductFrame3)
+        self.CartProductLabel3.setGeometry(QtCore.QRect(170, 30, 121, 16))
+        font = QtGui.QFont()
+        font.setFamily("Franklin Gothic Medium Cond")
+        font.setPointSize(12)
+        self.CartProductLabel3.setFont(font)
+        self.CartProductLabel3.setText("")
+        self.CartProductLabel3.setObjectName("CartProductLabel3")
+        self.CartProductPicture3 = QtWidgets.QLabel(self.ProductFrame3)
+        self.CartProductPicture3.setGeometry(QtCore.QRect(20, 20, 131, 91))
+        self.CartProductPicture3.setStyleSheet("QLabel {\n"
+"    image: url(:/)\n"
+"}")
+        self.CartProductPicture3.setText("")
+        self.CartProductPicture3.setObjectName("CartProductPicture3")
+        self.ProductFrame5 = QtWidgets.QFrame(self.centralwidget)
+        self.ProductFrame5.setGeometry(QtCore.QRect(50, 360, 441, 121))
+        self.ProductFrame5.setStyleSheet("QFrame {\n"
+"    background: lightgray;\n"
+"    border-radius: 30px;\n"
+"}")
+        self.ProductFrame5.setFrameShape(QtWidgets.QFrame.StyledPanel)
+        self.ProductFrame5.setFrameShadow(QtWidgets.QFrame.Raised)
+        self.ProductFrame5.setObjectName("ProductFrame5")
+        self.DeleteButton5 = QtWidgets.QPushButton(self.ProductFrame5)
+        self.DeleteButton5.setGeometry(QtCore.QRect(310, 80, 111, 31))
+        font = QtGui.QFont()
+        font.setFamily("Franklin Gothic Medium Cond")
+        font.setPointSize(12)
+        font.setBold(False)
+        font.setKerning(True)
+        font.setStyleStrategy(QtGui.QFont.PreferDefault)
+        self.DeleteButton5.setFont(font)
+        self.DeleteButton5.setStyleSheet("QPushButton {\n"
+"    color: white;\n"
+"    background: red;\n"
+"    border-radius: 15px;\n"
+"}\n"
+"\n"
+"QPushButton:hover {\n"
+"    color: darkred;\n"
+"    background: white;\n"
+"    border-radius: 15px;\n"
+"}\n"
+"\n"
+"\n"
+"")
+        self.DeleteButton5.setObjectName("DeleteButton5")
+        self.CartProductAmount5 = QtWidgets.QLabel(self.ProductFrame5)
+        self.CartProductAmount5.setGeometry(QtCore.QRect(310, 50, 111, 16))
+        font = QtGui.QFont()
+        font.setFamily("Franklin Gothic Medium Cond")
+        font.setPointSize(12)
+        self.CartProductAmount5.setFont(font)
+        self.CartProductAmount5.setAlignment(QtCore.Qt.AlignCenter)
+        self.CartProductAmount5.setObjectName("CartProductAmount5")
+        self.CartProductIncrease5 = QtWidgets.QPushButton(self.ProductFrame5)
+        self.CartProductIncrease5.setGeometry(QtCore.QRect(400, 40, 21, 24))
+        font = QtGui.QFont()
+        font.setBold(True)
+        self.CartProductIncrease5.setFont(font)
+        self.CartProductIncrease5.setStyleSheet("QPushButton {\n"
+"    background: lightgray;\n"
+"}")
+        self.CartProductIncrease5.setObjectName("CartProductIncrease5")
+        self.CartProductDecrease5 = QtWidgets.QPushButton(self.ProductFrame5)
+        self.CartProductDecrease5.setGeometry(QtCore.QRect(310, 40, 21, 24))
+        font = QtGui.QFont()
+        font.setBold(True)
+        self.CartProductDecrease5.setFont(font)
+        self.CartProductDecrease5.setStyleSheet("QPushButton {\n"
+"    background: lightgray;\n"
+"}")
+        self.CartProductDecrease5.setObjectName("CartProductDecrease5")
+        self.CartProductLabel5 = QtWidgets.QLabel(self.ProductFrame5)
+        self.CartProductLabel5.setGeometry(QtCore.QRect(170, 30, 121, 16))
+        font = QtGui.QFont()
+        font.setFamily("Franklin Gothic Medium Cond")
+        font.setPointSize(12)
+        self.CartProductLabel5.setFont(font)
+        self.CartProductLabel5.setText("")
+        self.CartProductLabel5.setObjectName("CartProductLabel5")
+        self.CartProductPicture5 = QtWidgets.QLabel(self.ProductFrame5)
+        self.CartProductPicture5.setGeometry(QtCore.QRect(20, 20, 131, 91))
+        self.CartProductPicture5.setStyleSheet("QLabel {\n"
+"    image: url(:/)\n"
+"}")
+        self.CartProductPicture5.setText("")
+        self.CartProductPicture5.setObjectName("CartProductPicture5")
+        self.ProductFrame4 = QtWidgets.QFrame(self.centralwidget)
+        self.ProductFrame4.setGeometry(QtCore.QRect(530, 220, 441, 121))
+        self.ProductFrame4.setStyleSheet("QFrame {\n"
+"    background: lightgray;\n"
+"    border-radius: 30px;\n"
+"}")
+        self.ProductFrame4.setFrameShape(QtWidgets.QFrame.StyledPanel)
+        self.ProductFrame4.setFrameShadow(QtWidgets.QFrame.Raised)
+        self.ProductFrame4.setObjectName("ProductFrame4")
+        self.DeleteButton4 = QtWidgets.QPushButton(self.ProductFrame4)
+        self.DeleteButton4.setGeometry(QtCore.QRect(310, 80, 111, 31))
+        font = QtGui.QFont()
+        font.setFamily("Franklin Gothic Medium Cond")
+        font.setPointSize(12)
+        font.setBold(False)
+        font.setKerning(True)
+        font.setStyleStrategy(QtGui.QFont.PreferDefault)
+        self.DeleteButton4.setFont(font)
+        self.DeleteButton4.setStyleSheet("QPushButton {\n"
+"    color: white;\n"
+"    background: red;\n"
+"    border-radius: 15px;\n"
+"}\n"
+"\n"
+"QPushButton:hover {\n"
+"    color: darkred;\n"
+"    background: white;\n"
+"    border-radius: 15px;\n"
+"}\n"
+"\n"
+"\n"
+"")
+        self.DeleteButton4.setObjectName("DeleteButton4")
+        self.CartProductAmount4 = QtWidgets.QLabel(self.ProductFrame4)
+        self.CartProductAmount4.setGeometry(QtCore.QRect(310, 50, 111, 16))
+        font = QtGui.QFont()
+        font.setFamily("Franklin Gothic Medium Cond")
+        font.setPointSize(12)
+        self.CartProductAmount4.setFont(font)
+        self.CartProductAmount4.setAlignment(QtCore.Qt.AlignCenter)
+        self.CartProductAmount4.setObjectName("CartProductAmount4")
+        self.CartProductIncrease4 = QtWidgets.QPushButton(self.ProductFrame4)
+        self.CartProductIncrease4.setGeometry(QtCore.QRect(400, 40, 21, 24))
+        font = QtGui.QFont()
+        font.setBold(True)
+        self.CartProductIncrease4.setFont(font)
+        self.CartProductIncrease4.setStyleSheet("QPushButton {\n"
+"    background: lightgray;\n"
+"}")
+        self.CartProductIncrease4.setObjectName("CartProductIncrease4")
+        self.CartProductDecrease4 = QtWidgets.QPushButton(self.ProductFrame4)
+        self.CartProductDecrease4.setGeometry(QtCore.QRect(310, 40, 21, 24))
+        font = QtGui.QFont()
+        font.setBold(True)
+        self.CartProductDecrease4.setFont(font)
+        self.CartProductDecrease4.setStyleSheet("QPushButton {\n"
+"    background: lightgray;\n"
+"}")
+        self.CartProductDecrease4.setObjectName("CartProductDecrease4")
+        self.CartProductLabel4 = QtWidgets.QLabel(self.ProductFrame4)
+        self.CartProductLabel4.setGeometry(QtCore.QRect(170, 30, 121, 16))
+        font = QtGui.QFont()
+        font.setFamily("Franklin Gothic Medium Cond")
+        font.setPointSize(12)
+        self.CartProductLabel4.setFont(font)
+        self.CartProductLabel4.setText("")
+        self.CartProductLabel4.setObjectName("CartProductLabel4")
+        self.CartProductPicture4 = QtWidgets.QLabel(self.ProductFrame4)
+        self.CartProductPicture4.setGeometry(QtCore.QRect(20, 20, 131, 91))
+        self.CartProductPicture4.setStyleSheet("QLabel {\n"
+"    image: url(:/)\n"
+"}")
+        self.CartProductPicture4.setText("")
+        self.CartProductPicture4.setObjectName("CartProductPicture4")
+        self.ProductFrame6 = QtWidgets.QFrame(self.centralwidget)
+        self.ProductFrame6.setGeometry(QtCore.QRect(530, 360, 441, 121))
+        self.ProductFrame6.setStyleSheet("QFrame {\n"
+"    background: lightgray;\n"
+"    border-radius: 30px;\n"
+"}")
+        self.ProductFrame6.setFrameShape(QtWidgets.QFrame.StyledPanel)
+        self.ProductFrame6.setFrameShadow(QtWidgets.QFrame.Raised)
+        self.ProductFrame6.setObjectName("ProductFrame6")
+        self.DeleteButton5_2 = QtWidgets.QPushButton(self.ProductFrame6)
+        self.DeleteButton5_2.setGeometry(QtCore.QRect(310, 80, 111, 31))
+        font = QtGui.QFont()
+        font.setFamily("Franklin Gothic Medium Cond")
+        font.setPointSize(12)
+        font.setBold(False)
+        font.setKerning(True)
+        font.setStyleStrategy(QtGui.QFont.PreferDefault)
+        self.DeleteButton5_2.setFont(font)
+        self.DeleteButton5_2.setStyleSheet("QPushButton {\n"
+"    color: white;\n"
+"    background: red;\n"
+"    border-radius: 15px;\n"
+"}\n"
+"\n"
+"QPushButton:hover {\n"
+"    color: darkred;\n"
+"    background: white;\n"
+"    border-radius: 15px;\n"
+"}\n"
+"\n"
+"\n"
+"")
+        self.DeleteButton5_2.setObjectName("DeleteButton5_2")
+        self.CartProductAmount6 = QtWidgets.QLabel(self.ProductFrame6)
+        self.CartProductAmount6.setGeometry(QtCore.QRect(310, 50, 111, 16))
+        font = QtGui.QFont()
+        font.setFamily("Franklin Gothic Medium Cond")
+        font.setPointSize(12)
+        self.CartProductAmount6.setFont(font)
+        self.CartProductAmount6.setAlignment(QtCore.Qt.AlignCenter)
+        self.CartProductAmount6.setObjectName("CartProductAmount6")
+        self.CartProductIncrease6 = QtWidgets.QPushButton(self.ProductFrame6)
+        self.CartProductIncrease6.setGeometry(QtCore.QRect(400, 40, 21, 24))
+        font = QtGui.QFont()
+        font.setBold(True)
+        self.CartProductIncrease6.setFont(font)
+        self.CartProductIncrease6.setStyleSheet("QPushButton {\n"
+"    background: lightgray;\n"
+"}")
+        self.CartProductIncrease6.setObjectName("CartProductIncrease6")
+        self.CartProductDecrease6 = QtWidgets.QPushButton(self.ProductFrame6)
+        self.CartProductDecrease6.setGeometry(QtCore.QRect(310, 40, 21, 24))
+        font = QtGui.QFont()
+        font.setBold(True)
+        self.CartProductDecrease6.setFont(font)
+        self.CartProductDecrease6.setStyleSheet("QPushButton {\n"
+"    background: lightgray;\n"
+"}")
+        self.CartProductDecrease6.setObjectName("CartProductDecrease6")
+        self.CartProductLabel6 = QtWidgets.QLabel(self.ProductFrame6)
+        self.CartProductLabel6.setGeometry(QtCore.QRect(170, 30, 121, 16))
+        font = QtGui.QFont()
+        font.setFamily("Franklin Gothic Medium Cond")
+        font.setPointSize(12)
+        self.CartProductLabel6.setFont(font)
+        self.CartProductLabel6.setText("")
+        self.CartProductLabel6.setObjectName("CartProductLabel6")
+        self.CartProductPicture6 = QtWidgets.QLabel(self.ProductFrame6)
+        self.CartProductPicture6.setGeometry(QtCore.QRect(20, 20, 131, 91))
+        self.CartProductPicture6.setStyleSheet("QLabel {\n"
+"    image: url(:/)\n"
+"}")
+        self.CartProductPicture6.setText("")
+        self.CartProductPicture6.setObjectName("CartProductPicture6")
+        self.LeftButton = QtWidgets.QPushButton(self.centralwidget)
+        self.LeftButton.setGeometry(QtCore.QRect(530, 510, 41, 41))
+        font = QtGui.QFont()
+        font.setFamily("Franklin Gothic Medium Cond")
+        font.setPointSize(12)
+        font.setBold(False)
+        font.setKerning(True)
+        font.setStyleStrategy(QtGui.QFont.PreferDefault)
+        self.LeftButton.setFont(font)
+        self.LeftButton.setStyleSheet("QPushButton {\n"
+"    background: lightgray;\n"
+"    border-radius: 20px;\n"
+"    image: url(:/others/Arrow/leftArrow.png);\n"
+"}\n"
+"\n"
+"QPushButton:hover {\n"
+"    background: lightgreen;\n"
+"    border-radius: 20px;\n"
+"}\n"
+"\n"
+"\n"
+"")
+        self.LeftButton.setText("")
+        self.LeftButton.setObjectName("LeftButton")
+        self.RightButton = QtWidgets.QPushButton(self.centralwidget)
+        self.RightButton.setGeometry(QtCore.QRect(630, 510, 41, 41))
+        font = QtGui.QFont()
+        font.setFamily("Franklin Gothic Medium Cond")
+        font.setPointSize(12)
+        font.setBold(False)
+        font.setKerning(True)
+        font.setStyleStrategy(QtGui.QFont.PreferDefault)
+        self.RightButton.setFont(font)
+        self.RightButton.setStyleSheet("QPushButton {\n"
+"    background: lightgray;\n"
+"    border-radius: 20px;\n"
+"    image: url(:/others/Arrow/rightArrow.png);\n"
+"}\n"
+"\n"
+"QPushButton:hover {\n"
+"    background: lightgreen;\n"
+"    border-radius: 20px;\n"
+"}\n"
+"\n"
+"\n"
+"")
+        self.RightButton.setText("")
+        self.RightButton.setObjectName("RightButton")
         MainWindow.setCentralWidget(self.centralwidget)
         self.statusbar = QtWidgets.QStatusBar(MainWindow)
         self.statusbar.setObjectName("statusbar")
@@ -174,6 +592,27 @@ class Ui_MainWindow(object):
         self.CartProductDecrease1.setText(_translate("MainWindow", "-"))
         self.BackButton.setText(_translate("MainWindow", "Go Back"))
         self.ReloadButton.setText(_translate("MainWindow", "Reload"))
+        self.DeleteButton2.setText(_translate("MainWindow", "Delete"))
+        self.CartProductAmount2.setText(_translate("MainWindow", "Buy: 1"))
+        self.CartProductIncrease2.setText(_translate("MainWindow", "+"))
+        self.CartProductDecrease2.setText(_translate("MainWindow", "-"))
+        self.DeleteButton3.setText(_translate("MainWindow", "Delete"))
+        self.CartProductAmount3.setText(_translate("MainWindow", "Buy: 1"))
+        self.CartProductIncrease3.setText(_translate("MainWindow", "+"))
+        self.CartProductDecrease3.setText(_translate("MainWindow", "-"))
+        self.DeleteButton5.setText(_translate("MainWindow", "Delete"))
+        self.CartProductAmount5.setText(_translate("MainWindow", "Buy: 1"))
+        self.CartProductIncrease5.setText(_translate("MainWindow", "+"))
+        self.CartProductDecrease5.setText(_translate("MainWindow", "-"))
+        self.DeleteButton4.setText(_translate("MainWindow", "Delete"))
+        self.CartProductAmount4.setText(_translate("MainWindow", "Buy: 1"))
+        self.CartProductIncrease4.setText(_translate("MainWindow", "+"))
+        self.CartProductDecrease4.setText(_translate("MainWindow", "-"))
+        self.DeleteButton5_2.setText(_translate("MainWindow", "Delete"))
+        self.CartProductAmount6.setText(_translate("MainWindow", "Buy: 1"))
+        self.CartProductIncrease6.setText(_translate("MainWindow", "+"))
+        self.CartProductDecrease6.setText(_translate("MainWindow", "-"))
+import pic_rc
 
 
 if __name__ == "__main__":
