@@ -21,7 +21,9 @@ class database:
         self.ref = db.reference('/')
 
     #push data to database via ref
-    def push(self, data, db_directory = '/'):
+    def push_users(self, db_directory = '/users'):
+        data = {'username' : self.username, 'password' : self.password}
+
         self.ref = db.reference(db_directory)
         self.ref.push(data)
 
