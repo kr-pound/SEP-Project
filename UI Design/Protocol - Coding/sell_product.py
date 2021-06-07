@@ -73,7 +73,5 @@ class SellProductWindow(QtWidgets.QMainWindow, Ui_SellProductWindow):
 
         database.push_product(database)
         
-        #reload product data
-        CartProductClass.load_product_data(CartProductClass)
 
         
