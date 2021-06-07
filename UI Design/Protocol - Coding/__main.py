@@ -4,9 +4,9 @@ from login import LoginWindow
 from register import RegisterWindow
 from search import SearchWindow
 from cart import CartWindow
+from sell_product import SellProductWindow
 
 from os import environ
-from __database import database
 
 
 def suppress_qt_warnings():
@@ -25,6 +25,7 @@ if __name__ == "__main__":
     search = SearchWindow()
     register = RegisterWindow()
     cart = CartWindow()
+    sell_product = SellProductWindow()
     
     #connect login with the search page
     login.logged.connect(search.show)
@@ -32,6 +33,9 @@ if __name__ == "__main__":
     register.login.connect(login.show)
     search.cart.connect(cart.show)
     cart.search.connect(search.show)
+
+    search.sell_product.connect(sell_product.show)
+    sell_product.search.connect(search.show)
     
     #show login page
     login.show()

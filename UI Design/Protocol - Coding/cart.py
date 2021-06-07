@@ -61,6 +61,7 @@ class CartWindow(QtWidgets.QMainWindow, Ui_CartWindow):
         self.search.emit()
         self.close()
 
+
     def reload(self):
         self.clear_cart_label()
 
