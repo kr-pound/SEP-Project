@@ -118,19 +118,19 @@ class SearchWindow(QtWidgets.QMainWindow, Ui_SearchWindow):
     def amount_label1(self):
         self.buy_index = ((self.page - 1) * 5) + 1
         if (self.buy_index < len(self.cpClass.product_list)):
-            self.ProductAmount1.setText("Buy: " + str(self.cpClass.product[self.buy_index].buy_amount))
+            self.ProductAmount2.setText("Buy: " + str(self.cpClass.product[self.buy_index].buy_amount))
     def amount_label2(self):
         self.buy_index = ((self.page - 1) * 5) + 2
         if (self.buy_index < len(self.cpClass.product_list)):
-            self.ProductAmount1.setText("Buy: " + str(self.cpClass.product[self.buy_index].buy_amount))
+            self.ProductAmount3.setText("Buy: " + str(self.cpClass.product[self.buy_index].buy_amount))
     def amount_label3(self):
         self.buy_index = ((self.page - 1) * 5) + 3
         if (self.buy_index < len(self.cpClass.product_list)):
-            self.ProductAmount1.setText("Buy: " + str(self.cpClass.product[self.buy_index].buy_amount))
+            self.ProductAmount4.setText("Buy: " + str(self.cpClass.product[self.buy_index].buy_amount))
     def amount_label4(self):
         self.buy_index = ((self.page - 1) * 5) + 4
         if (self.buy_index < len(self.cpClass.product_list)):
-            self.ProductAmount1.setText("Buy: " + str(self.cpClass.product[self.buy_index].buy_amount))
+            self.ProductAmount5.setText("Buy: " + str(self.cpClass.product[self.buy_index].buy_amount))
 
 
     #increment button
@@ -165,22 +165,27 @@ class SearchWindow(QtWidgets.QMainWindow, Ui_SearchWindow):
         self.ProductLabel1.setText(self.cpClass.productLabel1)
         self.BuyingButton1.setText(self.cpClass.buyingButton1)
         self.ProductDescription1.setText(self.cpClass.productDescription1)
+        self.ProductAmount1.setText("Buy: " + str(self.cpClass.productAmount1))
 
         self.ProductLabel2.setText(self.cpClass.productLabel2)
         self.BuyingButton2.setText(self.cpClass.buyingButton2)
         self.ProductDescription2.setText(self.cpClass.productDescription2)
+        self.ProductAmount2.setText("Buy: " + str(self.cpClass.productAmount2))
 
         self.ProductLabel3.setText(self.cpClass.productLabel3)
         self.BuyingButton3.setText(self.cpClass.buyingButton3)
         self.ProductDescription3.setText(self.cpClass.productDescription3)
+        self.ProductAmount3.setText("Buy: " + str(self.cpClass.productAmount3))
 
         self.ProductLabel4.setText(self.cpClass.productLabel4)
         self.BuyingButton4.setText(self.cpClass.buyingButton4)
         self.ProductDescription4.setText(self.cpClass.productDescription4)
+        self.ProductAmount4.setText("Buy: " + str(self.cpClass.productAmount4))
 
         self.ProductLabel5.setText(self.cpClass.productLabel5)
         self.BuyingButton5.setText(self.cpClass.buyingButton5)
         self.ProductDescription5.setText(self.cpClass.productDescription5)
+        self.ProductAmount5.setText("Buy: " + str(self.cpClass.productAmount5))
 
     
     
