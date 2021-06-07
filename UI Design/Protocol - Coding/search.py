@@ -154,27 +154,22 @@ class SearchWindow(QtWidgets.QMainWindow, Ui_SearchWindow):
         self.buy_index = ((self.page - 1) * 5) + 0
         if (self.buy_index < len(self.cpClass.product_list)):
             self.ProductAmount1.setText("Buy: " + str(self.buy_amount0))
-            print(self.buy_amount0)
     def amount_label1(self):
         self.buy_index = ((self.page - 1) * 5) + 1
         if (self.buy_index < len(self.cpClass.product_list)):
             self.ProductAmount2.setText("Buy: " + str(self.buy_amount1))
-            print(self.buy_amount1)
     def amount_label2(self):
         self.buy_index = ((self.page - 1) * 5) + 2
         if (self.buy_index < len(self.cpClass.product_list)):
             self.ProductAmount3.setText("Buy: " + str(self.buy_amount2))
-            print(self.buy_amount2)
     def amount_label3(self):
         self.buy_index = ((self.page - 1) * 5) + 3
         if (self.buy_index < len(self.cpClass.product_list)):
             self.ProductAmount4.setText("Buy: " + str(self.buy_amount3))
-            print(self.buy_amount3)
     def amount_label4(self):
         self.buy_index = ((self.page - 1) * 5) + 4
         if (self.buy_index < len(self.cpClass.product_list)):
             self.ProductAmount5.setText("Buy: " + str(self.buy_amount4))
-            print(self.buy_amount4)
 
 
     #increment button
