@@ -27,6 +27,9 @@ class CartWindow(QtWidgets.QMainWindow, Ui_CartWindow):
         #cart load button
         self.ReloadButton.clicked.connect(self.reload)
 
+        self.LeftButton.clicked.connect(self.leftTransfer)
+        self.RightButton.clicked.connect(self.rightTransfer)
+
         
     @QtCore.pyqtSlot()
     def searchTransfer(self):
@@ -34,18 +37,20 @@ class CartWindow(QtWidgets.QMainWindow, Ui_CartWindow):
         self.close()
 
     def reload(self):
+        self.clear_cart_label()
+
         buy_count = 0
         CartProductClass.buy_list = [None] * 6
 
         for product in CartProductClass.product:
             #add more cart space
             if (product != None):
-                if (CartProductClass.buy_list[-1] != None):
-                    CartProductClass.buy_list += [None] * 6
-                    print("adding buy_count at ", end="")
-                    print(product)
+                
 
                 if (product.buy_amount > 0):
+                    if (CartProductClass.buy_list[-1] != None):
+                        CartProductClass.buy_list += [None] * 6
+
                     #put product object into buy_list
                     CartProductClass.buy_list[buy_count] = product
                     buy_count += 1
@@ -56,43 +61,48 @@ class CartWindow(QtWidgets.QMainWindow, Ui_CartWindow):
         print(CartProductClass.buy_list)
 
         self.label_product_cart_detail()
-        
+    
+    #cart data label
     def label_product_cart_detail(self):
+        page_index = self.page - 1
 
-        if (CartProductClass.buy_list[0] != None):
-            self.CartProductLabel1.setText(CartProductClass.buy_list[0].name)
-        if (CartProductClass.buy_list[1] != None):
-            self.CartProductLabel2.setText(CartProductClass.buy_list[1].name)
-        if (CartProductClass.buy_list[2] != None):
-            self.CartProductLabel3.setText(CartProductClass.buy_list[2].name)
-        if (CartProductClass.buy_list[3] != None):
-            self.CartProductLabel4.setText(CartProductClass.buy_list[3].name)
-        if (CartProductClass.buy_list[4] != None):
-            self.CartProductLabel5.setText(CartProductClass.buy_list[4].name)
-        if (CartProductClass.buy_list[5] != None):
-            self.CartProductLabel6.setText(CartProductClass.buy_list[5].name)
+        if (CartProductClass.buy_list[0 + page_index * 6] != None):
+            self.CartProductLabel1.setText(CartProductClass.buy_list[0 + page_index * 6].name)
+        if (CartProductClass.buy_list[1 + page_index * 6] != None):
+            self.CartProductLabel2.setText(CartProductClass.buy_list[1 + page_index * 6].name)
+        if (CartProductClass.buy_list[2 + page_index * 6] != None):
+            self.CartProductLabel3.setText(CartProductClass.buy_list[2 + page_index * 6].name)
+        if (CartProductClass.buy_list[3 + page_index * 6] != None):
+            self.CartProductLabel4.setText(CartProductClass.buy_list[3 + page_index * 6].name)
+        if (CartProductClass.buy_list[4 + page_index * 6] != None):
+            self.CartProductLabel5.setText(CartProductClass.buy_list[4 + page_index * 6].name)
+        if (CartProductClass.buy_list[5 + page_index * 6] != None):
+            self.CartProductLabel6.setText(CartProductClass.buy_list[5 + page_index * 6].name)
+
+    def clear_cart_label(self):
+        cleared_label = ""
+
+        self.CartProductLabel1.setText(cleared_label)
+        self.CartProductLabel2.setText(cleared_label)
+        self.CartProductLabel3.setText(cleared_label)
+        self.CartProductLabel4.setText(cleared_label)
+        self.CartProductLabel5.setText(cleared_label)
+        self.CartProductLabel6.setText(cleared_label)
 
     #change the page of product show
     def rightTransfer(self):
-        if (self.page * 5 < len(self.cpClass.product_list)):
+        if (self.page * 6 < len(CartProductClass.buy_list)):
             self.page += 1
 
             #reset product info
-            self.cpClass.clear_label_product_detail()
-            self.set_product_detail()
-            self.cpClass.label_product_detail(self.page, 5, self.cpClass.product)
-            self.set_product_detail()
+            self.reload()
     
     def leftTransfer(self):
         if (self.page > 1):
             self.page -= 1
 
             #reset product info
-            self.cpClass.clear_label_product_detail()
-            self.set_product_detail()
-            self.cpClass.label_product_detail(self.page, 5, self.cpClass.product)
-            self.set_product_detail()
-
+            self.reload()
 
         
 
