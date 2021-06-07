@@ -18,6 +18,7 @@ class SearchWindow(QtWidgets.QMainWindow, Ui_SearchWindow):
     buy_index = None
 
     cpClass = CartProductClass()
+    
 
     def __init__(self, parent=None):
         #super the class to setup the Ui
