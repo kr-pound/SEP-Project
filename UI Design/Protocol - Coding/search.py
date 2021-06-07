@@ -50,6 +50,8 @@ class SearchWindow(QtWidgets.QMainWindow, Ui_SearchWindow):
         self.cpClass.label_product_detail(1, 5, self.cpClass.product)
         self.set_product_detail()
 
+        self.ProductIncrease1.clicked.connect(self.increment0)
+
 
     @QtCore.pyqtSlot()
     def cartTransfer(self):
@@ -81,23 +83,43 @@ class SearchWindow(QtWidgets.QMainWindow, Ui_SearchWindow):
     def buy_index0(self):
         self.buy_index = ((self.page - 1) * 5) + 0
         if (self.buy_index < len(self.cpClass.product_list)):
-            self.cpClass.product[self.buy_index].buy_amount = 1
+            self.cpClass.product[self.buy_index].buy_amount = int(self.ProductAmount1.text().split()[-1])
+            print(self.cpClass.product[self.buy_index])
+            print("Buy Amount: " + str(self.cpClass.product[self.buy_index].buy_amount))
     def buy_index1(self):
         self.buy_index = ((self.page - 1) * 5) + 1
         if (self.buy_index < len(self.cpClass.product_list)):
-            self.cpClass.product[self.buy_index].buy_amount = 1
+            self.cpClass.product[self.buy_index].buy_amount = int(self.ProductAmount1.text().split()[-1])
+            print("Buy Amount: " + str(self.cpClass.product[self.buy_index].buy_amount))
     def buy_index2(self):
         self.buy_index = ((self.page - 1) * 5) + 2
         if (self.buy_index < len(self.cpClass.product_list)):
-            self.cpClass.product[self.buy_index].buy_amount = 1
+            self.cpClass.product[self.buy_index].buy_amount = int(self.ProductAmount1.text().split()[-1])
+            print("Buy Amount: " + str(self.cpClass.product[self.buy_index].buy_amount))
     def buy_index3(self):
         self.buy_index = ((self.page - 1) * 5) + 3
         if (self.buy_index < len(self.cpClass.product_list)):
-            self.cpClass.product[self.buy_index].buy_amount = 1
+            self.cpClass.product[self.buy_index].buy_amount = int(self.ProductAmount1.text().split()[-1])
+            print("Buy Amount: " + str(self.cpClass.product[self.buy_index].buy_amount))
     def buy_index4(self):
         self.buy_index = ((self.page - 1) * 5) + 4
         if (self.buy_index < len(self.cpClass.product_list)):
-            self.cpClass.product[self.buy_index].buy_amount = 1
+            self.cpClass.product[self.buy_index].buy_amount = int(self.ProductAmount1.text().split()[-1])
+            print("Buy Amount: " + str(self.cpClass.product[self.buy_index].buy_amount))
+
+    #label product amount
+    def amount_label0(self):
+        self.buy_index = ((self.page - 1) * 5) + 0
+        if (self.buy_index < len(self.cpClass.product_list)):
+            self.ProductAmount1.setText(str(self.cpClass.product[self.buy_index].buy_amount) + " Baht")
+
+    #increment button
+    def increment0(self, id):
+        self.buy_index = ((self.page - 1) * 5) + 0
+        if (self.buy_index < len(self.cpClass.product_list)):
+            self.cpClass.product[self.buy_index].buy_amount += 1
+            print(self.cpClass.product[self.buy_index])
+            print(self.cpClass.product[self.buy_index].buy_amount)
 
     #label product information
     def set_product_detail(self):
@@ -122,6 +144,5 @@ class SearchWindow(QtWidgets.QMainWindow, Ui_SearchWindow):
         self.ProductDescription5.setText(self.cpClass.productDescription5)
 
     
-    def increment(self, id):
-        pass
+    
         

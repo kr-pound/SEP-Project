@@ -109,6 +109,7 @@ class CartProductClass():
         self.productDescription5 = description_cleared
 
 
+
 #class of each product info
 class ProductClass():
     id = None
