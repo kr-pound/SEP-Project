@@ -30,6 +30,13 @@ class CartProductClass():
     productDescription4 = None
     productDescription5 = None
 
+    productAmount1 = 0
+    productAmount2 = 0
+    productAmount3 = 0
+    productAmount4 = 0
+    productAmount5 = 0
+
+
     def __init__(self):
         db = database()
 
@@ -62,33 +69,39 @@ class CartProductClass():
             self.productLabel1 = product_list[0 + (amount_per_page * page_index)].name
             self.buyingButton1 = str(product_list[0 + (amount_per_page * page_index)].price) + " Baht"
             self.productDescription1 = "   " + product_list[0 + (amount_per_page * page_index)].detail
+            self.productAmount1 = "Buy: " + str(product_list[0 + (amount_per_page * page_index)].buy_amount)
 
         if (product_list[1 + (amount_per_page * page_index)] != None):
             self.productLabel2 = product_list[1 + (amount_per_page * page_index)].name
             self.buyingButton2 = str(product_list[1 + (amount_per_page * page_index)].price) + " Baht"
             self.productDescription2 = "   " + product_list[1 + (amount_per_page * page_index)].detail
+            self.productAmount2 = "Buy: " + str(product_list[1 + (amount_per_page * page_index)].buy_amount)
 
         if (product_list[2 + (amount_per_page * page_index)] != None):
             self.productLabel3 = product_list[2 + (amount_per_page * page_index)].name
             self.buyingButton3 = str(product_list[2 + (amount_per_page * page_index)].price) + " Baht"
             self.productDescription3 = "   " + product_list[0 + (amount_per_page * page_index)].detail
+            self.productAmount3 = "Buy: " + str(product_list[2 + (amount_per_page * page_index)].buy_amount)
 
         if (product_list[3 + (amount_per_page * page_index)] != None):
             self.productLabel4 = product_list[3 + (amount_per_page * page_index)].name
             self.buyingButton4 = str(product_list[3 + (amount_per_page * page_index)].price) + " Baht"
             self.productDescription4 = "   " + product_list[3 + (amount_per_page * page_index)].detail
+            self.productAmount4 = "Buy: " + str(product_list[3 + (amount_per_page * page_index)].buy_amount)
 
         if (product_list[4 + (amount_per_page * page_index)] != None):
             self.productLabel5 = product_list[4 + (amount_per_page * page_index)].name
             self.buyingButton5 = str(product_list[4 + (amount_per_page * page_index)].price) + " Baht"
             self.productDescription5 = "   " + product_list[4 + (amount_per_page * page_index)].detail
+            self.productAmount5 = "Buy: " + str(product_list[4 + (amount_per_page * page_index)].buy_amount)
 
 
     #clear any product show
     def clear_label_product_detail(self):
         lebel_cleared = ""
-        buying_button_cleaed = "0 Baht"
+        buying_button_cleaed = ""
         description_cleared = ""
+        product_amount_cleared = ""
 
         self.productLabel1 = lebel_cleared
         self.productLabel2 = lebel_cleared
@@ -107,6 +120,13 @@ class CartProductClass():
         self.productDescription3 = description_cleared
         self.productDescription4 = description_cleared
         self.productDescription5 = description_cleared
+
+        self.productAmount1 = product_amount_cleared
+        self.productAmount2 = product_amount_cleared
+        self.productAmount3 = product_amount_cleared
+        self.productAmount4 = product_amount_cleared
+        self.productAmount5 = product_amount_cleared
+
 
 
 #class of each product info

@@ -543,7 +543,7 @@ class Ui_MainWindow(object):
 "}\n"
 "\n"
 "QPushButton:hover {\n"
-"    color: gray;\n"
+"    color: black;\n"
 "    background: lightblue;\n"
 "    border-radius: 15px;\n"
 "}\n"
@@ -599,6 +599,30 @@ class Ui_MainWindow(object):
 "")
         self.LeftButton.setText("")
         self.LeftButton.setObjectName("LeftButton")
+        self.RefreshButton = QtWidgets.QPushButton(self.centralwidget)
+        self.RefreshButton.setGeometry(QtCore.QRect(880, 70, 111, 31))
+        font = QtGui.QFont()
+        font.setFamily("Franklin Gothic Medium Cond")
+        font.setPointSize(12)
+        font.setBold(False)
+        font.setKerning(True)
+        font.setStyleStrategy(QtGui.QFont.PreferDefault)
+        self.RefreshButton.setFont(font)
+        self.RefreshButton.setStyleSheet("QPushButton {\n"
+"    color: black;\n"
+"    background: lightgray;\n"
+"    border-radius: 15px;\n"
+"}\n"
+"\n"
+"QPushButton:hover {\n"
+"    color: black;\n"
+"    background: lightgreen;\n"
+"    border-radius: 15px;\n"
+"}\n"
+"\n"
+"\n"
+"")
+        self.RefreshButton.setObjectName("RefreshButton")
         MainWindow.setCentralWidget(self.centralwidget)
         self.menubar = QtWidgets.QMenuBar(MainWindow)
         self.menubar.setGeometry(QtCore.QRect(0, 0, 1014, 22))
@@ -671,6 +695,7 @@ class Ui_MainWindow(object):
         self.ProductIncrease5.setText(_translate("MainWindow", "+"))
         self.ProductDecrease5.setText(_translate("MainWindow", "-"))
         self.CartButton.setText(_translate("MainWindow", "View Cart"))
+        self.RefreshButton.setText(_translate("MainWindow", "Refresh"))
 import pic_rc
 
 
