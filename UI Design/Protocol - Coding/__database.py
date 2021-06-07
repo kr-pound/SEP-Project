@@ -10,6 +10,12 @@ class database:
     username = None
     password = None
 
+    product_name = None
+    product_price = 0
+    product_detail = None
+    product_category = None
+    product_amount = 0
+
     def __init__(self):
         #path in local pc and database
         self.service_account_path = "C:/Users/krita/Documents/GitHub/SEP-Project/UI Design/Protocol - Coding/serviceAccountKey.json"
@@ -29,6 +35,13 @@ class database:
 
         #implementation
         #database().push({'username' : 'AB', 'password' : '123456'}, 'sub_dir_name')
+
+    def push_product(self, db_directory = '/product'):
+        data = {'name' : self.product_name, 'id' : len(self.get_product(self)) + 1, 'detail' : self.product_detail,
+                'price' : self.product_price}
+
+        self.ref = db.reference(db_directory)
+        self.ref.push(data)
 
     #return the data reference in database
     def __get_data(self, key, value, db_directory = '/'):
@@ -51,8 +64,8 @@ class database:
         #implementation
         #print(database().is_visible('username', 'ABC', '/users'))
     
-    def get_username_password(self, key, value, db_directory = '/'):
-        val = self.__get_data(self, key, value, db_directory)
+    def get_password(self, user_key, user_value, db_directory = '/users'):
+        val = self.__get_data(self, user_key, user_value, db_directory)
 
         self.username = None
         self.password = None
@@ -63,10 +76,9 @@ class database:
             self.password = val["password"]
 
         #implementation
-        #print(database().get_username_password('username', 'ABC', '/users'))
+        #print(database().get_username_password('username', 'ABC'))
 
-
-    def get_product(self, db_directory = '/'):
+    def get_product(self, db_directory = '/product'):
         ref = db.reference(db_directory)
         product_data = ref.get()
 
@@ -79,7 +91,7 @@ class database:
         return product_list
 
         #implementation
-        #print(database().get_product('/product'))
+        #print(database().get_product())
 
     #print all the list in directory
     def show_list(self, db_directory = '/', print_data = True):

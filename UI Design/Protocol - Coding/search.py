@@ -12,6 +12,7 @@ def suppress_qt_warnings():
 
 class SearchWindow(QtWidgets.QMainWindow, Ui_SearchWindow):
     cart = QtCore.pyqtSignal()
+    sell_product = QtCore.pyqtSignal()
 
     page = 1
     #the buying of product id
@@ -31,8 +32,9 @@ class SearchWindow(QtWidgets.QMainWindow, Ui_SearchWindow):
         super(SearchWindow, self).__init__(parent)
         self.setupUi(self)
 
-        #after push the button --> view cart
+        #after push the button --> view cart or sell product page
         self.CartButton.clicked.connect(self.cartTransfer)
+        self.SellProductButton.clicked.connect(self.sellProductTransfer)
         
         #product label color
         self.ProductLabel1.setStyleSheet("color: darkgreen;")
@@ -82,9 +84,20 @@ class SearchWindow(QtWidgets.QMainWindow, Ui_SearchWindow):
         self.amount_label3()
         self.amount_label4()
 
-
         self.cart.emit()
         self.close()
+
+    @QtCore.pyqtSlot()
+    def sellProductTransfer(self):
+        #set and re-label amount to the same as object product
+        self.set_buy_amount()
+        self.amount_label0()
+        self.amount_label1()
+        self.amount_label2()
+        self.amount_label3()
+        self.amount_label4()
+
+        self.sell_product.emit()
 
     def refreshData(self):
         #set the data from database

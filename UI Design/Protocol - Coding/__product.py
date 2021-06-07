@@ -38,10 +38,12 @@ class CartProductClass():
 
 
     def __init__(self):
-        db = database()
+        self.db = database()
+        self.load_product_data()
 
+    def load_product_data(self):
         #receive product dictionary from database
-        self.product_list = db.get_product('/product')
+        self.product_list = database.get_product('/product')
         #create list of each product object in page
         while(len(self.product) < len(self.product_list)):
             self.product += [None] * 5
@@ -80,7 +82,7 @@ class CartProductClass():
         if (product_list[2 + (amount_per_page * page_index)] != None):
             self.productLabel3 = product_list[2 + (amount_per_page * page_index)].name
             self.buyingButton3 = str(product_list[2 + (amount_per_page * page_index)].price) + " Baht"
-            self.productDescription3 = "   " + product_list[0 + (amount_per_page * page_index)].detail
+            self.productDescription3 = "   " + product_list[2 + (amount_per_page * page_index)].detail
             self.productAmount3 = "Buy: " + str(product_list[2 + (amount_per_page * page_index)].buy_amount)
 
         if (product_list[3 + (amount_per_page * page_index)] != None):

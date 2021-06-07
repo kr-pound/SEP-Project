@@ -1,7 +1,5 @@
 from PyQt5 import QtCore, QtGui, QtWidgets
 from _register_design import Ui_MainWindow as Ui_RegisterWindow
-from firebase_admin import db
-from login import Ui_LoginWindow
 from __database import database
 
 from os import environ
@@ -60,5 +58,4 @@ class RegisterWindow(QtWidgets.QMainWindow, Ui_RegisterWindow):
 
         self.db.push_users(self.db)
 
-        #self.db.push({'username' : self.username, 'password' : self.password}, 'users')
 

@@ -37,7 +37,7 @@ class LoginWindow(QtWidgets.QMainWindow, Ui_LoginWindow):
         local_password = self.Password.text()
 
         #user & pass get from db
-        database.get_username_password(database, 'username', local_username, '/users')
+        database.get_password(database, 'username', local_username)
         print(database.username)
         print(database.password)
 
