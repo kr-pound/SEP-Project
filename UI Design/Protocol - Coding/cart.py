@@ -42,7 +42,7 @@ class CartWindow(QtWidgets.QMainWindow, Ui_CartWindow):
         self.DeleteButton5.clicked.connect(self.delete_index4)
         self.DeleteButton5_2.clicked.connect(self.delete_index5)
 
-        
+    
     @QtCore.pyqtSlot()
     def searchTransfer(self):
         self.search.emit()
@@ -57,7 +57,6 @@ class CartWindow(QtWidgets.QMainWindow, Ui_CartWindow):
         for product in self.cpClass.product:
             #add more cart space
             if (product != None):
-                
 
                 if (product.buy_amount > 0):
                     if (self.cpClass.buy_list[-1] != None):

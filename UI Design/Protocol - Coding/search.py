@@ -39,6 +39,13 @@ class SearchWindow(QtWidgets.QMainWindow, Ui_SearchWindow):
         self.RightButton.clicked.connect(self.rightTransfer)
         self.LeftButton.clicked.connect(self.leftTransfer)
 
+        #increment button
+        self.ProductIncrease1.clicked.connect(self.increment0)
+        self.ProductIncrease2.clicked.connect(self.increment1)
+        self.ProductIncrease3.clicked.connect(self.increment2)
+        self.ProductIncrease4.clicked.connect(self.increment3)
+        self.ProductIncrease5.clicked.connect(self.increment4)
+
         #buying button push --> send object to buy method
         self.BuyingButton1.clicked.connect(self.buy_index0)
         self.BuyingButton2.clicked.connect(self.buy_index1)
@@ -49,9 +56,6 @@ class SearchWindow(QtWidgets.QMainWindow, Ui_SearchWindow):
         #insert product info
         self.cpClass.label_product_detail(1, 5, self.cpClass.product)
         self.set_product_detail()
-
-        self.ProductIncrease1.clicked.connect(self.increment0)
-
 
     @QtCore.pyqtSlot()
     def cartTransfer(self):
@@ -84,42 +88,77 @@ class SearchWindow(QtWidgets.QMainWindow, Ui_SearchWindow):
         self.buy_index = ((self.page - 1) * 5) + 0
         if (self.buy_index < len(self.cpClass.product_list)):
             self.cpClass.product[self.buy_index].buy_amount = int(self.ProductAmount1.text().split()[-1])
-            print(self.cpClass.product[self.buy_index])
             print("Buy Amount: " + str(self.cpClass.product[self.buy_index].buy_amount))
     def buy_index1(self):
         self.buy_index = ((self.page - 1) * 5) + 1
         if (self.buy_index < len(self.cpClass.product_list)):
-            self.cpClass.product[self.buy_index].buy_amount = int(self.ProductAmount1.text().split()[-1])
+            self.cpClass.product[self.buy_index].buy_amount = int(self.ProductAmount2.text().split()[-1])
             print("Buy Amount: " + str(self.cpClass.product[self.buy_index].buy_amount))
     def buy_index2(self):
         self.buy_index = ((self.page - 1) * 5) + 2
         if (self.buy_index < len(self.cpClass.product_list)):
-            self.cpClass.product[self.buy_index].buy_amount = int(self.ProductAmount1.text().split()[-1])
+            self.cpClass.product[self.buy_index].buy_amount = int(self.ProductAmount3.text().split()[-1])
             print("Buy Amount: " + str(self.cpClass.product[self.buy_index].buy_amount))
     def buy_index3(self):
         self.buy_index = ((self.page - 1) * 5) + 3
         if (self.buy_index < len(self.cpClass.product_list)):
-            self.cpClass.product[self.buy_index].buy_amount = int(self.ProductAmount1.text().split()[-1])
+            self.cpClass.product[self.buy_index].buy_amount = int(self.ProductAmount4.text().split()[-1])
             print("Buy Amount: " + str(self.cpClass.product[self.buy_index].buy_amount))
     def buy_index4(self):
         self.buy_index = ((self.page - 1) * 5) + 4
         if (self.buy_index < len(self.cpClass.product_list)):
-            self.cpClass.product[self.buy_index].buy_amount = int(self.ProductAmount1.text().split()[-1])
+            self.cpClass.product[self.buy_index].buy_amount = int(self.ProductAmount5.text().split()[-1])
             print("Buy Amount: " + str(self.cpClass.product[self.buy_index].buy_amount))
 
     #label product amount
     def amount_label0(self):
         self.buy_index = ((self.page - 1) * 5) + 0
         if (self.buy_index < len(self.cpClass.product_list)):
-            self.ProductAmount1.setText(str(self.cpClass.product[self.buy_index].buy_amount) + " Baht")
+            self.ProductAmount1.setText("Buy: " + str(self.cpClass.product[self.buy_index].buy_amount))
+    def amount_label1(self):
+        self.buy_index = ((self.page - 1) * 5) + 1
+        if (self.buy_index < len(self.cpClass.product_list)):
+            self.ProductAmount1.setText("Buy: " + str(self.cpClass.product[self.buy_index].buy_amount))
+    def amount_label2(self):
+        self.buy_index = ((self.page - 1) * 5) + 2
+        if (self.buy_index < len(self.cpClass.product_list)):
+            self.ProductAmount1.setText("Buy: " + str(self.cpClass.product[self.buy_index].buy_amount))
+    def amount_label3(self):
+        self.buy_index = ((self.page - 1) * 5) + 3
+        if (self.buy_index < len(self.cpClass.product_list)):
+            self.ProductAmount1.setText("Buy: " + str(self.cpClass.product[self.buy_index].buy_amount))
+    def amount_label4(self):
+        self.buy_index = ((self.page - 1) * 5) + 4
+        if (self.buy_index < len(self.cpClass.product_list)):
+            self.ProductAmount1.setText("Buy: " + str(self.cpClass.product[self.buy_index].buy_amount))
+
 
     #increment button
-    def increment0(self, id):
+    def increment0(self):
         self.buy_index = ((self.page - 1) * 5) + 0
         if (self.buy_index < len(self.cpClass.product_list)):
             self.cpClass.product[self.buy_index].buy_amount += 1
-            print(self.cpClass.product[self.buy_index])
-            print(self.cpClass.product[self.buy_index].buy_amount)
+            self.amount_label0()
+    def increment1(self):
+        self.buy_index = ((self.page - 1) * 5) + 1
+        if (self.buy_index < len(self.cpClass.product_list)):
+            self.cpClass.product[self.buy_index].buy_amount += 1
+            self.amount_label1()
+    def increment2(self):
+        self.buy_index = ((self.page - 1) * 5) + 2
+        if (self.buy_index < len(self.cpClass.product_list)):
+            self.cpClass.product[self.buy_index].buy_amount += 1
+            self.amount_label2()
+    def increment3(self):
+        self.buy_index = ((self.page - 1) * 5) + 3
+        if (self.buy_index < len(self.cpClass.product_list)):
+            self.cpClass.product[self.buy_index].buy_amount += 1
+            self.amount_label3()
+    def increment4(self):
+        self.buy_index = ((self.page - 1) * 5) + 4
+        if (self.buy_index < len(self.cpClass.product_list)):
+            self.cpClass.product[self.buy_index].buy_amount += 1
+            self.amount_label4()
 
     #label product information
     def set_product_detail(self):
