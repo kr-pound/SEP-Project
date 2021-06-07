@@ -12,7 +12,7 @@ class database:
 
     def __init__(self):
         #path in local pc and database
-        self.service_account_path = "C:/Users/krita/Documents/GitHub/SEP-Project/UI Design/Protocol - Coding/serviceAccountKey.json"
+        self.service_account_path = "C:/Users/atnha/OneDrive/Documents/GitHub/SEP_Project/UI Design/Protocol - Coding/serviceAccountKey.json"
         self.database_url_path = "https://fresh-python-default-rtdb.asia-southeast1.firebasedatabase.app"
         self.cred = credentials.Certificate(self.service_account_path)
         self.default_app = firebase_admin.initialize_app(self.cred, {'databaseURL': self.database_url_path} )
