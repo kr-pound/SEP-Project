@@ -320,7 +320,8 @@
      </property>
      <property name="styleSheet">
       <string notr="true">QLabel {
-	image: url(:/)
+	
+	image: url(:/icon/Icon/veg.png);
 }</string>
      </property>
      <property name="text">
