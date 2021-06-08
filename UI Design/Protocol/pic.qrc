@@ -1,6 +1,0 @@
-<RCC>
-  <qresource prefix="others">
-    <file>Arrow/leftArrow.png</file>
-    <file>Arrow/rightArrow.png</file>
-  </qresource>
-</RCC>
