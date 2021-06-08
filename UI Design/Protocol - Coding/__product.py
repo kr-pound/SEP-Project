@@ -36,6 +36,12 @@ class CartProductClass():
     productAmount4 = 0
     productAmount5 = 0
 
+    productPicture1 = None
+    productPicture2 = None
+    productPicture3 = None
+    productPicture4 = None
+    productPicture5 = None
+
 
     def __init__(self):
         self.db = database()
@@ -56,9 +62,10 @@ class CartProductClass():
             name = self.product[id_count] = product["name"]
             price = self.product[id_count] = product["price"]
             detail = self.product[id_count] = product["detail"]
+            picture = self.product[id_count] = product["category"] + ".png"
 
             #store the object within a list
-            self.product[id_count] = ProductClass(id, name, price, detail)
+            self.product[id_count] = ProductClass(id, name, price, detail, picture)
             id_count += 1
 
         print(self.product)
@@ -72,30 +79,35 @@ class CartProductClass():
             self.buyingButton1 = str(product_list[0 + (amount_per_page * page_index)].price) + " Baht"
             self.productDescription1 = "   " + product_list[0 + (amount_per_page * page_index)].detail
             self.productAmount1 = "Buy: " + str(product_list[0 + (amount_per_page * page_index)].buy_amount)
+            self.productPicture1 = str(product_list[0 + (amount_per_page * page_index)].picture)
 
         if (product_list[1 + (amount_per_page * page_index)] != None):
             self.productLabel2 = product_list[1 + (amount_per_page * page_index)].name
             self.buyingButton2 = str(product_list[1 + (amount_per_page * page_index)].price) + " Baht"
             self.productDescription2 = "   " + product_list[1 + (amount_per_page * page_index)].detail
             self.productAmount2 = "Buy: " + str(product_list[1 + (amount_per_page * page_index)].buy_amount)
+            self.productPicture2 = str(product_list[1 + (amount_per_page * page_index)].picture)
 
         if (product_list[2 + (amount_per_page * page_index)] != None):
             self.productLabel3 = product_list[2 + (amount_per_page * page_index)].name
             self.buyingButton3 = str(product_list[2 + (amount_per_page * page_index)].price) + " Baht"
             self.productDescription3 = "   " + product_list[2 + (amount_per_page * page_index)].detail
             self.productAmount3 = "Buy: " + str(product_list[2 + (amount_per_page * page_index)].buy_amount)
+            self.productPicture3 = str(product_list[2 + (amount_per_page * page_index)].picture)
 
         if (product_list[3 + (amount_per_page * page_index)] != None):
             self.productLabel4 = product_list[3 + (amount_per_page * page_index)].name
             self.buyingButton4 = str(product_list[3 + (amount_per_page * page_index)].price) + " Baht"
             self.productDescription4 = "   " + product_list[3 + (amount_per_page * page_index)].detail
             self.productAmount4 = "Buy: " + str(product_list[3 + (amount_per_page * page_index)].buy_amount)
+            self.productPicture4 = str(product_list[3 + (amount_per_page * page_index)].picture)
 
         if (product_list[4 + (amount_per_page * page_index)] != None):
             self.productLabel5 = product_list[4 + (amount_per_page * page_index)].name
             self.buyingButton5 = str(product_list[4 + (amount_per_page * page_index)].price) + " Baht"
             self.productDescription5 = "   " + product_list[4 + (amount_per_page * page_index)].detail
             self.productAmount5 = "Buy: " + str(product_list[4 + (amount_per_page * page_index)].buy_amount)
+            self.productPicture5 = str(product_list[4 + (amount_per_page * page_index)].picture)
 
 
     #clear any product show
@@ -104,6 +116,7 @@ class CartProductClass():
         buying_button_cleaed = ""
         description_cleared = ""
         product_amount_cleared = ""
+        product_picture_cleared = ""
 
         self.productLabel1 = lebel_cleared
         self.productLabel2 = lebel_cleared
@@ -129,6 +142,12 @@ class CartProductClass():
         self.productAmount4 = product_amount_cleared
         self.productAmount5 = product_amount_cleared
 
+        self.productPicture1 = product_picture_cleared
+        self.productPicture2 = product_picture_cleared
+        self.productPicture3 = product_picture_cleared
+        self.productPicture4 = product_picture_cleared
+        self.productPicture5 = product_picture_cleared
+
 
 
 #class of each product info
@@ -139,11 +158,15 @@ class ProductClass():
     detail = None
 
     buy_amount = 0
+    picture = 0
 
-    def __init__(self, id, name, price, detail):
+    def __init__(self, id, name, price, detail, picture):
         self.id = id
         self.name = name
         self.price = price
         self.detail = detail
+
+        self.picture = picture
+
 
 
