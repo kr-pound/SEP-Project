@@ -4,6 +4,8 @@ from __product import CartProductClass
 
 from os import environ
 
+
+
 def suppress_qt_warnings():
     environ["QT_DEVICE_PIXEL_RATIO"] = "0"
     environ["QT_AUTO_SCREEN_SCALE_FACTOR"] = "1"
@@ -259,26 +261,36 @@ class SearchWindow(QtWidgets.QMainWindow, Ui_SearchWindow):
         self.BuyingButton1.setText(self.cpClass.buyingButton1)
         self.ProductDescription1.setText(self.cpClass.productDescription1)
         self.ProductAmount1.setText(self.cpClass.productAmount1)
+        self.ProductPicture1.setStyleSheet("image: url(:/icon/Icon/" + self.cpClass.productPicture1 + ");")
+        print(self.cpClass.productPicture1)
 
         self.ProductLabel2.setText(self.cpClass.productLabel2)
         self.BuyingButton2.setText(self.cpClass.buyingButton2)
         self.ProductDescription2.setText(self.cpClass.productDescription2)
         self.ProductAmount2.setText(self.cpClass.productAmount2)
+        self.ProductPicture2.setStyleSheet(self.cpClass.productPicture2)
+        self.ProductPicture2.setStyleSheet("image: url(:/icon/Icon/" + self.cpClass.productPicture2 + ");")
 
         self.ProductLabel3.setText(self.cpClass.productLabel3)
         self.BuyingButton3.setText(self.cpClass.buyingButton3)
         self.ProductDescription3.setText(self.cpClass.productDescription3)
         self.ProductAmount3.setText(self.cpClass.productAmount3)
+        self.ProductPicture3.setStyleSheet(self.cpClass.productPicture3)
+        self.ProductPicture3.setStyleSheet("image: url(:/icon/Icon/" + self.cpClass.productPicture3 + ");")
 
         self.ProductLabel4.setText(self.cpClass.productLabel4)
         self.BuyingButton4.setText(self.cpClass.buyingButton4)
         self.ProductDescription4.setText(self.cpClass.productDescription4)
         self.ProductAmount4.setText(self.cpClass.productAmount4)
+        self.ProductPicture4.setStyleSheet(self.cpClass.productPicture4)
+        self.ProductPicture4.setStyleSheet("image: url(:/icon/Icon/" + self.cpClass.productPicture4 + ");")
 
         self.ProductLabel5.setText(self.cpClass.productLabel5)
         self.BuyingButton5.setText(self.cpClass.buyingButton5)
         self.ProductDescription5.setText(self.cpClass.productDescription5)
         self.ProductAmount5.setText(self.cpClass.productAmount5)
+        self.ProductPicture5.setStyleSheet(self.cpClass.productPicture5)
+        self.ProductPicture5.setStyleSheet("image: url(:/icon/Icon/" + self.cpClass.productPicture5 + ");")
 
     
     

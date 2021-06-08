@@ -101,42 +101,49 @@ class CartWindow(QtWidgets.QMainWindow, Ui_CartWindow):
             self.CartProductPrice1.setText("Price: " + str(self.cpClass.buy_list[0 + page_index * 6].price *
                                             self.cpClass.buy_list[0 + page_index * 6].buy_amount))
             self.DeleteButton1.setText(delete_text)
+            self.CartProductPicture1.setStyleSheet("image: url(:/icon/Icon/" + self.cpClass.buy_list[0 + page_index * 6].picture + ");")
         if (self.cpClass.buy_list[1 + page_index * 6] != None):
             self.CartProductLabel2.setText(self.cpClass.buy_list[1 + page_index * 6].name)
             self.CartProductAmount2.setText("Buy: " + str(self.cpClass.buy_list[1 + page_index * 6].buy_amount))
             self.CartProductPrice2.setText("Price: " + str(self.cpClass.buy_list[1 + page_index * 6].price *
                                             self.cpClass.buy_list[1 + page_index * 6].buy_amount))
             self.DeleteButton2.setText(delete_text)
+            self.CartProductPicture2.setStyleSheet("image: url(:/icon/Icon/" + self.cpClass.buy_list[1 + page_index * 6].picture + ");")
         if (self.cpClass.buy_list[2 + page_index * 6] != None):
             self.CartProductLabel3.setText(self.cpClass.buy_list[2 + page_index * 6].name)
             self.CartProductAmount3.setText("Buy: " + str(self.cpClass.buy_list[2 + page_index * 6].buy_amount))
             self.CartProductPrice3.setText("Price: " + str(self.cpClass.buy_list[2 + page_index * 6].price *
                                             self.cpClass.buy_list[2 + page_index * 6].buy_amount))
             self.DeleteButton3.setText(delete_text)
+            self.CartProductPicture3.setStyleSheet("image: url(:/icon/Icon/" + self.cpClass.buy_list[2 + page_index * 6].picture + ");")
         if (self.cpClass.buy_list[3 + page_index * 6] != None):
             self.CartProductLabel4.setText(self.cpClass.buy_list[3 + page_index * 6].name)
             self.CartProductAmount4.setText("Buy: " + str(self.cpClass.buy_list[3 + page_index * 6].buy_amount))
             self.CartProductPrice4.setText("Price: " + str(self.cpClass.buy_list[3 + page_index * 6].price *
                                             self.cpClass.buy_list[3 + page_index * 6].buy_amount))
             self.DeleteButton4.setText(delete_text)
+            self.CartProductPicture4.setStyleSheet("image: url(:/icon/Icon/" + self.cpClass.buy_list[3 + page_index * 6].picture + ");")
         if (self.cpClass.buy_list[4 + page_index * 6] != None):
             self.CartProductLabel5.setText(self.cpClass.buy_list[4 + page_index * 6].name)
             self.CartProductAmount5.setText("Buy: " + str(self.cpClass.buy_list[4 + page_index * 6].buy_amount))
             self.CartProductPrice5.setText("Price: " + str(self.cpClass.buy_list[4 + page_index * 6].price *
                                             self.cpClass.buy_list[4 + page_index * 6].buy_amount))
             self.DeleteButton5.setText(delete_text)
+            self.CartProductPicture5.setStyleSheet("image: url(:/icon/Icon/" + self.cpClass.buy_list[4 + page_index * 6].picture + ");")
         if (self.cpClass.buy_list[5 + page_index * 6] != None):
             self.CartProductLabel6.setText(self.cpClass.buy_list[5 + page_index * 6].name)
             self.CartProductAmount6.setText("Buy: " + str(self.cpClass.buy_list[5 + page_index * 6].buy_amount))
             self.CartProductPrice6.setText("Price: " + str(self.cpClass.buy_list[5 + page_index * 6].price *
                                             self.cpClass.buy_list[5 + page_index * 6].buy_amount))
             self.DeleteButton6.setText(delete_text)
+            self.CartProductPicture6.setStyleSheet("image: url(:/icon/Icon/" + self.cpClass.buy_list[5 + page_index * 6].picture + ");")
 
     def clear_cart_label(self):
         cleared_label = ""
         cleared_amount = ""
         cleared_price = ""
         cleared_button = ""
+        cleared_picture = ""
 
         self.CartProductLabel1.setText(cleared_label)
         self.CartProductLabel2.setText(cleared_label)
@@ -165,6 +172,13 @@ class CartWindow(QtWidgets.QMainWindow, Ui_CartWindow):
         self.DeleteButton4.setText(cleared_button)
         self.DeleteButton5.setText(cleared_button)
         self.DeleteButton6.setText(cleared_button)
+
+        self.CartProductPicture1.setStyleSheet(cleared_picture)
+        self.CartProductPicture2.setStyleSheet(cleared_picture)
+        self.CartProductPicture3.setStyleSheet(cleared_picture)
+        self.CartProductPicture4.setStyleSheet(cleared_picture)
+        self.CartProductPicture5.setStyleSheet(cleared_picture)
+        self.CartProductPicture6.setStyleSheet(cleared_picture)
 
     #change the page of product show
     def rightTransfer(self):
