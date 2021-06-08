@@ -258,7 +258,7 @@ p, li { white-space: pre-wrap; }
       <string>Daily product</string>
      </property>
     </widget>
-    <widget class="QRadioButton" name="radioButton_4">
+    <widget class="QRadioButton" name="OTOPCategory">
      <property name="geometry">
       <rect>
        <x>330</x>

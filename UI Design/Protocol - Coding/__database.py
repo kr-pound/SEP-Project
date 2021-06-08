@@ -13,8 +13,14 @@ class database:
     product_name = None
     product_price = 0
     product_detail = None
+
+    #store category
+    product_veg = None
+    product_fruit = None
+    product_daily_product = None
+    product_otop = None
+
     product_category = None
-    product_amount = 0
 
     def __init__(self):
         #path in local pc and database
@@ -37,8 +43,17 @@ class database:
         #database().push({'username' : 'AB', 'password' : '123456'}, 'sub_dir_name')
 
     def push_product(self, db_directory = '/product'):
+        if (self.product_veg == True):
+            self.product_category = "veg"
+        if (self.product_fruit == True):
+            self.product_category = "fruit"
+        if (self.product_daily_product == True):
+            self.product_category = "product"
+        if (self.product_otop == True):
+            self.product_category = "otop"
+
         data = {'name' : self.product_name, 'id' : len(self.get_product(self)) + 1, 'detail' : self.product_detail,
-                'price' : self.product_price}
+                'price' : self.product_price, 'category' : self.product_category}
 
         self.ref = db.reference(db_directory)
         self.ref.push(data)

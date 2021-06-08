@@ -14,7 +14,7 @@ from PyQt5 import QtCore, QtGui, QtWidgets
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
         MainWindow.setObjectName("MainWindow")
-        MainWindow.resize(646, 528)
+        MainWindow.resize(646, 510)
         self.centralwidget = QtWidgets.QWidget(MainWindow)
         self.centralwidget.setObjectName("centralwidget")
         self.PageLabel = QtWidgets.QLabel(self.centralwidget)
@@ -28,7 +28,7 @@ class Ui_MainWindow(object):
 "")
         self.PageLabel.setObjectName("PageLabel")
         self.ConfirmButton = QtWidgets.QPushButton(self.centralwidget)
-        self.ConfirmButton.setGeometry(QtCore.QRect(280, 460, 75, 24))
+        self.ConfirmButton.setGeometry(QtCore.QRect(290, 440, 75, 24))
         self.ConfirmButton.setStyleSheet("QPushButton {\n"
 "    color: white;\n"
 "    background: #64AB25;\n"
@@ -48,7 +48,7 @@ class Ui_MainWindow(object):
         self.InfoLabel.setFont(font)
         self.InfoLabel.setObjectName("InfoLabel")
         self.frame = QtWidgets.QFrame(self.centralwidget)
-        self.frame.setGeometry(QtCore.QRect(30, 120, 591, 311))
+        self.frame.setGeometry(QtCore.QRect(30, 120, 591, 301))
         self.frame.setStyleSheet("background-color: rgb(116, 183, 46);\n"
 "border-radius: 15px;")
         self.frame.setFrameShape(QtWidgets.QFrame.StyledPanel)
@@ -90,20 +90,18 @@ class Ui_MainWindow(object):
         font.setPointSize(12)
         self.CategoryLabel.setFont(font)
         self.CategoryLabel.setObjectName("CategoryLabel")
-        self.CategoryLineEdit = QtWidgets.QLineEdit(self.frame)
-        self.CategoryLineEdit.setGeometry(QtCore.QRect(150, 210, 411, 31))
-        self.CategoryLineEdit.setStyleSheet("background-color: rgb(255, 255, 255);")
-        self.CategoryLineEdit.setObjectName("CategoryLineEdit")
-        self.AmountLabel = QtWidgets.QLabel(self.frame)
-        self.AmountLabel.setGeometry(QtCore.QRect(20, 260, 121, 31))
-        font = QtGui.QFont()
-        font.setPointSize(12)
-        self.AmountLabel.setFont(font)
-        self.AmountLabel.setObjectName("AmountLabel")
-        self.AmountLineEdit = QtWidgets.QLineEdit(self.frame)
-        self.AmountLineEdit.setGeometry(QtCore.QRect(150, 260, 411, 31))
-        self.AmountLineEdit.setStyleSheet("background-color: rgb(255, 255, 255);")
-        self.AmountLineEdit.setObjectName("AmountLineEdit")
+        self.VegetableCategory = QtWidgets.QRadioButton(self.frame)
+        self.VegetableCategory.setGeometry(QtCore.QRect(150, 220, 101, 20))
+        self.VegetableCategory.setObjectName("VegetableCategory")
+        self.FruitCategory = QtWidgets.QRadioButton(self.frame)
+        self.FruitCategory.setGeometry(QtCore.QRect(330, 220, 89, 20))
+        self.FruitCategory.setObjectName("FruitCategory")
+        self.DailyProductCategory = QtWidgets.QRadioButton(self.frame)
+        self.DailyProductCategory.setGeometry(QtCore.QRect(150, 260, 111, 20))
+        self.DailyProductCategory.setObjectName("DailyProductCategory")
+        self.radioButton_4 = QtWidgets.QRadioButton(self.frame)
+        self.radioButton_4.setGeometry(QtCore.QRect(330, 260, 89, 20))
+        self.radioButton_4.setObjectName("radioButton_4")
         MainWindow.setCentralWidget(self.centralwidget)
         self.menubar = QtWidgets.QMenuBar(MainWindow)
         self.menubar.setGeometry(QtCore.QRect(0, 0, 646, 22))
@@ -131,7 +129,10 @@ class Ui_MainWindow(object):
 "</style></head><body style=\" font-family:\'Segoe UI\'; font-size:9pt; font-weight:400; font-style:normal;\">\n"
 "<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><br /></p></body></html>"))
         self.CategoryLabel.setText(_translate("MainWindow", "Category"))
-        self.AmountLabel.setText(_translate("MainWindow", "Product Amount"))
+        self.VegetableCategory.setText(_translate("MainWindow", "Vegetable"))
+        self.FruitCategory.setText(_translate("MainWindow", "Fruit"))
+        self.DailyProductCategory.setText(_translate("MainWindow", "Daily product"))
+        self.radioButton_4.setText(_translate("MainWindow", "OTOP"))
 
 
 if __name__ == "__main__":
