@@ -44,7 +44,7 @@ border-radius: 15px;
      <rect>
       <x>760</x>
       <y>560</y>
-      <width>201</width>
+      <width>221</width>
       <height>61</height>
      </rect>
     </property>
@@ -68,7 +68,7 @@ QPushButton:hover {
 }</string>
     </property>
     <property name="text">
-     <string>Check out</string>
+     <string>CHECK OUT</string>
     </property>
    </widget>
    <widget class="QFrame" name="ProductFrame1">

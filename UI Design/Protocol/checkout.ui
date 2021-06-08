@@ -86,7 +86,7 @@ QPushButton:hover {
 }</string>
     </property>
     <property name="text">
-     <string>Confirm</string>
+     <string>CONFIRM</string>
     </property>
    </widget>
    <widget class="QFrame" name="frame">
