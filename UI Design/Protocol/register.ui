@@ -19,13 +19,14 @@
      <rect>
       <x>30</x>
       <y>10</y>
-      <width>231</width>
+      <width>251</width>
       <height>61</height>
      </rect>
     </property>
     <property name="font">
      <font>
-      <pointsize>28</pointsize>
+      <family>Franklin Gothic Medium Cond</family>
+      <pointsize>36</pointsize>
      </font>
     </property>
     <property name="styleSheet">
@@ -47,17 +48,23 @@ border-radius: 15px;
       <height>24</height>
      </rect>
     </property>
+    <property name="font">
+     <font>
+      <family>Franklin Gothic Medium Cond</family>
+      <pointsize>12</pointsize>
+     </font>
+    </property>
     <property name="styleSheet">
      <string notr="true">QPushButton {
-    color: white;
-    background: #64AB25;
-    border-radius: 15px;
+	color: white;
+	background: #64AB25;
+	border-radius: 15px;
 }
 
 QPushButton:hover {
-    color: #64AB25;
-    background: #333;
-    border-radius: 15px;
+	color: #64AB25;
+	background: #333;
+	border-radius: 15px;
 }</string>
     </property>
     <property name="text">
@@ -75,7 +82,8 @@ QPushButton:hover {
     </property>
     <property name="font">
      <font>
-      <pointsize>10</pointsize>
+      <family>Franklin Gothic Medium Cond</family>
+      <pointsize>12</pointsize>
      </font>
     </property>
     <property name="text">
@@ -112,7 +120,8 @@ border-radius: 15px;</string>
      </property>
      <property name="font">
       <font>
-       <pointsize>12</pointsize>
+       <family>Franklin Gothic Medium Cond</family>
+       <pointsize>14</pointsize>
       </font>
      </property>
      <property name="text">
@@ -130,7 +139,8 @@ border-radius: 15px;</string>
      </property>
      <property name="font">
       <font>
-       <pointsize>12</pointsize>
+       <family>Franklin Gothic Medium Cond</family>
+       <pointsize>14</pointsize>
       </font>
      </property>
      <property name="text">
@@ -148,7 +158,8 @@ border-radius: 15px;</string>
      </property>
      <property name="font">
       <font>
-       <pointsize>12</pointsize>
+       <family>Franklin Gothic Medium Cond</family>
+       <pointsize>14</pointsize>
       </font>
      </property>
      <property name="text">
