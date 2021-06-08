@@ -6,208 +6,198 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>646</width>
-    <height>413</height>
+    <width>582</width>
+    <height>300</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>MainWindow</string>
   </property>
+  <property name="styleSheet">
+   <string notr="true">background-color: rgb(255, 255, 255);
+</string>
+  </property>
   <widget class="QWidget" name="centralwidget">
-   <widget class="QLabel" name="PageLabel">
+   <widget class="QLabel" name="label_8">
     <property name="geometry">
      <rect>
-      <x>30</x>
-      <y>10</y>
-      <width>231</width>
-      <height>61</height>
+      <x>20</x>
+      <y>90</y>
+      <width>81</width>
+      <height>31</height>
      </rect>
     </property>
     <property name="font">
      <font>
-      <pointsize>28</pointsize>
+      <pointsize>12</pointsize>
      </font>
     </property>
-    <property name="styleSheet">
-     <string notr="true">color: white;
-background-color : &quot;rgb(0, 0, 0)&quot;;
-border-radius: 15px;
-</string>
-    </property>
     <property name="text">
-     <string>Register page</string>
+     <string>Username:</string>
     </property>
    </widget>
-   <widget class="QPushButton" name="ConfirmButton">
+   <widget class="QLabel" name="label_9">
     <property name="geometry">
      <rect>
-      <x>270</x>
-      <y>330</y>
-      <width>75</width>
-      <height>24</height>
+      <x>20</x>
+      <y>130</y>
+      <width>101</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>12</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>Password:</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButton">
+    <property name="geometry">
+     <rect>
+      <x>230</x>
+      <y>210</y>
+      <width>121</width>
+      <height>51</height>
      </rect>
     </property>
     <property name="styleSheet">
-     <string notr="true">QPushButton {
-    color: white;
-    background: #64AB25;
-    border-radius: 15px;
-}
-
-QPushButton:hover {
-    color: #64AB25;
-    background: #333;
-    border-radius: 15px;
-}</string>
+     <string notr="true">border-style: outset;
+font: 16pt &quot;Rockwell&quot;;
+background-color: rgb(128, 195, 66);
+color: rgb(255, 255, 255);
+border-radius: 15px;
+padding: 4px;</string>
     </property>
     <property name="text">
      <string>Confirm</string>
     </property>
    </widget>
-   <widget class="QLabel" name="InfoLabel">
+   <widget class="QLineEdit" name="lineEdit_4">
     <property name="geometry">
      <rect>
-      <x>40</x>
-      <y>80</y>
-      <width>271</width>
-      <height>16</height>
+      <x>160</x>
+      <y>130</y>
+      <width>391</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QLineEdit {
+ border: 2px solid gray;
+ border-radius: 10px;
+}</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="lineEdit_6">
+    <property name="geometry">
+     <rect>
+      <x>160</x>
+      <y>90</y>
+      <width>391</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QLineEdit {
+ border: 2px solid gray;
+ border-radius: 10px;
+}</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_11">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>40</y>
+      <width>371</width>
+      <height>61</height>
      </rect>
     </property>
     <property name="font">
      <font>
-      <pointsize>10</pointsize>
+      <family>Berlin Sans FB</family>
+      <pointsize>20</pointsize>
+      <italic>false</italic>
+      <bold>false</bold>
      </font>
     </property>
+    <property name="styleSheet">
+     <string notr="true">font: 20pt &quot;Berlin Sans FB&quot;;
+color: rgb(128, 195, 66);
+background-color: rgba(255, 255, 255, 0);</string>
+    </property>
     <property name="text">
-     <string>Please fill in below to register a new account.</string>
+     <string>Please fill in the form</string>
     </property>
    </widget>
-   <widget class="QFrame" name="frame">
+   <widget class="QLineEdit" name="lineEdit_5">
     <property name="geometry">
      <rect>
-      <x>30</x>
-      <y>120</y>
-      <width>591</width>
-      <height>181</height>
+      <x>160</x>
+      <y>170</y>
+      <width>391</width>
+      <height>31</height>
      </rect>
     </property>
     <property name="styleSheet">
-     <string notr="true">background-color: rgb(116, 183, 46);
-border-radius: 15px;</string>
+     <string notr="true">QLineEdit {
+ border: 2px solid gray;
+ border-radius: 10px;
+}</string>
     </property>
-    <property name="frameShape">
-     <enum>QFrame::StyledPanel</enum>
-    </property>
-    <property name="frameShadow">
-     <enum>QFrame::Raised</enum>
-    </property>
-    <widget class="QLabel" name="UsernameLabel">
-     <property name="geometry">
-      <rect>
-       <x>20</x>
-       <y>20</y>
-       <width>81</width>
-       <height>31</height>
-      </rect>
-     </property>
-     <property name="font">
-      <font>
-       <pointsize>12</pointsize>
-      </font>
-     </property>
-     <property name="text">
-      <string>Username:</string>
-     </property>
-    </widget>
-    <widget class="QLabel" name="PasswordLabel">
-     <property name="geometry">
-      <rect>
-       <x>20</x>
-       <y>70</y>
-       <width>101</width>
-       <height>31</height>
-      </rect>
-     </property>
-     <property name="font">
-      <font>
-       <pointsize>12</pointsize>
-      </font>
-     </property>
-     <property name="text">
-      <string>Password:</string>
-     </property>
-    </widget>
-    <widget class="QLabel" name="RePasswordLabel">
-     <property name="geometry">
-      <rect>
-       <x>20</x>
-       <y>120</y>
-       <width>141</width>
-       <height>31</height>
-      </rect>
-     </property>
-     <property name="font">
-      <font>
-       <pointsize>12</pointsize>
-      </font>
-     </property>
-     <property name="text">
-      <string>Re-Password:</string>
-     </property>
-    </widget>
-    <widget class="QLineEdit" name="UsernameLineEdit">
-     <property name="geometry">
-      <rect>
-       <x>140</x>
-       <y>20</y>
-       <width>411</width>
-       <height>31</height>
-      </rect>
-     </property>
-     <property name="styleSheet">
-      <string notr="true">background-color: rgb(255, 255, 255);</string>
-     </property>
-    </widget>
-    <widget class="QLineEdit" name="PasswordLineEdit">
-     <property name="geometry">
-      <rect>
-       <x>140</x>
-       <y>70</y>
-       <width>411</width>
-       <height>31</height>
-      </rect>
-     </property>
-     <property name="styleSheet">
-      <string notr="true">background-color: rgb(255, 255, 255);</string>
-     </property>
-    </widget>
-    <widget class="QLineEdit" name="RePasswordLineEdit">
-     <property name="geometry">
-      <rect>
-       <x>140</x>
-       <y>120</y>
-       <width>411</width>
-       <height>31</height>
-      </rect>
-     </property>
-     <property name="styleSheet">
-      <string notr="true">background-color: rgb(255, 255, 255);</string>
-     </property>
-    </widget>
    </widget>
-  </widget>
-  <widget class="QMenuBar" name="menubar">
-   <property name="geometry">
-    <rect>
-     <x>0</x>
-     <y>0</y>
-     <width>646</width>
-     <height>22</height>
-    </rect>
-   </property>
+   <widget class="QLabel" name="label_10">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>170</y>
+      <width>141</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>12</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>Confirm Password:</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_12">
+    <property name="geometry">
+     <rect>
+      <x>230</x>
+      <y>0</y>
+      <width>141</width>
+      <height>61</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Berlin Sans FB</family>
+      <pointsize>30</pointsize>
+      <italic>false</italic>
+      <bold>false</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">font: 30pt &quot;Berlin Sans FB&quot;;
+color: rgb(128, 195, 66);
+background-color: rgba(255, 255, 255, 0);</string>
+    </property>
+    <property name="text">
+     <string>Register</string>
+    </property>
+   </widget>
   </widget>
   <widget class="QStatusBar" name="statusbar"/>
  </widget>
- <resources/>
+ <resources>
+  <include location="../register_pic.qrc"/>
+ </resources>
  <connections/>
 </ui>
