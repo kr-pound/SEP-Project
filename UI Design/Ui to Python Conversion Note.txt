@@ -13,3 +13,11 @@ pyuic5 -x yourform.ui -o file.py
 * install first: pip install pyqt5-tools
 
 pyrcc5 resource.qrc -o resource_rc.py
+
+
+
+
+
+Image to pixmap pyqt5
+
+https://learndataanalysis.org/how-to-display-image-from-the-web-with-qlabel-widget-in-pyqt5/
