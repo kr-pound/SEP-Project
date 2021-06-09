@@ -6,15 +6,15 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>843</width>
-    <height>318</height>
+    <width>659</width>
+    <height>263</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>MainWindow</string>
   </property>
   <widget class="QWidget" name="centralwidget">
-   <widget class="QLabel" name="label">
+   <widget class="QLabel" name="CheckoutLabel">
     <property name="geometry">
      <rect>
       <x>20</x>
@@ -38,30 +38,11 @@ border-radius: 15px;</string>
      <string>Check out:</string>
     </property>
    </widget>
-   <widget class="QLabel" name="label_7">
+   <widget class="QPushButton" name="CloseButton">
     <property name="geometry">
      <rect>
-      <x>20</x>
-      <y>90</y>
-      <width>541</width>
-      <height>31</height>
-     </rect>
-    </property>
-    <property name="font">
-     <font>
-      <family>Franklin Gothic Medium Cond</family>
-      <pointsize>12</pointsize>
-     </font>
-    </property>
-    <property name="text">
-     <string>Banking information/ after tranfer the money send proof to seller.</string>
-    </property>
-   </widget>
-   <widget class="QPushButton" name="pushButton">
-    <property name="geometry">
-     <rect>
-      <x>630</x>
-      <y>140</y>
+      <x>410</x>
+      <y>120</y>
       <width>181</width>
       <height>91</height>
      </rect>
@@ -86,15 +67,15 @@ QPushButton:hover {
 }</string>
     </property>
     <property name="text">
-     <string>CONFIRM</string>
+     <string>CLOSE</string>
     </property>
    </widget>
    <widget class="QFrame" name="frame">
     <property name="geometry">
      <rect>
-      <x>20</x>
-      <y>140</y>
-      <width>551</width>
+      <x>140</x>
+      <y>130</y>
+      <width>191</width>
       <height>81</height>
      </rect>
     </property>
@@ -108,7 +89,7 @@ border-radius: 15px;</string>
     <property name="frameShadow">
      <enum>QFrame::Raised</enum>
     </property>
-    <widget class="QLabel" name="label_5">
+    <widget class="QLabel" name="TotalLabel">
      <property name="geometry">
       <rect>
        <x>10</x>
@@ -127,19 +108,66 @@ border-radius: 15px;</string>
       <string>Total:</string>
      </property>
     </widget>
-    <widget class="QLineEdit" name="lineEdit_5">
+    <widget class="QLabel" name="PriceLabel">
      <property name="geometry">
       <rect>
-       <x>90</x>
+       <x>80</x>
        <y>20</y>
-       <width>411</width>
-       <height>31</height>
+       <width>71</width>
+       <height>41</height>
       </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Franklin Gothic Medium Cond</family>
+       <pointsize>16</pointsize>
+      </font>
      </property>
      <property name="styleSheet">
       <string notr="true">background-color: rgb(255, 255, 255);</string>
      </property>
+     <property name="text">
+      <string/>
+     </property>
     </widget>
+   </widget>
+   <widget class="QPushButton" name="BillButton">
+    <property name="geometry">
+     <rect>
+      <x>480</x>
+      <y>70</y>
+      <width>111</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Franklin Gothic Medium Cond</family>
+      <pointsize>12</pointsize>
+      <bold>false</bold>
+      <stylestrategy>PreferDefault</stylestrategy>
+      <kerning>true</kerning>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton {
+	color: black;
+	background: lightgray;
+	border-radius: 15px;
+}
+
+QPushButton:hover {
+	color: black;
+	background: lightgreen;
+	border-radius: 15px;
+}
+
+
+</string>
+    </property>
+    <property name="text">
+     <string>Bill Print</string>
+    </property>
    </widget>
   </widget>
   <widget class="QMenuBar" name="menubar">
@@ -147,7 +175,7 @@ border-radius: 15px;</string>
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>843</width>
+     <width>659</width>
      <height>22</height>
     </rect>
    </property>

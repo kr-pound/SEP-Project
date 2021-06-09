@@ -4,6 +4,7 @@
     <file>Arrow/rightArrow.png</file>
   </qresource>
   <qresource prefix="icon">
+    <file>Icon/red tick.png</file>
     <file>Icon/fruit.png</file>
     <file>Icon/otop.png</file>
     <file>Icon/product.png</file>

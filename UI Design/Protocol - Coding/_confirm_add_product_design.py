@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-# Form implementation generated from reading ui file 'checkout.ui'
+# Form implementation generated from reading ui file 'confirm_add_product.ui'
 #
 # Created by: PyQt5 UI code generator 5.15.2
 #
@@ -17,16 +17,6 @@ class Ui_MainWindow(object):
         MainWindow.resize(659, 263)
         self.centralwidget = QtWidgets.QWidget(MainWindow)
         self.centralwidget.setObjectName("centralwidget")
-        self.CheckoutLabel = QtWidgets.QLabel(self.centralwidget)
-        self.CheckoutLabel.setGeometry(QtCore.QRect(20, 20, 261, 61))
-        font = QtGui.QFont()
-        font.setFamily("Franklin Gothic Medium Cond")
-        font.setPointSize(48)
-        self.CheckoutLabel.setFont(font)
-        self.CheckoutLabel.setStyleSheet("color: white;\n"
-"background-color : \"rgb(0, 0, 0)\";\n"
-"border-radius: 15px;")
-        self.CheckoutLabel.setObjectName("CheckoutLabel")
         self.CloseButton = QtWidgets.QPushButton(self.centralwidget)
         self.CloseButton.setGeometry(QtCore.QRect(410, 120, 181, 91))
         font = QtGui.QFont()
@@ -45,53 +35,21 @@ class Ui_MainWindow(object):
 "    border-radius: 15px;\n"
 "}")
         self.CloseButton.setObjectName("CloseButton")
-        self.frame = QtWidgets.QFrame(self.centralwidget)
-        self.frame.setGeometry(QtCore.QRect(140, 130, 191, 81))
-        self.frame.setStyleSheet("background-color: rgb(116, 183, 46);\n"
-"border-radius: 15px;")
-        self.frame.setFrameShape(QtWidgets.QFrame.StyledPanel)
-        self.frame.setFrameShadow(QtWidgets.QFrame.Raised)
-        self.frame.setObjectName("frame")
-        self.TotalLabel = QtWidgets.QLabel(self.frame)
-        self.TotalLabel.setGeometry(QtCore.QRect(10, 20, 71, 41))
+        self.TotalLabel = QtWidgets.QLabel(self.centralwidget)
+        self.TotalLabel.setGeometry(QtCore.QRect(70, 20, 341, 41))
         font = QtGui.QFont()
         font.setFamily("Franklin Gothic Medium Cond")
         font.setPointSize(16)
         self.TotalLabel.setFont(font)
         self.TotalLabel.setObjectName("TotalLabel")
-        self.PriceLabel = QtWidgets.QLabel(self.frame)
-        self.PriceLabel.setGeometry(QtCore.QRect(80, 20, 71, 41))
+        self.TotalLabel_2 = QtWidgets.QLabel(self.centralwidget)
+        self.TotalLabel_2.setGeometry(QtCore.QRect(70, 60, 441, 41))
         font = QtGui.QFont()
         font.setFamily("Franklin Gothic Medium Cond")
         font.setPointSize(16)
-        self.PriceLabel.setFont(font)
-        self.PriceLabel.setStyleSheet("background-color: rgb(255, 255, 255);")
-        self.PriceLabel.setText("")
-        self.PriceLabel.setObjectName("PriceLabel")
-        self.BillButton = QtWidgets.QPushButton(self.centralwidget)
-        self.BillButton.setGeometry(QtCore.QRect(480, 70, 111, 31))
-        font = QtGui.QFont()
-        font.setFamily("Franklin Gothic Medium Cond")
-        font.setPointSize(12)
-        font.setBold(False)
-        font.setKerning(True)
-        font.setStyleStrategy(QtGui.QFont.PreferDefault)
-        self.BillButton.setFont(font)
-        self.BillButton.setStyleSheet("QPushButton {\n"
-"    color: black;\n"
-"    background: lightgray;\n"
-"    border-radius: 15px;\n"
-"}\n"
-"\n"
-"QPushButton:hover {\n"
-"    color: black;\n"
-"    background: lightgreen;\n"
-"    border-radius: 15px;\n"
-"}\n"
-"\n"
-"\n"
-"")
-        self.BillButton.setObjectName("BillButton")
+        self.TotalLabel_2.setFont(font)
+        self.TotalLabel_2.setStyleSheet("color: red;")
+        self.TotalLabel_2.setObjectName("TotalLabel_2")
         MainWindow.setCentralWidget(self.centralwidget)
         self.menubar = QtWidgets.QMenuBar(MainWindow)
         self.menubar.setGeometry(QtCore.QRect(0, 0, 659, 22))
@@ -107,10 +65,9 @@ class Ui_MainWindow(object):
     def retranslateUi(self, MainWindow):
         _translate = QtCore.QCoreApplication.translate
         MainWindow.setWindowTitle(_translate("MainWindow", "MainWindow"))
-        self.CheckoutLabel.setText(_translate("MainWindow", "Check out:"))
         self.CloseButton.setText(_translate("MainWindow", "CLOSE"))
-        self.TotalLabel.setText(_translate("MainWindow", "Total:"))
-        self.BillButton.setText(_translate("MainWindow", "Bill Print"))
+        self.TotalLabel.setText(_translate("MainWindow", "Successfully added data"))
+        self.TotalLabel_2.setText(_translate("MainWindow", "The product store will be update on the next time runs"))
 
 
 if __name__ == "__main__":

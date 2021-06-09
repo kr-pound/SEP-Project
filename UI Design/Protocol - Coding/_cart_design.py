@@ -18,16 +18,33 @@ class Ui_MainWindow(object):
         self.centralwidget = QtWidgets.QWidget(MainWindow)
         self.centralwidget.setObjectName("centralwidget")
         self.label = QtWidgets.QLabel(self.centralwidget)
-        self.label.setGeometry(QtCore.QRect(10, 10, 101, 51))
+        self.label.setGeometry(QtCore.QRect(40, 10, 131, 61))
         font = QtGui.QFont()
-        font.setPointSize(36)
+        font.setFamily("Franklin Gothic Medium Cond")
+        font.setPointSize(48)
         self.label.setFont(font)
+        self.label.setStyleSheet("color: white;\n"
+"background-color : \"rgb(0, 0, 0)\";\n"
+"border-radius: 15px;\n"
+"")
         self.label.setObjectName("label")
         self.pushButton_2 = QtWidgets.QPushButton(self.centralwidget)
-        self.pushButton_2.setGeometry(QtCore.QRect(770, 560, 201, 61))
+        self.pushButton_2.setGeometry(QtCore.QRect(760, 560, 221, 61))
         font = QtGui.QFont()
-        font.setPointSize(18)
+        font.setFamily("Franklin Gothic Medium Cond")
+        font.setPointSize(36)
         self.pushButton_2.setFont(font)
+        self.pushButton_2.setStyleSheet("QPushButton {\n"
+"    color: white;\n"
+"    background: #64AB25;\n"
+"    border-radius: 15px;\n"
+"}\n"
+"\n"
+"QPushButton:hover {\n"
+"    color: #64AB25;\n"
+"    background: #333;\n"
+"    border-radius: 15px;\n"
+"}")
         self.pushButton_2.setObjectName("pushButton_2")
         self.ProductFrame1 = QtWidgets.QFrame(self.centralwidget)
         self.ProductFrame1.setGeometry(QtCore.QRect(50, 80, 441, 121))
@@ -486,7 +503,7 @@ class Ui_MainWindow(object):
         self.LeftButton.setText("")
         self.LeftButton.setObjectName("LeftButton")
         self.RightButton = QtWidgets.QPushButton(self.centralwidget)
-        self.RightButton.setGeometry(QtCore.QRect(630, 510, 41, 41))
+        self.RightButton.setGeometry(QtCore.QRect(700, 510, 41, 41))
         font = QtGui.QFont()
         font.setFamily("Franklin Gothic Medium Cond")
         font.setPointSize(12)
@@ -509,6 +526,21 @@ class Ui_MainWindow(object):
 "")
         self.RightButton.setText("")
         self.RightButton.setObjectName("RightButton")
+        self.TotalLabel = QtWidgets.QLabel(self.centralwidget)
+        self.TotalLabel.setGeometry(QtCore.QRect(620, 580, 121, 41))
+        font = QtGui.QFont()
+        font.setFamily("Franklin Gothic Medium Cond")
+        font.setPointSize(16)
+        self.TotalLabel.setFont(font)
+        self.TotalLabel.setObjectName("TotalLabel")
+        self.PageLabel = QtWidgets.QLabel(self.centralwidget)
+        self.PageLabel.setGeometry(QtCore.QRect(580, 520, 111, 16))
+        font = QtGui.QFont()
+        font.setFamily("Franklin Gothic Medium Cond")
+        font.setPointSize(12)
+        self.PageLabel.setFont(font)
+        self.PageLabel.setAlignment(QtCore.Qt.AlignCenter)
+        self.PageLabel.setObjectName("PageLabel")
         MainWindow.setCentralWidget(self.centralwidget)
         self.statusbar = QtWidgets.QStatusBar(MainWindow)
         self.statusbar.setObjectName("statusbar")
@@ -525,7 +557,7 @@ class Ui_MainWindow(object):
         _translate = QtCore.QCoreApplication.translate
         MainWindow.setWindowTitle(_translate("MainWindow", "MainWindow"))
         self.label.setText(_translate("MainWindow", "Cart:"))
-        self.pushButton_2.setText(_translate("MainWindow", "Check out"))
+        self.pushButton_2.setText(_translate("MainWindow", "CHECK OUT"))
         self.DeleteButton1.setText(_translate("MainWindow", "Delete"))
         self.CartProductAmount1.setText(_translate("MainWindow", "Buy: 0"))
         self.BackButton.setText(_translate("MainWindow", "Go Back"))
@@ -540,6 +572,8 @@ class Ui_MainWindow(object):
         self.CartProductAmount4.setText(_translate("MainWindow", "Buy: 0"))
         self.DeleteButton6.setText(_translate("MainWindow", "Delete"))
         self.CartProductAmount6.setText(_translate("MainWindow", "Buy: 0"))
+        self.TotalLabel.setText(_translate("MainWindow", "Total:"))
+        self.PageLabel.setText(_translate("MainWindow", "Page: 1/1"))
 import pic_rc
 
 

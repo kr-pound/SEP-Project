@@ -1015,7 +1015,7 @@ QPushButton:hover {
    <widget class="QPushButton" name="RightButton">
     <property name="geometry">
      <rect>
-      <x>630</x>
+      <x>700</x>
       <y>510</y>
       <width>41</width>
       <height>41</height>
@@ -1047,6 +1047,47 @@ QPushButton:hover {
     </property>
     <property name="text">
      <string/>
+    </property>
+   </widget>
+   <widget class="QLabel" name="TotalLabel">
+    <property name="geometry">
+     <rect>
+      <x>620</x>
+      <y>580</y>
+      <width>121</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Franklin Gothic Medium Cond</family>
+      <pointsize>16</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>Total:</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="PageLabel">
+    <property name="geometry">
+     <rect>
+      <x>580</x>
+      <y>520</y>
+      <width>111</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Franklin Gothic Medium Cond</family>
+      <pointsize>12</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>Page: 1/1</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
     </property>
    </widget>
   </widget>

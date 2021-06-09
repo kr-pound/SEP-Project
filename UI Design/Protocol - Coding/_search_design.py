@@ -23,30 +23,6 @@ class Ui_MainWindow(object):
         font.setPointSize(18)
         self.label.setFont(font)
         self.label.setObjectName("label")
-        self.label_4 = QtWidgets.QLabel(self.centralwidget)
-        self.label_4.setGeometry(QtCore.QRect(100, 260, 101, 26))
-        font = QtGui.QFont()
-        font.setPointSize(14)
-        self.label_4.setFont(font)
-        self.label_4.setObjectName("label_4")
-        self.label_5 = QtWidgets.QLabel(self.centralwidget)
-        self.label_5.setGeometry(QtCore.QRect(320, 250, 61, 41))
-        font = QtGui.QFont()
-        font.setPointSize(14)
-        self.label_5.setFont(font)
-        self.label_5.setObjectName("label_5")
-        self.label_6 = QtWidgets.QLabel(self.centralwidget)
-        self.label_6.setGeometry(QtCore.QRect(500, 250, 141, 41))
-        font = QtGui.QFont()
-        font.setPointSize(14)
-        self.label_6.setFont(font)
-        self.label_6.setObjectName("label_6")
-        self.label_7 = QtWidgets.QLabel(self.centralwidget)
-        self.label_7.setGeometry(QtCore.QRect(770, 250, 61, 31))
-        font = QtGui.QFont()
-        font.setPointSize(14)
-        self.label_7.setFont(font)
-        self.label_7.setObjectName("label_7")
         self.CoverFrame = QtWidgets.QFrame(self.centralwidget)
         self.CoverFrame.setGeometry(QtCore.QRect(150, 20, 711, 161))
         self.CoverFrame.setFocusPolicy(QtCore.Qt.NoFocus)
@@ -123,7 +99,7 @@ class Ui_MainWindow(object):
         self.BrandLabel.setAlignment(QtCore.Qt.AlignCenter)
         self.BrandLabel.setObjectName("BrandLabel")
         self.ProductFrame1 = QtWidgets.QFrame(self.centralwidget)
-        self.ProductFrame1.setGeometry(QtCore.QRect(90, 300, 151, 331))
+        self.ProductFrame1.setGeometry(QtCore.QRect(90, 270, 151, 331))
         self.ProductFrame1.setStyleSheet("QFrame {\n"
 "    background: lightgray;\n"
 "    border-radius: 30px;\n"
@@ -134,7 +110,7 @@ class Ui_MainWindow(object):
         self.ProductPicture1 = QtWidgets.QLabel(self.ProductFrame1)
         self.ProductPicture1.setGeometry(QtCore.QRect(10, 10, 131, 91))
         self.ProductPicture1.setStyleSheet("QLabel {\n"
-"    image: url(:/)\n"
+"    image: url(:/);\n"
 "}")
         self.ProductPicture1.setText("")
         self.ProductPicture1.setObjectName("ProductPicture1")
@@ -203,8 +179,15 @@ class Ui_MainWindow(object):
 "    background: lightgray;\n"
 "}")
         self.ProductDecrease1.setObjectName("ProductDecrease1")
+        self.TickMark1 = QtWidgets.QLabel(self.ProductFrame1)
+        self.TickMark1.setGeometry(QtCore.QRect(10, 10, 21, 21))
+        self.TickMark1.setStyleSheet("QLabel {\n"
+"    image: url(:/);\n"
+"}")
+        self.TickMark1.setText("")
+        self.TickMark1.setObjectName("TickMark1")
         self.ProductFrame3 = QtWidgets.QFrame(self.centralwidget)
-        self.ProductFrame3.setGeometry(QtCore.QRect(430, 300, 151, 331))
+        self.ProductFrame3.setGeometry(QtCore.QRect(430, 270, 151, 331))
         self.ProductFrame3.setStyleSheet("QFrame {\n"
 "    background: lightgray;\n"
 "    border-radius: 30px;\n"
@@ -284,8 +267,15 @@ class Ui_MainWindow(object):
 "    background: lightgray;\n"
 "}")
         self.ProductDecrease3.setObjectName("ProductDecrease3")
+        self.TickMark3 = QtWidgets.QLabel(self.ProductFrame3)
+        self.TickMark3.setGeometry(QtCore.QRect(10, 10, 21, 21))
+        self.TickMark3.setStyleSheet("QLabel {\n"
+"    image: url(:/);\n"
+"}")
+        self.TickMark3.setText("")
+        self.TickMark3.setObjectName("TickMark3")
         self.ProductFrame2 = QtWidgets.QFrame(self.centralwidget)
-        self.ProductFrame2.setGeometry(QtCore.QRect(260, 300, 151, 331))
+        self.ProductFrame2.setGeometry(QtCore.QRect(260, 270, 151, 331))
         self.ProductFrame2.setStyleSheet("QFrame {\n"
 "    background: lightgray;\n"
 "    border-radius: 30px;\n"
@@ -365,8 +355,15 @@ class Ui_MainWindow(object):
 "    background: lightgray;\n"
 "}")
         self.ProductDecrease2.setObjectName("ProductDecrease2")
+        self.TickMark2 = QtWidgets.QLabel(self.ProductFrame2)
+        self.TickMark2.setGeometry(QtCore.QRect(10, 10, 21, 21))
+        self.TickMark2.setStyleSheet("QLabel {\n"
+"    image: url(:/);\n"
+"}")
+        self.TickMark2.setText("")
+        self.TickMark2.setObjectName("TickMark2")
         self.ProductFrame4 = QtWidgets.QFrame(self.centralwidget)
-        self.ProductFrame4.setGeometry(QtCore.QRect(600, 300, 151, 331))
+        self.ProductFrame4.setGeometry(QtCore.QRect(600, 270, 151, 331))
         self.ProductFrame4.setStyleSheet("QFrame {\n"
 "    background: lightgray;\n"
 "    border-radius: 30px;\n"
@@ -446,8 +443,15 @@ class Ui_MainWindow(object):
 "    background: lightgray;\n"
 "}")
         self.ProductDecrease4.setObjectName("ProductDecrease4")
+        self.TickMark4 = QtWidgets.QLabel(self.ProductFrame4)
+        self.TickMark4.setGeometry(QtCore.QRect(10, 10, 21, 21))
+        self.TickMark4.setStyleSheet("QLabel {\n"
+"    image: url(:/);\n"
+"}")
+        self.TickMark4.setText("")
+        self.TickMark4.setObjectName("TickMark4")
         self.ProductFrame5 = QtWidgets.QFrame(self.centralwidget)
-        self.ProductFrame5.setGeometry(QtCore.QRect(770, 300, 151, 331))
+        self.ProductFrame5.setGeometry(QtCore.QRect(770, 270, 151, 331))
         self.ProductFrame5.setStyleSheet("QFrame {\n"
 "    background: lightgray;\n"
 "    border-radius: 30px;\n"
@@ -527,6 +531,13 @@ class Ui_MainWindow(object):
 "    background: lightgray;\n"
 "}")
         self.ProductDecrease5.setObjectName("ProductDecrease5")
+        self.TickMark5 = QtWidgets.QLabel(self.ProductFrame5)
+        self.TickMark5.setGeometry(QtCore.QRect(10, 10, 21, 21))
+        self.TickMark5.setStyleSheet("QLabel {\n"
+"    image: url(:/);\n"
+"}")
+        self.TickMark5.setText("")
+        self.TickMark5.setObjectName("TickMark5")
         self.CartButton = QtWidgets.QPushButton(self.centralwidget)
         self.CartButton.setGeometry(QtCore.QRect(880, 20, 111, 31))
         font = QtGui.QFont()
@@ -552,7 +563,7 @@ class Ui_MainWindow(object):
 "")
         self.CartButton.setObjectName("CartButton")
         self.RightButton = QtWidgets.QPushButton(self.centralwidget)
-        self.RightButton.setGeometry(QtCore.QRect(950, 420, 41, 41))
+        self.RightButton.setGeometry(QtCore.QRect(950, 390, 41, 41))
         font = QtGui.QFont()
         font.setFamily("Franklin Gothic Medium Cond")
         font.setPointSize(12)
@@ -576,7 +587,7 @@ class Ui_MainWindow(object):
         self.RightButton.setText("")
         self.RightButton.setObjectName("RightButton")
         self.LeftButton = QtWidgets.QPushButton(self.centralwidget)
-        self.LeftButton.setGeometry(QtCore.QRect(20, 420, 41, 41))
+        self.LeftButton.setGeometry(QtCore.QRect(20, 390, 41, 41))
         font = QtGui.QFont()
         font.setFamily("Franklin Gothic Medium Cond")
         font.setPointSize(12)
@@ -647,6 +658,14 @@ class Ui_MainWindow(object):
 "\n"
 "")
         self.SellProductButton.setObjectName("SellProductButton")
+        self.PageLabel = QtWidgets.QLabel(self.centralwidget)
+        self.PageLabel.setGeometry(QtCore.QRect(450, 620, 111, 16))
+        font = QtGui.QFont()
+        font.setFamily("Franklin Gothic Medium Cond")
+        font.setPointSize(12)
+        self.PageLabel.setFont(font)
+        self.PageLabel.setAlignment(QtCore.Qt.AlignCenter)
+        self.PageLabel.setObjectName("PageLabel")
         MainWindow.setCentralWidget(self.centralwidget)
         self.menubar = QtWidgets.QMenuBar(MainWindow)
         self.menubar.setGeometry(QtCore.QRect(0, 0, 1014, 22))
@@ -663,10 +682,6 @@ class Ui_MainWindow(object):
         _translate = QtCore.QCoreApplication.translate
         MainWindow.setWindowTitle(_translate("MainWindow", "MainWindow"))
         self.label.setText(_translate("MainWindow", "Welcome to Fresh! We only have fresh stuff here. All the items are organic & natural."))
-        self.label_4.setText(_translate("MainWindow", "Vegetables"))
-        self.label_5.setText(_translate("MainWindow", "Fruits"))
-        self.label_6.setText(_translate("MainWindow", "Daily products"))
-        self.label_7.setText(_translate("MainWindow", "OTOP"))
         self.KeywordInput.setWhatsThis(_translate("MainWindow", "<html><head/><body><p><br/></p></body></html>"))
         self.KeywordInput.setText(_translate("MainWindow", "  Type keywords"))
         self.Search.setText(_translate("MainWindow", "..."))
@@ -679,7 +694,7 @@ class Ui_MainWindow(object):
 "</style></head><body style=\" font-family:\'Franklin Gothic Medium Cond\'; font-size:10pt; font-weight:400; font-style:normal;\">\n"
 "<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><br /></p></body></html>"))
         self.BuyingButton1.setText(_translate("MainWindow", "0 Bath"))
-        self.ProductAmount1.setText(_translate("MainWindow", "Buy: 1"))
+        self.ProductAmount1.setText(_translate("MainWindow", "Buy: 0"))
         self.ProductIncrease1.setText(_translate("MainWindow", "+"))
         self.ProductDecrease1.setText(_translate("MainWindow", "-"))
         self.ProductDescription3.setHtml(_translate("MainWindow", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
@@ -688,7 +703,7 @@ class Ui_MainWindow(object):
 "</style></head><body style=\" font-family:\'Franklin Gothic Medium Cond\'; font-size:10pt; font-weight:400; font-style:normal;\">\n"
 "<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><br /></p></body></html>"))
         self.BuyingButton3.setText(_translate("MainWindow", "0 Bath"))
-        self.ProductAmount3.setText(_translate("MainWindow", "Buy: 1"))
+        self.ProductAmount3.setText(_translate("MainWindow", "Buy: 0"))
         self.ProductIncrease3.setText(_translate("MainWindow", "+"))
         self.ProductDecrease3.setText(_translate("MainWindow", "-"))
         self.ProductDescription2.setHtml(_translate("MainWindow", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
@@ -697,7 +712,7 @@ class Ui_MainWindow(object):
 "</style></head><body style=\" font-family:\'Franklin Gothic Medium Cond\'; font-size:10pt; font-weight:400; font-style:normal;\">\n"
 "<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><br /></p></body></html>"))
         self.BuyingButton2.setText(_translate("MainWindow", "0 Bath"))
-        self.ProductAmount2.setText(_translate("MainWindow", "Buy: 1"))
+        self.ProductAmount2.setText(_translate("MainWindow", "Buy: 0"))
         self.ProductIncrease2.setText(_translate("MainWindow", "+"))
         self.ProductDecrease2.setText(_translate("MainWindow", "-"))
         self.ProductDescription4.setHtml(_translate("MainWindow", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
@@ -706,7 +721,7 @@ class Ui_MainWindow(object):
 "</style></head><body style=\" font-family:\'Franklin Gothic Medium Cond\'; font-size:10pt; font-weight:400; font-style:normal;\">\n"
 "<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><br /></p></body></html>"))
         self.BuyingButton4.setText(_translate("MainWindow", "0 Bath"))
-        self.ProductAmount4.setText(_translate("MainWindow", "Buy: 1"))
+        self.ProductAmount4.setText(_translate("MainWindow", "Buy: 0"))
         self.ProductIncrease4.setText(_translate("MainWindow", "+"))
         self.ProductDecrease4.setText(_translate("MainWindow", "-"))
         self.ProductDescription5.setHtml(_translate("MainWindow", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
@@ -715,12 +730,13 @@ class Ui_MainWindow(object):
 "</style></head><body style=\" font-family:\'Franklin Gothic Medium Cond\'; font-size:10pt; font-weight:400; font-style:normal;\">\n"
 "<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><br /></p></body></html>"))
         self.BuyingButton5.setText(_translate("MainWindow", "0 Bath"))
-        self.ProductAmount5.setText(_translate("MainWindow", "Buy: 1"))
+        self.ProductAmount5.setText(_translate("MainWindow", "Buy: 0"))
         self.ProductIncrease5.setText(_translate("MainWindow", "+"))
         self.ProductDecrease5.setText(_translate("MainWindow", "-"))
         self.CartButton.setText(_translate("MainWindow", "View Cart"))
         self.RefreshButton.setText(_translate("MainWindow", "Refresh"))
         self.SellProductButton.setText(_translate("MainWindow", "Sell Product"))
+        self.PageLabel.setText(_translate("MainWindow", "Page: 0/0"))
 import pic_rc
 
 
