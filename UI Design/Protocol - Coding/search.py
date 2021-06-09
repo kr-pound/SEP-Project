@@ -4,6 +4,8 @@ from __product import CartProductClass
 
 from os import environ
 
+
+
 def suppress_qt_warnings():
     environ["QT_DEVICE_PIXEL_RATIO"] = "0"
     environ["QT_AUTO_SCREEN_SCALE_FACTOR"] = "1"
@@ -35,6 +37,9 @@ class SearchWindow(QtWidgets.QMainWindow, Ui_SearchWindow):
         #after push the button --> view cart or sell product page
         self.CartButton.clicked.connect(self.cartTransfer)
         self.SellProductButton.clicked.connect(self.sellProductTransfer)
+
+        #set page label
+        self.PageLabel.setText("Page: 0/0")
         
         #product label color
         self.ProductLabel1.setStyleSheet("color: darkgreen;")
@@ -104,6 +109,11 @@ class SearchWindow(QtWidgets.QMainWindow, Ui_SearchWindow):
         self.cpClass.label_product_detail(1, 5, self.cpClass.product)
         self.set_product_detail()
         self.page = 1
+        self.PageLabel.setText("Page: " + str(self.page) + "/" + str(len(self.cpClass.product)//5))
+
+    def refreshTickMark(self):
+        self.cpClass.label_product_detail(self.page, 5, self.cpClass.product)
+        self.set_product_detail()
 
     #change the page of product show
     def rightTransfer(self):
@@ -136,31 +146,42 @@ class SearchWindow(QtWidgets.QMainWindow, Ui_SearchWindow):
         if (self.buy_index < len(self.cpClass.product_list)):
             if(self.ProductAmount1.text() != ""):
                 self.cpClass.product[self.buy_index].buy_amount = int(self.ProductAmount1.text().split()[-1])
-            print("Buy Amount: " + str(self.cpClass.product[self.buy_index].buy_amount))
+            print("<<< Updated: " + self.cpClass.product[self.buy_index].name + " >>>" +
+                "\tBuy Amount: " + str(self.cpClass.product[self.buy_index].buy_amount))
+        self.refreshTickMark()
     def buy_index1(self):
         self.buy_index = ((self.page - 1) * 5) + 1
         if (self.buy_index < len(self.cpClass.product_list)):
             if(self.ProductAmount2.text() != ""):
                 self.cpClass.product[self.buy_index].buy_amount = int(self.ProductAmount2.text().split()[-1])
-            print("Buy Amount: " + str(self.cpClass.product[self.buy_index].buy_amount))
+            print("<<< Updated: " + self.cpClass.product[self.buy_index].name + " >>>" +
+                "\tBuy Amount: " + str(self.cpClass.product[self.buy_index].buy_amount))
+        self.refreshTickMark()
     def buy_index2(self):
         self.buy_index = ((self.page - 1) * 5) + 2
         if (self.buy_index < len(self.cpClass.product_list)):
             if(self.ProductAmount3.text() != ""):
                 self.cpClass.product[self.buy_index].buy_amount = int(self.ProductAmount3.text().split()[-1])
-            print("Buy Amount: " + str(self.cpClass.product[self.buy_index].buy_amount))
+            print("<<< Updated: " + self.cpClass.product[self.buy_index].name + " >>>" +
+                "\tBuy Amount: " + str(self.cpClass.product[self.buy_index].buy_amount))
+        self.refreshTickMark()
     def buy_index3(self):
         self.buy_index = ((self.page - 1) * 5) + 3
         if (self.buy_index < len(self.cpClass.product_list)):
             if(self.ProductAmount4.text() != ""):
                 self.cpClass.product[self.buy_index].buy_amount = int(self.ProductAmount4.text().split()[-1])
-            print("Buy Amount: " + str(self.cpClass.product[self.buy_index].buy_amount))
+            print("<<< Updated: " + self.cpClass.product[self.buy_index].name + " >>>" +
+                "\tBuy Amount: " + str(self.cpClass.product[self.buy_index].buy_amount))
+        self.refreshTickMark()
     def buy_index4(self):
         self.buy_index = ((self.page - 1) * 5) + 4
         if (self.buy_index < len(self.cpClass.product_list)):
             if(self.ProductAmount5.text() != ""):
                 self.cpClass.product[self.buy_index].buy_amount = int(self.ProductAmount5.text().split()[-1])
-            print("Buy Amount: " + str(self.cpClass.product[self.buy_index].buy_amount))
+            print("<<< Updated: " + self.cpClass.product[self.buy_index].name + " >>>" +
+                "\tBuy Amount: " + str(self.cpClass.product[self.buy_index].buy_amount))
+        self.refreshTickMark()
+
 
     #label product amount
     def amount_label0(self):
@@ -191,7 +212,6 @@ class SearchWindow(QtWidgets.QMainWindow, Ui_SearchWindow):
         if (self.buy_index < len(self.cpClass.product_list)):
             self.buy_amount0 += 1
             self.amount_label0()
-            print(self.buy_amount0)
     def increment1(self):
         self.buy_index = ((self.page - 1) * 5) + 1
         if (self.buy_index < len(self.cpClass.product_list)):
@@ -259,26 +279,42 @@ class SearchWindow(QtWidgets.QMainWindow, Ui_SearchWindow):
         self.BuyingButton1.setText(self.cpClass.buyingButton1)
         self.ProductDescription1.setText(self.cpClass.productDescription1)
         self.ProductAmount1.setText(self.cpClass.productAmount1)
+        self.ProductPicture1.setStyleSheet("image: url(:/icon/Icon/" + self.cpClass.productPicture1 + ");")
+        self.TickMark1.setStyleSheet("image: url(:/icon/Icon/" + self.cpClass.productTick1 + ");")
 
         self.ProductLabel2.setText(self.cpClass.productLabel2)
         self.BuyingButton2.setText(self.cpClass.buyingButton2)
         self.ProductDescription2.setText(self.cpClass.productDescription2)
         self.ProductAmount2.setText(self.cpClass.productAmount2)
+        self.ProductPicture2.setStyleSheet(self.cpClass.productPicture2)
+        self.ProductPicture2.setStyleSheet("image: url(:/icon/Icon/" + self.cpClass.productPicture2 + ");")
+        self.TickMark2.setStyleSheet("image: url(:/icon/Icon/" + self.cpClass.productTick2 + ");")
 
         self.ProductLabel3.setText(self.cpClass.productLabel3)
         self.BuyingButton3.setText(self.cpClass.buyingButton3)
         self.ProductDescription3.setText(self.cpClass.productDescription3)
         self.ProductAmount3.setText(self.cpClass.productAmount3)
+        self.ProductPicture3.setStyleSheet(self.cpClass.productPicture3)
+        self.ProductPicture3.setStyleSheet("image: url(:/icon/Icon/" + self.cpClass.productPicture3 + ");")
+        self.TickMark3.setStyleSheet("image: url(:/icon/Icon/" + self.cpClass.productTick3 + ");")
 
         self.ProductLabel4.setText(self.cpClass.productLabel4)
         self.BuyingButton4.setText(self.cpClass.buyingButton4)
         self.ProductDescription4.setText(self.cpClass.productDescription4)
         self.ProductAmount4.setText(self.cpClass.productAmount4)
+        self.ProductPicture4.setStyleSheet(self.cpClass.productPicture4)
+        self.ProductPicture4.setStyleSheet("image: url(:/icon/Icon/" + self.cpClass.productPicture4 + ");")
+        self.TickMark4.setStyleSheet("image: url(:/icon/Icon/" + self.cpClass.productTick4 + ");")
 
         self.ProductLabel5.setText(self.cpClass.productLabel5)
         self.BuyingButton5.setText(self.cpClass.buyingButton5)
         self.ProductDescription5.setText(self.cpClass.productDescription5)
         self.ProductAmount5.setText(self.cpClass.productAmount5)
+        self.ProductPicture5.setStyleSheet(self.cpClass.productPicture5)
+        self.ProductPicture5.setStyleSheet("image: url(:/icon/Icon/" + self.cpClass.productPicture5 + ");")
+        self.TickMark5.setStyleSheet("image: url(:/icon/Icon/" + self.cpClass.productTick5 + ");")
+
+        self.PageLabel.setText("Page: " + str(self.page) + "/" + str(len(self.cpClass.product)//5))
 
     
     

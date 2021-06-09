@@ -1,8 +1,8 @@
 from PyQt5 import QtCore, QtGui, QtWidgets
 
 from _login_design import Ui_MainWindow as Ui_LoginWindow
-from register import Ui_RegisterWindow
-from search import Ui_SearchWindow
+
+import pyrebase
 
 from os import environ
 from __database import database
@@ -38,13 +38,17 @@ class LoginWindow(QtWidgets.QMainWindow, Ui_LoginWindow):
 
         #user & pass get from db
         database.get_password(database, 'username', local_username)
-        print(database.username)
-        print(database.password)
+        #print("\nValid Username: " + database.username)
+        #print("Valid Password: " + database.password + "\n")
 
         #login and close the previous window
         if database.username == local_username and database.password == local_password:
             self.logged.emit()
             self.close()
+
+            print("Logging in\n")
+        else:
+            print("Wrong Input")
 
 
         

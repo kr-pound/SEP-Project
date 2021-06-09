@@ -5,9 +5,10 @@ from register import RegisterWindow
 from search import SearchWindow
 from cart import CartWindow
 from sell_product import SellProductWindow
+from checkout import CheckoutWindow
+from confirm_add_product import ConfirmAddProductWindow
 
 from os import environ
-
 
 def suppress_qt_warnings():
     environ["QT_DEVICE_PIXEL_RATIO"] = "0"
@@ -26,6 +27,8 @@ if __name__ == "__main__":
     register = RegisterWindow()
     cart = CartWindow()
     sell_product = SellProductWindow()
+    checkout = CheckoutWindow()
+    confirm_add_product = ConfirmAddProductWindow()
     
     #connect login with the search page
     login.logged.connect(search.show)
@@ -35,7 +38,10 @@ if __name__ == "__main__":
     cart.search.connect(search.show)
 
     search.sell_product.connect(sell_product.show)
-    sell_product.search.connect(search.show)
+    sell_product.confirm_add_product.connect(confirm_add_product.show)
+    confirm_add_product.search.connect(search.show)
+    cart.checkout.connect(checkout.show)
+    checkout.cart.connect(cart.show)
     
     #show login page
     login.show()

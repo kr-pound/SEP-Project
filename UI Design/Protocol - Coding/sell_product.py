@@ -12,7 +12,7 @@ def suppress_qt_warnings():
     environ["QT_SCALE_FACTOR"] = "1"
 
 class SellProductWindow(QtWidgets.QMainWindow, Ui_SellProductWindow):
-    search = QtCore.pyqtSignal()
+    confirm_add_product = QtCore.pyqtSignal()
 
     name = None
     price = 0
@@ -31,27 +31,32 @@ class SellProductWindow(QtWidgets.QMainWindow, Ui_SellProductWindow):
         self.ConfirmButton.clicked.connect(self.receiveData)
 
     @QtCore.pyqtSlot()
-    def searchTransfer(self):
-        self.search.emit()
+    def confirmAddProductTransfer(self):
+        print("Successfully added data")
+        print("The product store will be update on the next time runs\n")
+
+        self.confirm_add_product.emit()
         self.close()
 
     def receiveData(self):
         self.name = self.NameLineEdit.text()
         self.price = self.PriceLineEdit.text()
         self.detail = self.DetailTextEdit.toPlainText()
-        self.category = self.CategoryLineEdit.text()
-        self.amount = self.AmountLineEdit.text()
+
+        self.veg = self.VegetableCategory.isChecked()
+        self.fruit = self.FruitCategory.isChecked()
+        self.daily_product = self.DailyProductCategory.isChecked()
+        self.otop = self.OTOPCategory.isChecked()
 
         self.clear_lineEdit()
 
-        if (self.price == '') or (self.amount == ''):
+        if (self.price == '') or (self.price.isnumeric() == False):
             print("Wrong Input")
         else:
             self.price = int(self.price)
-            self.amount = int(self.amount)
 
             self.submitData()
-            self.searchTransfer()
+            self.confirmAddProductTransfer()
 
     #clear line edit after push button
     def clear_lineEdit(self):
@@ -60,16 +65,17 @@ class SellProductWindow(QtWidgets.QMainWindow, Ui_SellProductWindow):
         self.NameLineEdit.setText(cleared_text)
         self.PriceLineEdit.setText(cleared_text)
         self.DetailTextEdit.setPlainText(cleared_text)
-        self.CategoryLineEdit.setText(cleared_text)
-        self.AmountLineEdit.setText(cleared_text)
 
     #send data to __database.py
     def submitData(self):
         database.product_name = self.name
         database.product_price = self.price
         database.product_detail = self.detail
-        database.product_category = self.category
-        database.product_amount = self.amount
+
+        database.product_veg = self.veg
+        database.product_fruit = self.fruit
+        database.product_daily_product = self.daily_product
+        database.product_otop = self.otop
 
         database.push_product(database)
         
