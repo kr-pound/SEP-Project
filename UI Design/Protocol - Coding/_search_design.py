@@ -179,6 +179,13 @@ class Ui_MainWindow(object):
 "    background: lightgray;\n"
 "}")
         self.ProductDecrease1.setObjectName("ProductDecrease1")
+        self.TickMark1 = QtWidgets.QLabel(self.ProductFrame1)
+        self.TickMark1.setGeometry(QtCore.QRect(10, 10, 21, 21))
+        self.TickMark1.setStyleSheet("QLabel {\n"
+"    image: url(:/);\n"
+"}")
+        self.TickMark1.setText("")
+        self.TickMark1.setObjectName("TickMark1")
         self.ProductFrame3 = QtWidgets.QFrame(self.centralwidget)
         self.ProductFrame3.setGeometry(QtCore.QRect(430, 270, 151, 331))
         self.ProductFrame3.setStyleSheet("QFrame {\n"
@@ -260,6 +267,13 @@ class Ui_MainWindow(object):
 "    background: lightgray;\n"
 "}")
         self.ProductDecrease3.setObjectName("ProductDecrease3")
+        self.TickMark3 = QtWidgets.QLabel(self.ProductFrame3)
+        self.TickMark3.setGeometry(QtCore.QRect(10, 10, 21, 21))
+        self.TickMark3.setStyleSheet("QLabel {\n"
+"    image: url(:/);\n"
+"}")
+        self.TickMark3.setText("")
+        self.TickMark3.setObjectName("TickMark3")
         self.ProductFrame2 = QtWidgets.QFrame(self.centralwidget)
         self.ProductFrame2.setGeometry(QtCore.QRect(260, 270, 151, 331))
         self.ProductFrame2.setStyleSheet("QFrame {\n"
@@ -341,6 +355,13 @@ class Ui_MainWindow(object):
 "    background: lightgray;\n"
 "}")
         self.ProductDecrease2.setObjectName("ProductDecrease2")
+        self.TickMark2 = QtWidgets.QLabel(self.ProductFrame2)
+        self.TickMark2.setGeometry(QtCore.QRect(10, 10, 21, 21))
+        self.TickMark2.setStyleSheet("QLabel {\n"
+"    image: url(:/);\n"
+"}")
+        self.TickMark2.setText("")
+        self.TickMark2.setObjectName("TickMark2")
         self.ProductFrame4 = QtWidgets.QFrame(self.centralwidget)
         self.ProductFrame4.setGeometry(QtCore.QRect(600, 270, 151, 331))
         self.ProductFrame4.setStyleSheet("QFrame {\n"
@@ -422,6 +443,13 @@ class Ui_MainWindow(object):
 "    background: lightgray;\n"
 "}")
         self.ProductDecrease4.setObjectName("ProductDecrease4")
+        self.TickMark4 = QtWidgets.QLabel(self.ProductFrame4)
+        self.TickMark4.setGeometry(QtCore.QRect(10, 10, 21, 21))
+        self.TickMark4.setStyleSheet("QLabel {\n"
+"    image: url(:/);\n"
+"}")
+        self.TickMark4.setText("")
+        self.TickMark4.setObjectName("TickMark4")
         self.ProductFrame5 = QtWidgets.QFrame(self.centralwidget)
         self.ProductFrame5.setGeometry(QtCore.QRect(770, 270, 151, 331))
         self.ProductFrame5.setStyleSheet("QFrame {\n"
@@ -503,6 +531,13 @@ class Ui_MainWindow(object):
 "    background: lightgray;\n"
 "}")
         self.ProductDecrease5.setObjectName("ProductDecrease5")
+        self.TickMark5 = QtWidgets.QLabel(self.ProductFrame5)
+        self.TickMark5.setGeometry(QtCore.QRect(10, 10, 21, 21))
+        self.TickMark5.setStyleSheet("QLabel {\n"
+"    image: url(:/);\n"
+"}")
+        self.TickMark5.setText("")
+        self.TickMark5.setObjectName("TickMark5")
         self.CartButton = QtWidgets.QPushButton(self.centralwidget)
         self.CartButton.setGeometry(QtCore.QRect(880, 20, 111, 31))
         font = QtGui.QFont()

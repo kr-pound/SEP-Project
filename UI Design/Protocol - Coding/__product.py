@@ -44,6 +44,12 @@ class CartProductClass():
     productPicture4 = None
     productPicture5 = None
 
+    productTick1 = None
+    productTick2 = None
+    productTick3 = None
+    productTick4 = None
+    productTick5 = None
+
 
     def __init__(self):
         self.db = database()
@@ -83,6 +89,10 @@ class CartProductClass():
             self.productDescription1 = "   " + product_list[0 + (amount_per_page * page_index)].detail
             self.productAmount1 = "Buy: " + str(product_list[0 + (amount_per_page * page_index)].buy_amount)
             self.productPicture1 = str(product_list[0 + (amount_per_page * page_index)].picture)
+            if (product_list[0 + (amount_per_page * page_index)].buy_amount > 0):
+                self.productTick1 = "red tick.png"
+            else:
+                self.productTick1 = ""
 
         if (product_list[1 + (amount_per_page * page_index)] != None):
             self.productLabel2 = product_list[1 + (amount_per_page * page_index)].name
@@ -90,6 +100,10 @@ class CartProductClass():
             self.productDescription2 = "   " + product_list[1 + (amount_per_page * page_index)].detail
             self.productAmount2 = "Buy: " + str(product_list[1 + (amount_per_page * page_index)].buy_amount)
             self.productPicture2 = str(product_list[1 + (amount_per_page * page_index)].picture)
+            if (product_list[1 + (amount_per_page * page_index)].buy_amount > 0):
+                self.productTick2 = "red tick.png"
+            else:
+                self.productTick2 = ""
 
         if (product_list[2 + (amount_per_page * page_index)] != None):
             self.productLabel3 = product_list[2 + (amount_per_page * page_index)].name
@@ -97,6 +111,10 @@ class CartProductClass():
             self.productDescription3 = "   " + product_list[2 + (amount_per_page * page_index)].detail
             self.productAmount3 = "Buy: " + str(product_list[2 + (amount_per_page * page_index)].buy_amount)
             self.productPicture3 = str(product_list[2 + (amount_per_page * page_index)].picture)
+            if (product_list[2 + (amount_per_page * page_index)].buy_amount > 0):
+                self.productTick3 = "red tick.png"
+            else:
+                self.productTick3 = ""
 
         if (product_list[3 + (amount_per_page * page_index)] != None):
             self.productLabel4 = product_list[3 + (amount_per_page * page_index)].name
@@ -104,6 +122,10 @@ class CartProductClass():
             self.productDescription4 = "   " + product_list[3 + (amount_per_page * page_index)].detail
             self.productAmount4 = "Buy: " + str(product_list[3 + (amount_per_page * page_index)].buy_amount)
             self.productPicture4 = str(product_list[3 + (amount_per_page * page_index)].picture)
+            if (product_list[3 + (amount_per_page * page_index)].buy_amount > 0):
+                self.productTick4 = "red tick.png"
+            else:
+                self.productTick4 = ""
 
         if (product_list[4 + (amount_per_page * page_index)] != None):
             self.productLabel5 = product_list[4 + (amount_per_page * page_index)].name
@@ -111,6 +133,10 @@ class CartProductClass():
             self.productDescription5 = "   " + product_list[4 + (amount_per_page * page_index)].detail
             self.productAmount5 = "Buy: " + str(product_list[4 + (amount_per_page * page_index)].buy_amount)
             self.productPicture5 = str(product_list[4 + (amount_per_page * page_index)].picture)
+            if (product_list[4 + (amount_per_page * page_index)].buy_amount > 0):
+                self.productTick5 = "red tick.png"
+            else:
+                self.productTick5 = ""
 
 
     #clear any product show

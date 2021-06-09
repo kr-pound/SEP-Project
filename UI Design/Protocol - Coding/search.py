@@ -111,6 +111,10 @@ class SearchWindow(QtWidgets.QMainWindow, Ui_SearchWindow):
         self.page = 1
         self.PageLabel.setText("Page: " + str(self.page) + "/" + str(len(self.cpClass.product)//5))
 
+    def refreshTickMark(self):
+        self.cpClass.label_product_detail(self.page, 5, self.cpClass.product)
+        self.set_product_detail()
+
     #change the page of product show
     def rightTransfer(self):
         if (self.page * 5 < len(self.cpClass.product_list)):
@@ -144,6 +148,7 @@ class SearchWindow(QtWidgets.QMainWindow, Ui_SearchWindow):
                 self.cpClass.product[self.buy_index].buy_amount = int(self.ProductAmount1.text().split()[-1])
             print("<<< Updated: " + self.cpClass.product[self.buy_index].name + " >>>" +
                 "\tBuy Amount: " + str(self.cpClass.product[self.buy_index].buy_amount))
+        self.refreshTickMark()
     def buy_index1(self):
         self.buy_index = ((self.page - 1) * 5) + 1
         if (self.buy_index < len(self.cpClass.product_list)):
@@ -151,6 +156,7 @@ class SearchWindow(QtWidgets.QMainWindow, Ui_SearchWindow):
                 self.cpClass.product[self.buy_index].buy_amount = int(self.ProductAmount2.text().split()[-1])
             print("<<< Updated: " + self.cpClass.product[self.buy_index].name + " >>>" +
                 "\tBuy Amount: " + str(self.cpClass.product[self.buy_index].buy_amount))
+        self.refreshTickMark()
     def buy_index2(self):
         self.buy_index = ((self.page - 1) * 5) + 2
         if (self.buy_index < len(self.cpClass.product_list)):
@@ -158,6 +164,7 @@ class SearchWindow(QtWidgets.QMainWindow, Ui_SearchWindow):
                 self.cpClass.product[self.buy_index].buy_amount = int(self.ProductAmount3.text().split()[-1])
             print("<<< Updated: " + self.cpClass.product[self.buy_index].name + " >>>" +
                 "\tBuy Amount: " + str(self.cpClass.product[self.buy_index].buy_amount))
+        self.refreshTickMark()
     def buy_index3(self):
         self.buy_index = ((self.page - 1) * 5) + 3
         if (self.buy_index < len(self.cpClass.product_list)):
@@ -165,6 +172,7 @@ class SearchWindow(QtWidgets.QMainWindow, Ui_SearchWindow):
                 self.cpClass.product[self.buy_index].buy_amount = int(self.ProductAmount4.text().split()[-1])
             print("<<< Updated: " + self.cpClass.product[self.buy_index].name + " >>>" +
                 "\tBuy Amount: " + str(self.cpClass.product[self.buy_index].buy_amount))
+        self.refreshTickMark()
     def buy_index4(self):
         self.buy_index = ((self.page - 1) * 5) + 4
         if (self.buy_index < len(self.cpClass.product_list)):
@@ -172,6 +180,8 @@ class SearchWindow(QtWidgets.QMainWindow, Ui_SearchWindow):
                 self.cpClass.product[self.buy_index].buy_amount = int(self.ProductAmount5.text().split()[-1])
             print("<<< Updated: " + self.cpClass.product[self.buy_index].name + " >>>" +
                 "\tBuy Amount: " + str(self.cpClass.product[self.buy_index].buy_amount))
+        self.refreshTickMark()
+
 
     #label product amount
     def amount_label0(self):
@@ -270,6 +280,7 @@ class SearchWindow(QtWidgets.QMainWindow, Ui_SearchWindow):
         self.ProductDescription1.setText(self.cpClass.productDescription1)
         self.ProductAmount1.setText(self.cpClass.productAmount1)
         self.ProductPicture1.setStyleSheet("image: url(:/icon/Icon/" + self.cpClass.productPicture1 + ");")
+        self.TickMark1.setStyleSheet("image: url(:/icon/Icon/" + self.cpClass.productTick1 + ");")
 
         self.ProductLabel2.setText(self.cpClass.productLabel2)
         self.BuyingButton2.setText(self.cpClass.buyingButton2)
@@ -277,6 +288,7 @@ class SearchWindow(QtWidgets.QMainWindow, Ui_SearchWindow):
         self.ProductAmount2.setText(self.cpClass.productAmount2)
         self.ProductPicture2.setStyleSheet(self.cpClass.productPicture2)
         self.ProductPicture2.setStyleSheet("image: url(:/icon/Icon/" + self.cpClass.productPicture2 + ");")
+        self.TickMark2.setStyleSheet("image: url(:/icon/Icon/" + self.cpClass.productTick2 + ");")
 
         self.ProductLabel3.setText(self.cpClass.productLabel3)
         self.BuyingButton3.setText(self.cpClass.buyingButton3)
@@ -284,6 +296,7 @@ class SearchWindow(QtWidgets.QMainWindow, Ui_SearchWindow):
         self.ProductAmount3.setText(self.cpClass.productAmount3)
         self.ProductPicture3.setStyleSheet(self.cpClass.productPicture3)
         self.ProductPicture3.setStyleSheet("image: url(:/icon/Icon/" + self.cpClass.productPicture3 + ");")
+        self.TickMark3.setStyleSheet("image: url(:/icon/Icon/" + self.cpClass.productTick3 + ");")
 
         self.ProductLabel4.setText(self.cpClass.productLabel4)
         self.BuyingButton4.setText(self.cpClass.buyingButton4)
@@ -291,6 +304,7 @@ class SearchWindow(QtWidgets.QMainWindow, Ui_SearchWindow):
         self.ProductAmount4.setText(self.cpClass.productAmount4)
         self.ProductPicture4.setStyleSheet(self.cpClass.productPicture4)
         self.ProductPicture4.setStyleSheet("image: url(:/icon/Icon/" + self.cpClass.productPicture4 + ");")
+        self.TickMark4.setStyleSheet("image: url(:/icon/Icon/" + self.cpClass.productTick4 + ");")
 
         self.ProductLabel5.setText(self.cpClass.productLabel5)
         self.BuyingButton5.setText(self.cpClass.buyingButton5)
@@ -298,6 +312,7 @@ class SearchWindow(QtWidgets.QMainWindow, Ui_SearchWindow):
         self.ProductAmount5.setText(self.cpClass.productAmount5)
         self.ProductPicture5.setStyleSheet(self.cpClass.productPicture5)
         self.ProductPicture5.setStyleSheet("image: url(:/icon/Icon/" + self.cpClass.productPicture5 + ");")
+        self.TickMark5.setStyleSheet("image: url(:/icon/Icon/" + self.cpClass.productTick5 + ");")
 
         self.PageLabel.setText("Page: " + str(self.page) + "/" + str(len(self.cpClass.product)//5))
 

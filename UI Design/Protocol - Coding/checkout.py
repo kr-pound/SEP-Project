@@ -35,7 +35,7 @@ class CheckoutWindow(QtWidgets.QMainWindow, Ui_CheckoutWindow):
 
     def billPrint(self):
         self.PriceLabel.setText(str(self.cpClass.total_price))
-        print("\n\n<<< Printing Bill >>>")
+        print("\n<<< Printing Bill >>>")
 
         #printing
         i = 0
