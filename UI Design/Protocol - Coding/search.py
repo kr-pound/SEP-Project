@@ -37,6 +37,9 @@ class SearchWindow(QtWidgets.QMainWindow, Ui_SearchWindow):
         #after push the button --> view cart or sell product page
         self.CartButton.clicked.connect(self.cartTransfer)
         self.SellProductButton.clicked.connect(self.sellProductTransfer)
+
+        #set page label
+        self.PageLabel.setText("Page: 0/0")
         
         #product label color
         self.ProductLabel1.setStyleSheet("color: darkgreen;")
@@ -106,6 +109,7 @@ class SearchWindow(QtWidgets.QMainWindow, Ui_SearchWindow):
         self.cpClass.label_product_detail(1, 5, self.cpClass.product)
         self.set_product_detail()
         self.page = 1
+        self.PageLabel.setText("Page: " + str(self.page) + "/" + str(len(self.cpClass.product)//5))
 
     #change the page of product show
     def rightTransfer(self):
@@ -138,31 +142,36 @@ class SearchWindow(QtWidgets.QMainWindow, Ui_SearchWindow):
         if (self.buy_index < len(self.cpClass.product_list)):
             if(self.ProductAmount1.text() != ""):
                 self.cpClass.product[self.buy_index].buy_amount = int(self.ProductAmount1.text().split()[-1])
-            print("Buy Amount: " + str(self.cpClass.product[self.buy_index].buy_amount))
+            print("<<< Updated: " + self.cpClass.product[self.buy_index].name + " >>>" +
+                "\tBuy Amount: " + str(self.cpClass.product[self.buy_index].buy_amount))
     def buy_index1(self):
         self.buy_index = ((self.page - 1) * 5) + 1
         if (self.buy_index < len(self.cpClass.product_list)):
             if(self.ProductAmount2.text() != ""):
                 self.cpClass.product[self.buy_index].buy_amount = int(self.ProductAmount2.text().split()[-1])
-            print("Buy Amount: " + str(self.cpClass.product[self.buy_index].buy_amount))
+            print("<<< Updated: " + self.cpClass.product[self.buy_index].name + " >>>" +
+                "\tBuy Amount: " + str(self.cpClass.product[self.buy_index].buy_amount))
     def buy_index2(self):
         self.buy_index = ((self.page - 1) * 5) + 2
         if (self.buy_index < len(self.cpClass.product_list)):
             if(self.ProductAmount3.text() != ""):
                 self.cpClass.product[self.buy_index].buy_amount = int(self.ProductAmount3.text().split()[-1])
-            print("Buy Amount: " + str(self.cpClass.product[self.buy_index].buy_amount))
+            print("<<< Updated: " + self.cpClass.product[self.buy_index].name + " >>>" +
+                "\tBuy Amount: " + str(self.cpClass.product[self.buy_index].buy_amount))
     def buy_index3(self):
         self.buy_index = ((self.page - 1) * 5) + 3
         if (self.buy_index < len(self.cpClass.product_list)):
             if(self.ProductAmount4.text() != ""):
                 self.cpClass.product[self.buy_index].buy_amount = int(self.ProductAmount4.text().split()[-1])
-            print("Buy Amount: " + str(self.cpClass.product[self.buy_index].buy_amount))
+            print("<<< Updated: " + self.cpClass.product[self.buy_index].name + " >>>" +
+                "\tBuy Amount: " + str(self.cpClass.product[self.buy_index].buy_amount))
     def buy_index4(self):
         self.buy_index = ((self.page - 1) * 5) + 4
         if (self.buy_index < len(self.cpClass.product_list)):
             if(self.ProductAmount5.text() != ""):
                 self.cpClass.product[self.buy_index].buy_amount = int(self.ProductAmount5.text().split()[-1])
-            print("Buy Amount: " + str(self.cpClass.product[self.buy_index].buy_amount))
+            print("<<< Updated: " + self.cpClass.product[self.buy_index].name + " >>>" +
+                "\tBuy Amount: " + str(self.cpClass.product[self.buy_index].buy_amount))
 
     #label product amount
     def amount_label0(self):
@@ -193,7 +202,6 @@ class SearchWindow(QtWidgets.QMainWindow, Ui_SearchWindow):
         if (self.buy_index < len(self.cpClass.product_list)):
             self.buy_amount0 += 1
             self.amount_label0()
-            print(self.buy_amount0)
     def increment1(self):
         self.buy_index = ((self.page - 1) * 5) + 1
         if (self.buy_index < len(self.cpClass.product_list)):
@@ -262,7 +270,6 @@ class SearchWindow(QtWidgets.QMainWindow, Ui_SearchWindow):
         self.ProductDescription1.setText(self.cpClass.productDescription1)
         self.ProductAmount1.setText(self.cpClass.productAmount1)
         self.ProductPicture1.setStyleSheet("image: url(:/icon/Icon/" + self.cpClass.productPicture1 + ");")
-        print(self.cpClass.productPicture1)
 
         self.ProductLabel2.setText(self.cpClass.productLabel2)
         self.BuyingButton2.setText(self.cpClass.buyingButton2)
@@ -291,6 +298,8 @@ class SearchWindow(QtWidgets.QMainWindow, Ui_SearchWindow):
         self.ProductAmount5.setText(self.cpClass.productAmount5)
         self.ProductPicture5.setStyleSheet(self.cpClass.productPicture5)
         self.ProductPicture5.setStyleSheet("image: url(:/icon/Icon/" + self.cpClass.productPicture5 + ");")
+
+        self.PageLabel.setText("Page: " + str(self.page) + "/" + str(len(self.cpClass.product)//5))
 
     
     

@@ -10,6 +10,8 @@ class CartProductClass():
 
     #buying product list
     buy_list = [None] * 6
+    #total_price calculated
+    total_price = 0
 
     #product information
     productLabel1 = None
@@ -68,6 +70,7 @@ class CartProductClass():
             self.product[id_count] = ProductClass(id, name, price, detail, picture)
             id_count += 1
 
+        print("\nProduct Data: ", end="")
         print(self.product)
 
     #generate product information

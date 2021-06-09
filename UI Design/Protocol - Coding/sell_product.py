@@ -12,7 +12,7 @@ def suppress_qt_warnings():
     environ["QT_SCALE_FACTOR"] = "1"
 
 class SellProductWindow(QtWidgets.QMainWindow, Ui_SellProductWindow):
-    search = QtCore.pyqtSignal()
+    confirm_add_product = QtCore.pyqtSignal()
 
     name = None
     price = 0
@@ -31,8 +31,11 @@ class SellProductWindow(QtWidgets.QMainWindow, Ui_SellProductWindow):
         self.ConfirmButton.clicked.connect(self.receiveData)
 
     @QtCore.pyqtSlot()
-    def searchTransfer(self):
-        self.search.emit()
+    def confirmAddProductTransfer(self):
+        print("Successfully added data")
+        print("The product store will be update on the next time runs\n")
+
+        self.confirm_add_product.emit()
         self.close()
 
     def receiveData(self):
@@ -47,13 +50,13 @@ class SellProductWindow(QtWidgets.QMainWindow, Ui_SellProductWindow):
 
         self.clear_lineEdit()
 
-        if (self.price == ''):
+        if (self.price == '') or (self.price.isnumeric() == False):
             print("Wrong Input")
         else:
             self.price = int(self.price)
 
             self.submitData()
-            self.searchTransfer()
+            self.confirmAddProductTransfer()
 
     #clear line edit after push button
     def clear_lineEdit(self):
