@@ -23,8 +23,6 @@ class CheckoutWindow(QtWidgets.QMainWindow, Ui_CheckoutWindow):
         self.CloseButton.clicked.connect(self.cartTransfer)
         self.BillButton.clicked.connect(self.billPrint)
 
-        
-
     #close window and printing
     @QtCore.pyqtSlot()
     def cartTransfer(self):
@@ -43,6 +41,16 @@ class CheckoutWindow(QtWidgets.QMainWindow, Ui_CheckoutWindow):
         while(self.cpClass.buy_list[i] != None):
             print(self.cpClass.buy_list[i].name + "\t amount: " + str(self.cpClass.buy_list[i].buy_amount) +
                 "\t price: " + str(self.cpClass.buy_list[i].price * self.cpClass.buy_list[i].buy_amount) + " Baht")
+            self.cpClass.buy_list[i].status = "yes"
             i += 1
 
         print("\nTotal Price: " + str(self.cpClass.total_price) + " Baht\n")
+        
+        '''
+        #set sold status to "yes"
+        for i in range(len(self.cpClass.buy_list)):
+            if (self.cpClass.buy_list[i] != None):
+                self.cpClass.buy_list[i].status = "yes"
+        self.cpClass.update_status(CartProductClass)'''
+
+        

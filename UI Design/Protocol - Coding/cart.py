@@ -3,7 +3,6 @@ from _cart_design import Ui_MainWindow as Ui_CartWindow
 from __product import CartProductClass
 
 from os import environ
-import math
 
 def suppress_qt_warnings():
     environ["QT_DEVICE_PIXEL_RATIO"] = "0"
