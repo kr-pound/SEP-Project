@@ -46,7 +46,7 @@ class SellProductWindow(QtWidgets.QMainWindow, Ui_SellProductWindow):
         self.veg = self.VegetableCategory.isChecked()
         self.fruit = self.FruitCategory.isChecked()
         self.daily_product = self.DailyProductCategory.isChecked()
-        self.otop = self.radioButton_4.isChecked()
+        self.otop = self.OTOPCategory.isChecked()
 
         self.clear_lineEdit()
 
