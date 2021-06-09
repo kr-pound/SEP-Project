@@ -13,6 +13,7 @@ class database:
     product_name = None
     product_price = 0
     product_detail = None
+    product_sold_status = None
 
     #store category
     product_veg = None
@@ -52,8 +53,8 @@ class database:
         if (self.product_otop == True):
             self.product_category = "otop"
 
-        data = {'name' : self.product_name, 'id' : len(self.get_product(self)) + 1, 'detail' : self.product_detail,
-                'price' : self.product_price, 'category' : self.product_category}
+        data = {'name' : self.product_name, 'detail' : self.product_detail,
+                'price' : self.product_price, 'category' : self.product_category, 'sold': 'no'}
 
         self.ref = db.reference(db_directory)
         self.ref.push(data)
@@ -108,6 +109,15 @@ class database:
         #implementation
         #print(database().get_product())
 
+    
+    def update_node(self, child_key, key_set, value_set, db_directory = '/'):
+        self.ref = db.reference(db_directory)
+        key = self.ref.child('-MbjVvSyo0fcBG85whjb').get()
+        #print(key)
+        #return self.ref.child('-MbjVvSyo0fcBG85whjb').child(key).remove()
+
+        return self.ref.child('product').child('-MbjVvSyo0fcBG85whjb').update({'name': 'a'})
+
     #print all the list in directory
     def show_list(self, db_directory = '/', print_data = True):
         self.ref = db.reference(db_directory)
@@ -120,4 +130,5 @@ class database:
         #implementation
         #print(database().show_list('/users'))
 
-#database().push({'name' : 'Carrot7', 'id' : 7, 'price': '7', 'detail': 'Any carrot6 is good.'}, 'product')
+
+#print(database().delete_node())

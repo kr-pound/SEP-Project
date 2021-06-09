@@ -50,6 +50,11 @@ class CartProductClass():
     productTick4 = None
     productTick5 = None
 
+    productSoldStatus1 = None
+    productSoldStatus2 = None
+    productSoldStatus3 = None
+    productSoldStatus4 = None
+    productSoldStatus5 = None
 
     def __init__(self):
         self.db = database()
@@ -66,18 +71,27 @@ class CartProductClass():
         id_count = 0
         for product in self.product_list:
             #get any data from dictionary
-            id = self.product[id_count] = product["id"]
             name = self.product[id_count] = product["name"]
             price = self.product[id_count] = product["price"]
             detail = self.product[id_count] = product["detail"]
             picture = self.product[id_count] = product["category"] + ".png"
+            status = self.product[id_count] = product["sold"]
 
             #store the object within a list
-            self.product[id_count] = ProductClass(id, name, price, detail, picture)
+            self.product[id_count] = ProductClass(name, price, detail, picture, status)
             id_count += 1
 
         print("\nProduct Data: ", end="")
         print(self.product)
+
+    def update_status(self):
+        #id_count = 0
+        #print(self.product_list)
+        #for product in self.product_list:
+            #print(product)
+            #if (self.product[id_count] == 'yes'):
+                #print("This product is sold")
+        pass
 
     #generate product information
     def label_product_detail(self, current_page, amount_per_page, product_list):
@@ -177,25 +191,33 @@ class CartProductClass():
         self.productPicture4 = product_picture_cleared
         self.productPicture5 = product_picture_cleared
 
+        self.productTick1 = product_picture_cleared
+        self.productTick2 = product_picture_cleared
+        self.productTick3 = product_picture_cleared
+        self.productTick4 = product_picture_cleared
+        self.productTick5 = product_picture_cleared
 
+    def set_product_sold_out(self):
+        pass
 
 #class of each product info
 class ProductClass():
-    id = None
     name = None
     price = None
     detail = None
+    status = None
 
     buy_amount = 0
     picture = 0
 
-    def __init__(self, id, name, price, detail, picture):
-        self.id = id
+    def __init__(self, name, price, detail, picture, status):
         self.name = name
         self.price = price
         self.detail = detail
 
         self.picture = picture
+        self.status = status
+
 
 
 
