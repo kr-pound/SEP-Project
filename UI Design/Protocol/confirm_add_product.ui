@@ -6,33 +6,38 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>659</width>
-    <height>263</height>
+    <width>640</width>
+    <height>219</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>MainWindow</string>
   </property>
+  <property name="styleSheet">
+   <string notr="true"/>
+  </property>
   <widget class="QWidget" name="centralwidget">
    <widget class="QPushButton" name="CloseButton">
     <property name="geometry">
      <rect>
-      <x>410</x>
-      <y>120</y>
-      <width>181</width>
-      <height>91</height>
+      <x>440</x>
+      <y>100</y>
+      <width>121</width>
+      <height>51</height>
      </rect>
     </property>
     <property name="font">
      <font>
-      <family>Franklin Gothic Medium Cond</family>
-      <pointsize>36</pointsize>
+      <family>Sitka Small</family>
+      <pointsize>22</pointsize>
+      <italic>false</italic>
+      <bold>true</bold>
      </font>
     </property>
     <property name="styleSheet">
      <string notr="true">QPushButton {
 	color: white;
-	background: #64AB25;
+	background-color: rgb(0, 85, 0);
 	border-radius: 15px;
 }
 
@@ -43,63 +48,104 @@ QPushButton:hover {
 }</string>
     </property>
     <property name="text">
-     <string>CLOSE</string>
+     <string>OK</string>
     </property>
    </widget>
    <widget class="QLabel" name="TotalLabel">
     <property name="geometry">
      <rect>
-      <x>70</x>
-      <y>20</y>
-      <width>341</width>
-      <height>41</height>
+      <x>20</x>
+      <y>10</y>
+      <width>421</width>
+      <height>51</height>
      </rect>
     </property>
     <property name="font">
      <font>
-      <family>Franklin Gothic Medium Cond</family>
-      <pointsize>16</pointsize>
+      <family>Sitka Small</family>
+      <pointsize>28</pointsize>
+      <italic>true</italic>
+      <bold>true</bold>
      </font>
     </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgba(255, 255, 255, 0);</string>
+    </property>
     <property name="text">
-     <string>Successfully added data</string>
+     <string>Successfully</string>
     </property>
    </widget>
    <widget class="QLabel" name="TotalLabel_2">
     <property name="geometry">
      <rect>
-      <x>70</x>
+      <x>20</x>
       <y>60</y>
-      <width>441</width>
+      <width>661</width>
       <height>41</height>
      </rect>
     </property>
     <property name="font">
      <font>
-      <family>Franklin Gothic Medium Cond</family>
-      <pointsize>16</pointsize>
+      <family>Sitka Small</family>
+      <pointsize>11</pointsize>
+      <italic>false</italic>
+      <bold>true</bold>
      </font>
     </property>
     <property name="styleSheet">
-     <string notr="true">color: red;</string>
+     <string notr="true">background-color: rgba(255, 255, 255, 0);</string>
     </property>
     <property name="text">
      <string>The product store will be update on the next time runs</string>
     </property>
    </widget>
+   <widget class="QLabel" name="label">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>-20</y>
+      <width>791</width>
+      <height>481</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-image: url(:/Bg/Background.jpg);</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="pixmap">
+     <pixmap resource="qrc file/Bg.qrc">:/Bg/Background.jpg</pixmap>
+    </property>
+    <property name="scaledContents">
+     <bool>true</bool>
+    </property>
+   </widget>
+   <widget class="QGraphicsView" name="graphicsView">
+    <property name="geometry">
+     <rect>
+      <x>-40</x>
+      <y>-50</y>
+      <width>631</width>
+      <height>221</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QFrame {
+	background-color: rgb(237, 236, 233);
+	border-radius: 50px;
+}</string>
+    </property>
+   </widget>
+   <zorder>label</zorder>
+   <zorder>graphicsView</zorder>
+   <zorder>CloseButton</zorder>
+   <zorder>TotalLabel</zorder>
+   <zorder>TotalLabel_2</zorder>
   </widget>
-  <widget class="QMenuBar" name="menubar">
-   <property name="geometry">
-    <rect>
-     <x>0</x>
-     <y>0</y>
-     <width>659</width>
-     <height>22</height>
-    </rect>
-   </property>
-  </widget>
-  <widget class="QStatusBar" name="statusbar"/>
  </widget>
- <resources/>
+ <resources>
+  <include location="qrc file/Bg.qrc"/>
+ </resources>
  <connections/>
 </ui>

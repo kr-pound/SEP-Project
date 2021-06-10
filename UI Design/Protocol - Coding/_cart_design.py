@@ -14,29 +14,21 @@ from PyQt5 import QtCore, QtGui, QtWidgets
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
         MainWindow.setObjectName("MainWindow")
-        MainWindow.resize(1013, 681)
+        MainWindow.resize(982, 618)
         self.centralwidget = QtWidgets.QWidget(MainWindow)
         self.centralwidget.setObjectName("centralwidget")
-        self.label = QtWidgets.QLabel(self.centralwidget)
-        self.label.setGeometry(QtCore.QRect(40, 10, 131, 61))
-        font = QtGui.QFont()
-        font.setFamily("Franklin Gothic Medium Cond")
-        font.setPointSize(48)
-        self.label.setFont(font)
-        self.label.setStyleSheet("color: white;\n"
-"background-color : \"rgb(0, 0, 0)\";\n"
-"border-radius: 15px;\n"
-"")
-        self.label.setObjectName("label")
         self.pushButton_2 = QtWidgets.QPushButton(self.centralwidget)
-        self.pushButton_2.setGeometry(QtCore.QRect(760, 560, 221, 61))
+        self.pushButton_2.setGeometry(QtCore.QRect(730, 560, 191, 41))
         font = QtGui.QFont()
-        font.setFamily("Franklin Gothic Medium Cond")
-        font.setPointSize(36)
+        font.setFamily("Sitka")
+        font.setPointSize(18)
+        font.setBold(True)
+        font.setItalic(False)
         self.pushButton_2.setFont(font)
         self.pushButton_2.setStyleSheet("QPushButton {\n"
+"    font: 700 18pt \"Sitka\";\n"
 "    color: white;\n"
-"    background: #64AB25;\n"
+"    background-color: rgb(0, 85, 0);\n"
 "    border-radius: 15px;\n"
 "}\n"
 "\n"
@@ -47,7 +39,7 @@ class Ui_MainWindow(object):
 "}")
         self.pushButton_2.setObjectName("pushButton_2")
         self.ProductFrame1 = QtWidgets.QFrame(self.centralwidget)
-        self.ProductFrame1.setGeometry(QtCore.QRect(50, 80, 441, 121))
+        self.ProductFrame1.setGeometry(QtCore.QRect(40, 140, 441, 111))
         self.ProductFrame1.setStyleSheet("QFrame {\n"
 "    background: lightgray;\n"
 "    border-radius: 30px;\n"
@@ -56,11 +48,12 @@ class Ui_MainWindow(object):
         self.ProductFrame1.setFrameShadow(QtWidgets.QFrame.Raised)
         self.ProductFrame1.setObjectName("ProductFrame1")
         self.DeleteButton1 = QtWidgets.QPushButton(self.ProductFrame1)
-        self.DeleteButton1.setGeometry(QtCore.QRect(310, 80, 111, 31))
+        self.DeleteButton1.setGeometry(QtCore.QRect(310, 70, 111, 31))
         font = QtGui.QFont()
-        font.setFamily("Franklin Gothic Medium Cond")
+        font.setFamily("Sitka")
         font.setPointSize(12)
-        font.setBold(False)
+        font.setBold(True)
+        font.setItalic(False)
         font.setKerning(True)
         font.setStyleStrategy(QtGui.QFont.PreferDefault)
         self.DeleteButton1.setFont(font)
@@ -80,7 +73,7 @@ class Ui_MainWindow(object):
 "")
         self.DeleteButton1.setObjectName("DeleteButton1")
         self.CartProductAmount1 = QtWidgets.QLabel(self.ProductFrame1)
-        self.CartProductAmount1.setGeometry(QtCore.QRect(310, 50, 111, 16))
+        self.CartProductAmount1.setGeometry(QtCore.QRect(310, 40, 111, 16))
         font = QtGui.QFont()
         font.setFamily("Franklin Gothic Medium Cond")
         font.setPointSize(12)
@@ -96,14 +89,14 @@ class Ui_MainWindow(object):
         self.CartProductLabel1.setText("")
         self.CartProductLabel1.setObjectName("CartProductLabel1")
         self.CartProductPicture1 = QtWidgets.QLabel(self.ProductFrame1)
-        self.CartProductPicture1.setGeometry(QtCore.QRect(20, 20, 131, 91))
+        self.CartProductPicture1.setGeometry(QtCore.QRect(20, 10, 131, 91))
         self.CartProductPicture1.setStyleSheet("QLabel {\n"
 "    image: url(:/)\n"
 "}")
         self.CartProductPicture1.setText("")
         self.CartProductPicture1.setObjectName("CartProductPicture1")
         self.CartProductPrice1 = QtWidgets.QLabel(self.ProductFrame1)
-        self.CartProductPrice1.setGeometry(QtCore.QRect(170, 90, 121, 16))
+        self.CartProductPrice1.setGeometry(QtCore.QRect(170, 80, 121, 16))
         font = QtGui.QFont()
         font.setFamily("Franklin Gothic Medium Cond")
         font.setPointSize(12)
@@ -111,17 +104,19 @@ class Ui_MainWindow(object):
         self.CartProductPrice1.setText("")
         self.CartProductPrice1.setObjectName("CartProductPrice1")
         self.BackButton = QtWidgets.QPushButton(self.centralwidget)
-        self.BackButton.setGeometry(QtCore.QRect(40, 570, 111, 31))
+        self.BackButton.setGeometry(QtCore.QRect(60, 570, 131, 31))
         font = QtGui.QFont()
-        font.setFamily("Franklin Gothic Medium Cond")
+        font.setFamily("Sitka")
         font.setPointSize(12)
-        font.setBold(False)
+        font.setBold(True)
+        font.setItalic(False)
         font.setKerning(True)
         font.setStyleStrategy(QtGui.QFont.PreferDefault)
         self.BackButton.setFont(font)
         self.BackButton.setStyleSheet("QPushButton {\n"
+"font: 700 12pt \"Sitka\";\n"
 "    color: white;\n"
-"    background: #64AB25;\n"
+"    background-color: rgb(0, 85, 0);\n"
 "    border-radius: 15px;\n"
 "}\n"
 "\n"
@@ -135,17 +130,19 @@ class Ui_MainWindow(object):
 "")
         self.BackButton.setObjectName("BackButton")
         self.ReloadButton = QtWidgets.QPushButton(self.centralwidget)
-        self.ReloadButton.setGeometry(QtCore.QRect(860, 510, 111, 31))
+        self.ReloadButton.setGeometry(QtCore.QRect(60, 530, 131, 31))
         font = QtGui.QFont()
-        font.setFamily("Franklin Gothic Medium Cond")
+        font.setFamily("Sitka")
         font.setPointSize(12)
-        font.setBold(False)
+        font.setBold(True)
+        font.setItalic(False)
         font.setKerning(True)
         font.setStyleStrategy(QtGui.QFont.PreferDefault)
         self.ReloadButton.setFont(font)
         self.ReloadButton.setStyleSheet("QPushButton {\n"
-"    color: black;\n"
-"    background: lightgray;\n"
+"font: 700 12pt \"Sitka\";\n"
+"color: white;\n"
+"    background-color: rgb(0, 85, 0);\n"
 "    border-radius: 15px;\n"
 "}\n"
 "\n"
@@ -159,7 +156,7 @@ class Ui_MainWindow(object):
 "")
         self.ReloadButton.setObjectName("ReloadButton")
         self.ProductFrame2 = QtWidgets.QFrame(self.centralwidget)
-        self.ProductFrame2.setGeometry(QtCore.QRect(530, 80, 441, 121))
+        self.ProductFrame2.setGeometry(QtCore.QRect(520, 140, 441, 111))
         self.ProductFrame2.setStyleSheet("QFrame {\n"
 "    background: lightgray;\n"
 "    border-radius: 30px;\n"
@@ -168,11 +165,12 @@ class Ui_MainWindow(object):
         self.ProductFrame2.setFrameShadow(QtWidgets.QFrame.Raised)
         self.ProductFrame2.setObjectName("ProductFrame2")
         self.DeleteButton2 = QtWidgets.QPushButton(self.ProductFrame2)
-        self.DeleteButton2.setGeometry(QtCore.QRect(310, 80, 111, 31))
+        self.DeleteButton2.setGeometry(QtCore.QRect(310, 70, 111, 31))
         font = QtGui.QFont()
-        font.setFamily("Franklin Gothic Medium Cond")
+        font.setFamily("Sitka")
         font.setPointSize(12)
-        font.setBold(False)
+        font.setBold(True)
+        font.setItalic(False)
         font.setKerning(True)
         font.setStyleStrategy(QtGui.QFont.PreferDefault)
         self.DeleteButton2.setFont(font)
@@ -192,7 +190,7 @@ class Ui_MainWindow(object):
 "")
         self.DeleteButton2.setObjectName("DeleteButton2")
         self.CartProductAmount2 = QtWidgets.QLabel(self.ProductFrame2)
-        self.CartProductAmount2.setGeometry(QtCore.QRect(310, 50, 111, 16))
+        self.CartProductAmount2.setGeometry(QtCore.QRect(310, 40, 111, 16))
         font = QtGui.QFont()
         font.setFamily("Franklin Gothic Medium Cond")
         font.setPointSize(12)
@@ -208,14 +206,14 @@ class Ui_MainWindow(object):
         self.CartProductLabel2.setText("")
         self.CartProductLabel2.setObjectName("CartProductLabel2")
         self.CartProductPicture2 = QtWidgets.QLabel(self.ProductFrame2)
-        self.CartProductPicture2.setGeometry(QtCore.QRect(20, 20, 131, 91))
+        self.CartProductPicture2.setGeometry(QtCore.QRect(20, 10, 131, 91))
         self.CartProductPicture2.setStyleSheet("QLabel {\n"
 "    image: url(:/)\n"
 "}")
         self.CartProductPicture2.setText("")
         self.CartProductPicture2.setObjectName("CartProductPicture2")
         self.CartProductPrice2 = QtWidgets.QLabel(self.ProductFrame2)
-        self.CartProductPrice2.setGeometry(QtCore.QRect(170, 90, 121, 16))
+        self.CartProductPrice2.setGeometry(QtCore.QRect(170, 80, 121, 16))
         font = QtGui.QFont()
         font.setFamily("Franklin Gothic Medium Cond")
         font.setPointSize(12)
@@ -223,7 +221,7 @@ class Ui_MainWindow(object):
         self.CartProductPrice2.setText("")
         self.CartProductPrice2.setObjectName("CartProductPrice2")
         self.ProductFrame3 = QtWidgets.QFrame(self.centralwidget)
-        self.ProductFrame3.setGeometry(QtCore.QRect(50, 220, 441, 121))
+        self.ProductFrame3.setGeometry(QtCore.QRect(40, 270, 441, 111))
         self.ProductFrame3.setStyleSheet("QFrame {\n"
 "    background: lightgray;\n"
 "    border-radius: 30px;\n"
@@ -232,11 +230,12 @@ class Ui_MainWindow(object):
         self.ProductFrame3.setFrameShadow(QtWidgets.QFrame.Raised)
         self.ProductFrame3.setObjectName("ProductFrame3")
         self.DeleteButton3 = QtWidgets.QPushButton(self.ProductFrame3)
-        self.DeleteButton3.setGeometry(QtCore.QRect(310, 80, 111, 31))
+        self.DeleteButton3.setGeometry(QtCore.QRect(310, 70, 111, 31))
         font = QtGui.QFont()
-        font.setFamily("Franklin Gothic Medium Cond")
+        font.setFamily("Sitka")
         font.setPointSize(12)
-        font.setBold(False)
+        font.setBold(True)
+        font.setItalic(False)
         font.setKerning(True)
         font.setStyleStrategy(QtGui.QFont.PreferDefault)
         self.DeleteButton3.setFont(font)
@@ -256,7 +255,7 @@ class Ui_MainWindow(object):
 "")
         self.DeleteButton3.setObjectName("DeleteButton3")
         self.CartProductAmount3 = QtWidgets.QLabel(self.ProductFrame3)
-        self.CartProductAmount3.setGeometry(QtCore.QRect(310, 50, 111, 16))
+        self.CartProductAmount3.setGeometry(QtCore.QRect(310, 40, 111, 16))
         font = QtGui.QFont()
         font.setFamily("Franklin Gothic Medium Cond")
         font.setPointSize(12)
@@ -272,14 +271,14 @@ class Ui_MainWindow(object):
         self.CartProductLabel3.setText("")
         self.CartProductLabel3.setObjectName("CartProductLabel3")
         self.CartProductPicture3 = QtWidgets.QLabel(self.ProductFrame3)
-        self.CartProductPicture3.setGeometry(QtCore.QRect(20, 20, 131, 91))
+        self.CartProductPicture3.setGeometry(QtCore.QRect(20, 10, 131, 91))
         self.CartProductPicture3.setStyleSheet("QLabel {\n"
 "    image: url(:/)\n"
 "}")
         self.CartProductPicture3.setText("")
         self.CartProductPicture3.setObjectName("CartProductPicture3")
         self.CartProductPrice3 = QtWidgets.QLabel(self.ProductFrame3)
-        self.CartProductPrice3.setGeometry(QtCore.QRect(170, 90, 121, 16))
+        self.CartProductPrice3.setGeometry(QtCore.QRect(170, 80, 121, 16))
         font = QtGui.QFont()
         font.setFamily("Franklin Gothic Medium Cond")
         font.setPointSize(12)
@@ -287,7 +286,7 @@ class Ui_MainWindow(object):
         self.CartProductPrice3.setText("")
         self.CartProductPrice3.setObjectName("CartProductPrice3")
         self.ProductFrame5 = QtWidgets.QFrame(self.centralwidget)
-        self.ProductFrame5.setGeometry(QtCore.QRect(50, 360, 441, 121))
+        self.ProductFrame5.setGeometry(QtCore.QRect(40, 400, 441, 111))
         self.ProductFrame5.setStyleSheet("QFrame {\n"
 "    background: lightgray;\n"
 "    border-radius: 30px;\n"
@@ -296,11 +295,12 @@ class Ui_MainWindow(object):
         self.ProductFrame5.setFrameShadow(QtWidgets.QFrame.Raised)
         self.ProductFrame5.setObjectName("ProductFrame5")
         self.DeleteButton5 = QtWidgets.QPushButton(self.ProductFrame5)
-        self.DeleteButton5.setGeometry(QtCore.QRect(310, 80, 111, 31))
+        self.DeleteButton5.setGeometry(QtCore.QRect(310, 70, 111, 31))
         font = QtGui.QFont()
-        font.setFamily("Franklin Gothic Medium Cond")
+        font.setFamily("Sitka")
         font.setPointSize(12)
-        font.setBold(False)
+        font.setBold(True)
+        font.setItalic(False)
         font.setKerning(True)
         font.setStyleStrategy(QtGui.QFont.PreferDefault)
         self.DeleteButton5.setFont(font)
@@ -320,7 +320,7 @@ class Ui_MainWindow(object):
 "")
         self.DeleteButton5.setObjectName("DeleteButton5")
         self.CartProductAmount5 = QtWidgets.QLabel(self.ProductFrame5)
-        self.CartProductAmount5.setGeometry(QtCore.QRect(310, 50, 111, 16))
+        self.CartProductAmount5.setGeometry(QtCore.QRect(310, 40, 111, 16))
         font = QtGui.QFont()
         font.setFamily("Franklin Gothic Medium Cond")
         font.setPointSize(12)
@@ -336,14 +336,14 @@ class Ui_MainWindow(object):
         self.CartProductLabel5.setText("")
         self.CartProductLabel5.setObjectName("CartProductLabel5")
         self.CartProductPicture5 = QtWidgets.QLabel(self.ProductFrame5)
-        self.CartProductPicture5.setGeometry(QtCore.QRect(20, 20, 131, 91))
+        self.CartProductPicture5.setGeometry(QtCore.QRect(20, 10, 131, 91))
         self.CartProductPicture5.setStyleSheet("QLabel {\n"
 "    image: url(:/)\n"
 "}")
         self.CartProductPicture5.setText("")
         self.CartProductPicture5.setObjectName("CartProductPicture5")
         self.CartProductPrice5 = QtWidgets.QLabel(self.ProductFrame5)
-        self.CartProductPrice5.setGeometry(QtCore.QRect(170, 90, 121, 16))
+        self.CartProductPrice5.setGeometry(QtCore.QRect(170, 80, 121, 16))
         font = QtGui.QFont()
         font.setFamily("Franklin Gothic Medium Cond")
         font.setPointSize(12)
@@ -351,7 +351,7 @@ class Ui_MainWindow(object):
         self.CartProductPrice5.setText("")
         self.CartProductPrice5.setObjectName("CartProductPrice5")
         self.ProductFrame4 = QtWidgets.QFrame(self.centralwidget)
-        self.ProductFrame4.setGeometry(QtCore.QRect(530, 220, 441, 121))
+        self.ProductFrame4.setGeometry(QtCore.QRect(520, 270, 441, 111))
         self.ProductFrame4.setStyleSheet("QFrame {\n"
 "    background: lightgray;\n"
 "    border-radius: 30px;\n"
@@ -360,11 +360,12 @@ class Ui_MainWindow(object):
         self.ProductFrame4.setFrameShadow(QtWidgets.QFrame.Raised)
         self.ProductFrame4.setObjectName("ProductFrame4")
         self.DeleteButton4 = QtWidgets.QPushButton(self.ProductFrame4)
-        self.DeleteButton4.setGeometry(QtCore.QRect(310, 80, 111, 31))
+        self.DeleteButton4.setGeometry(QtCore.QRect(310, 70, 111, 31))
         font = QtGui.QFont()
-        font.setFamily("Franklin Gothic Medium Cond")
+        font.setFamily("Sitka")
         font.setPointSize(12)
-        font.setBold(False)
+        font.setBold(True)
+        font.setItalic(False)
         font.setKerning(True)
         font.setStyleStrategy(QtGui.QFont.PreferDefault)
         self.DeleteButton4.setFont(font)
@@ -384,7 +385,7 @@ class Ui_MainWindow(object):
 "")
         self.DeleteButton4.setObjectName("DeleteButton4")
         self.CartProductAmount4 = QtWidgets.QLabel(self.ProductFrame4)
-        self.CartProductAmount4.setGeometry(QtCore.QRect(310, 50, 111, 16))
+        self.CartProductAmount4.setGeometry(QtCore.QRect(310, 40, 111, 16))
         font = QtGui.QFont()
         font.setFamily("Franklin Gothic Medium Cond")
         font.setPointSize(12)
@@ -400,14 +401,14 @@ class Ui_MainWindow(object):
         self.CartProductLabel4.setText("")
         self.CartProductLabel4.setObjectName("CartProductLabel4")
         self.CartProductPicture4 = QtWidgets.QLabel(self.ProductFrame4)
-        self.CartProductPicture4.setGeometry(QtCore.QRect(20, 20, 131, 91))
+        self.CartProductPicture4.setGeometry(QtCore.QRect(20, 10, 131, 91))
         self.CartProductPicture4.setStyleSheet("QLabel {\n"
 "    image: url(:/)\n"
 "}")
         self.CartProductPicture4.setText("")
         self.CartProductPicture4.setObjectName("CartProductPicture4")
         self.CartProductPrice4 = QtWidgets.QLabel(self.ProductFrame4)
-        self.CartProductPrice4.setGeometry(QtCore.QRect(170, 90, 121, 16))
+        self.CartProductPrice4.setGeometry(QtCore.QRect(170, 80, 121, 16))
         font = QtGui.QFont()
         font.setFamily("Franklin Gothic Medium Cond")
         font.setPointSize(12)
@@ -415,7 +416,7 @@ class Ui_MainWindow(object):
         self.CartProductPrice4.setText("")
         self.CartProductPrice4.setObjectName("CartProductPrice4")
         self.ProductFrame6 = QtWidgets.QFrame(self.centralwidget)
-        self.ProductFrame6.setGeometry(QtCore.QRect(530, 360, 441, 121))
+        self.ProductFrame6.setGeometry(QtCore.QRect(520, 400, 441, 111))
         self.ProductFrame6.setStyleSheet("QFrame {\n"
 "    background: lightgray;\n"
 "    border-radius: 30px;\n"
@@ -424,11 +425,12 @@ class Ui_MainWindow(object):
         self.ProductFrame6.setFrameShadow(QtWidgets.QFrame.Raised)
         self.ProductFrame6.setObjectName("ProductFrame6")
         self.DeleteButton6 = QtWidgets.QPushButton(self.ProductFrame6)
-        self.DeleteButton6.setGeometry(QtCore.QRect(310, 80, 111, 31))
+        self.DeleteButton6.setGeometry(QtCore.QRect(310, 70, 111, 31))
         font = QtGui.QFont()
-        font.setFamily("Franklin Gothic Medium Cond")
+        font.setFamily("Sitka")
         font.setPointSize(12)
-        font.setBold(False)
+        font.setBold(True)
+        font.setItalic(False)
         font.setKerning(True)
         font.setStyleStrategy(QtGui.QFont.PreferDefault)
         self.DeleteButton6.setFont(font)
@@ -448,7 +450,7 @@ class Ui_MainWindow(object):
 "")
         self.DeleteButton6.setObjectName("DeleteButton6")
         self.CartProductAmount6 = QtWidgets.QLabel(self.ProductFrame6)
-        self.CartProductAmount6.setGeometry(QtCore.QRect(310, 50, 111, 16))
+        self.CartProductAmount6.setGeometry(QtCore.QRect(310, 40, 111, 16))
         font = QtGui.QFont()
         font.setFamily("Franklin Gothic Medium Cond")
         font.setPointSize(12)
@@ -464,14 +466,14 @@ class Ui_MainWindow(object):
         self.CartProductLabel6.setText("")
         self.CartProductLabel6.setObjectName("CartProductLabel6")
         self.CartProductPicture6 = QtWidgets.QLabel(self.ProductFrame6)
-        self.CartProductPicture6.setGeometry(QtCore.QRect(20, 20, 131, 91))
+        self.CartProductPicture6.setGeometry(QtCore.QRect(20, 10, 131, 91))
         self.CartProductPicture6.setStyleSheet("QLabel {\n"
 "    image: url(:/)\n"
 "}")
         self.CartProductPicture6.setText("")
         self.CartProductPicture6.setObjectName("CartProductPicture6")
         self.CartProductPrice6 = QtWidgets.QLabel(self.ProductFrame6)
-        self.CartProductPrice6.setGeometry(QtCore.QRect(170, 90, 121, 16))
+        self.CartProductPrice6.setGeometry(QtCore.QRect(170, 80, 121, 16))
         font = QtGui.QFont()
         font.setFamily("Franklin Gothic Medium Cond")
         font.setPointSize(12)
@@ -479,16 +481,18 @@ class Ui_MainWindow(object):
         self.CartProductPrice6.setText("")
         self.CartProductPrice6.setObjectName("CartProductPrice6")
         self.LeftButton = QtWidgets.QPushButton(self.centralwidget)
-        self.LeftButton.setGeometry(QtCore.QRect(530, 510, 41, 41))
+        self.LeftButton.setGeometry(QtCore.QRect(390, 560, 41, 41))
         font = QtGui.QFont()
-        font.setFamily("Franklin Gothic Medium Cond")
+        font.setFamily("Sitka")
         font.setPointSize(12)
-        font.setBold(False)
+        font.setBold(True)
+        font.setItalic(False)
         font.setKerning(True)
         font.setStyleStrategy(QtGui.QFont.PreferDefault)
         self.LeftButton.setFont(font)
         self.LeftButton.setStyleSheet("QPushButton {\n"
-"    background: lightgray;\n"
+"font: 700 12pt \"Sitka\";\n"
+"    background: white;\n"
 "    border-radius: 20px;\n"
 "    image: url(:/others/Arrow/leftArrow.png);\n"
 "}\n"
@@ -503,7 +507,7 @@ class Ui_MainWindow(object):
         self.LeftButton.setText("")
         self.LeftButton.setObjectName("LeftButton")
         self.RightButton = QtWidgets.QPushButton(self.centralwidget)
-        self.RightButton.setGeometry(QtCore.QRect(700, 510, 41, 41))
+        self.RightButton.setGeometry(QtCore.QRect(570, 560, 41, 41))
         font = QtGui.QFont()
         font.setFamily("Franklin Gothic Medium Cond")
         font.setPointSize(12)
@@ -512,7 +516,7 @@ class Ui_MainWindow(object):
         font.setStyleStrategy(QtGui.QFont.PreferDefault)
         self.RightButton.setFont(font)
         self.RightButton.setStyleSheet("QPushButton {\n"
-"    background: lightgray;\n"
+"    background: white;\n"
 "    border-radius: 20px;\n"
 "    image: url(:/others/Arrow/rightArrow.png);\n"
 "}\n"
@@ -527,28 +531,72 @@ class Ui_MainWindow(object):
         self.RightButton.setText("")
         self.RightButton.setObjectName("RightButton")
         self.TotalLabel = QtWidgets.QLabel(self.centralwidget)
-        self.TotalLabel.setGeometry(QtCore.QRect(620, 580, 121, 41))
+        self.TotalLabel.setGeometry(QtCore.QRect(750, 520, 121, 41))
         font = QtGui.QFont()
-        font.setFamily("Franklin Gothic Medium Cond")
-        font.setPointSize(16)
+        font.setFamily("Sitka")
+        font.setPointSize(15)
+        font.setBold(True)
+        font.setItalic(False)
         self.TotalLabel.setFont(font)
+        self.TotalLabel.setStyleSheet("font: 700 15pt \"Sitka\";")
         self.TotalLabel.setObjectName("TotalLabel")
         self.PageLabel = QtWidgets.QLabel(self.centralwidget)
-        self.PageLabel.setGeometry(QtCore.QRect(580, 520, 111, 16))
+        self.PageLabel.setGeometry(QtCore.QRect(440, 570, 121, 31))
         font = QtGui.QFont()
-        font.setFamily("Franklin Gothic Medium Cond")
+        font.setFamily("Sitka")
         font.setPointSize(12)
+        font.setBold(True)
+        font.setItalic(False)
         self.PageLabel.setFont(font)
+        self.PageLabel.setStyleSheet("font: 700 12pt \"Sitka\";")
         self.PageLabel.setAlignment(QtCore.Qt.AlignCenter)
         self.PageLabel.setObjectName("PageLabel")
+        self.label_2 = QtWidgets.QLabel(self.centralwidget)
+        self.label_2.setGeometry(QtCore.QRect(0, 0, 1131, 691))
+        self.label_2.setStyleSheet("background-image: url(:/Bg/Background.jpg);")
+        self.label_2.setText("")
+        self.label_2.setPixmap(QtGui.QPixmap(":/Bg/Background.jpg"))
+        self.label_2.setScaledContents(True)
+        self.label_2.setObjectName("label_2")
+        self.graphicsView = QtWidgets.QGraphicsView(self.centralwidget)
+        self.graphicsView.setGeometry(QtCore.QRect(0, 110, 1011, 731))
+        self.graphicsView.setStyleSheet("QFrame {\n"
+"    \n"
+"    background-color: rgb(237, 236, 233);\n"
+"    border-radius: 50px;\n"
+"}")
+        self.graphicsView.setObjectName("graphicsView")
+        self.Label = QtWidgets.QLabel(self.centralwidget)
+        self.Label.setGeometry(QtCore.QRect(70, 0, 851, 101))
+        font = QtGui.QFont()
+        font.setFamily("Sitka")
+        font.setPointSize(50)
+        font.setBold(True)
+        font.setItalic(True)
+        self.Label.setFont(font)
+        self.Label.setStyleSheet("QLabel {\n"
+"    color: rgb(245, 245, 245);\n"
+"    background-color: rgba(255, 255, 255, 0);\n"
+"}")
+        self.Label.setAlignment(QtCore.Qt.AlignCenter)
+        self.Label.setObjectName("Label")
+        self.label_2.raise_()
+        self.graphicsView.raise_()
+        self.pushButton_2.raise_()
+        self.ProductFrame1.raise_()
+        self.BackButton.raise_()
+        self.ReloadButton.raise_()
+        self.ProductFrame2.raise_()
+        self.ProductFrame3.raise_()
+        self.ProductFrame5.raise_()
+        self.ProductFrame4.raise_()
+        self.ProductFrame6.raise_()
+        self.LeftButton.raise_()
+        self.RightButton.raise_()
+        self.TotalLabel.raise_()
+        self.PageLabel.raise_()
+        self.Label.raise_()
         MainWindow.setCentralWidget(self.centralwidget)
-        self.statusbar = QtWidgets.QStatusBar(MainWindow)
-        self.statusbar.setObjectName("statusbar")
-        MainWindow.setStatusBar(self.statusbar)
-        self.menubar = QtWidgets.QMenuBar(MainWindow)
-        self.menubar.setGeometry(QtCore.QRect(0, 0, 1013, 22))
-        self.menubar.setObjectName("menubar")
-        MainWindow.setMenuBar(self.menubar)
 
         self.retranslateUi(MainWindow)
         QtCore.QMetaObject.connectSlotsByName(MainWindow)
@@ -556,12 +604,11 @@ class Ui_MainWindow(object):
     def retranslateUi(self, MainWindow):
         _translate = QtCore.QCoreApplication.translate
         MainWindow.setWindowTitle(_translate("MainWindow", "MainWindow"))
-        self.label.setText(_translate("MainWindow", "Cart:"))
         self.pushButton_2.setText(_translate("MainWindow", "CHECK OUT"))
         self.DeleteButton1.setText(_translate("MainWindow", "Delete"))
         self.CartProductAmount1.setText(_translate("MainWindow", "Buy: 0"))
         self.BackButton.setText(_translate("MainWindow", "Go Back"))
-        self.ReloadButton.setText(_translate("MainWindow", "Reload"))
+        self.ReloadButton.setText(_translate("MainWindow", "Calculate Price"))
         self.DeleteButton2.setText(_translate("MainWindow", "Delete"))
         self.CartProductAmount2.setText(_translate("MainWindow", "Buy: 0"))
         self.DeleteButton3.setText(_translate("MainWindow", "Delete"))
@@ -574,6 +621,8 @@ class Ui_MainWindow(object):
         self.CartProductAmount6.setText(_translate("MainWindow", "Buy: 0"))
         self.TotalLabel.setText(_translate("MainWindow", "Total:"))
         self.PageLabel.setText(_translate("MainWindow", "Page: 1/1"))
+        self.Label.setText(_translate("MainWindow", "Cart"))
+import Bg_rc
 import pic_rc
 
 

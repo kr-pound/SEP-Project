@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>646</width>
-    <height>413</height>
+    <width>660</width>
+    <height>337</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -18,57 +18,26 @@
     <property name="geometry">
      <rect>
       <x>30</x>
-      <y>10</y>
-      <width>251</width>
+      <y>30</y>
+      <width>401</width>
       <height>61</height>
      </rect>
     </property>
     <property name="font">
      <font>
-      <family>Franklin Gothic Medium Cond</family>
-      <pointsize>36</pointsize>
+      <family>Sitka Small</family>
+      <pointsize>40</pointsize>
+      <italic>false</italic>
+      <bold>false</bold>
      </font>
     </property>
     <property name="styleSheet">
      <string notr="true">color: white;
-background-color : &quot;rgb(0, 0, 0)&quot;;
-border-radius: 15px;
-</string>
+font: 40pt &quot;Sitka Small&quot;;
+background-color: rgba(255, 255, 255, 0);</string>
     </property>
     <property name="text">
      <string>Register page</string>
-    </property>
-   </widget>
-   <widget class="QPushButton" name="ConfirmButton">
-    <property name="geometry">
-     <rect>
-      <x>270</x>
-      <y>330</y>
-      <width>75</width>
-      <height>24</height>
-     </rect>
-    </property>
-    <property name="font">
-     <font>
-      <family>Franklin Gothic Medium Cond</family>
-      <pointsize>12</pointsize>
-     </font>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">QPushButton {
-	color: white;
-	background: #64AB25;
-	border-radius: 15px;
-}
-
-QPushButton:hover {
-	color: #64AB25;
-	background: #333;
-	border-radius: 15px;
-}</string>
-    </property>
-    <property name="text">
-     <string>CONFIRM</string>
     </property>
    </widget>
    <widget class="QLabel" name="InfoLabel">
@@ -93,15 +62,17 @@ QPushButton:hover {
    <widget class="QFrame" name="frame">
     <property name="geometry">
      <rect>
-      <x>30</x>
-      <y>120</y>
-      <width>591</width>
-      <height>181</height>
+      <x>0</x>
+      <y>110</y>
+      <width>661</width>
+      <height>321</height>
      </rect>
     </property>
     <property name="styleSheet">
-     <string notr="true">background-color: rgb(116, 183, 46);
-border-radius: 15px;</string>
+     <string notr="true">QFrame {
+	background-color: rgb(237, 236, 233);
+	border-radius: 50px;
+}</string>
     </property>
     <property name="frameShape">
      <enum>QFrame::StyledPanel</enum>
@@ -112,17 +83,23 @@ border-radius: 15px;</string>
     <widget class="QLabel" name="UsernameLabel">
      <property name="geometry">
       <rect>
-       <x>20</x>
+       <x>30</x>
        <y>20</y>
-       <width>81</width>
+       <width>111</width>
        <height>31</height>
       </rect>
      </property>
      <property name="font">
       <font>
-       <family>Franklin Gothic Medium Cond</family>
-       <pointsize>14</pointsize>
+       <family>Sitka Small</family>
+       <pointsize>15</pointsize>
+       <italic>false</italic>
+       <bold>false</bold>
       </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">font: 15pt &quot;Sitka Small&quot;;
+background-color: rgba(255, 255, 255, 0);</string>
      </property>
      <property name="text">
       <string>Username:</string>
@@ -131,17 +108,23 @@ border-radius: 15px;</string>
     <widget class="QLabel" name="PasswordLabel">
      <property name="geometry">
       <rect>
-       <x>20</x>
+       <x>30</x>
        <y>70</y>
-       <width>101</width>
+       <width>121</width>
        <height>31</height>
       </rect>
      </property>
      <property name="font">
       <font>
-       <family>Franklin Gothic Medium Cond</family>
-       <pointsize>14</pointsize>
+       <family>Sitka Small</family>
+       <pointsize>15</pointsize>
+       <italic>false</italic>
+       <bold>false</bold>
       </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">font: 15pt &quot;Sitka Small&quot;;
+background-color: rgba(255, 255, 255, 0);</string>
      </property>
      <property name="text">
       <string>Password:</string>
@@ -150,7 +133,7 @@ border-radius: 15px;</string>
     <widget class="QLabel" name="RePasswordLabel">
      <property name="geometry">
       <rect>
-       <x>20</x>
+       <x>30</x>
        <y>120</y>
        <width>141</width>
        <height>31</height>
@@ -158,9 +141,15 @@ border-radius: 15px;</string>
      </property>
      <property name="font">
       <font>
-       <family>Franklin Gothic Medium Cond</family>
-       <pointsize>14</pointsize>
+       <family>Sitka Small</family>
+       <pointsize>15</pointsize>
+       <italic>false</italic>
+       <bold>false</bold>
       </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">font: 15pt &quot;Sitka Small&quot;;
+background-color: rgba(255, 255, 255, 0);</string>
      </property>
      <property name="text">
       <string>Re-Password:</string>
@@ -169,56 +158,112 @@ border-radius: 15px;</string>
     <widget class="QLineEdit" name="UsernameLineEdit">
      <property name="geometry">
       <rect>
-       <x>140</x>
+       <x>190</x>
        <y>20</y>
        <width>411</width>
        <height>31</height>
       </rect>
      </property>
      <property name="styleSheet">
-      <string notr="true">background-color: rgb(255, 255, 255);</string>
+      <string notr="true">	font: 13pt &quot;Sitka Small&quot;;
+	color: black;
+	border-radius: 15px;</string>
      </property>
     </widget>
     <widget class="QLineEdit" name="PasswordLineEdit">
      <property name="geometry">
       <rect>
-       <x>140</x>
+       <x>190</x>
        <y>70</y>
        <width>411</width>
        <height>31</height>
       </rect>
      </property>
      <property name="styleSheet">
-      <string notr="true">background-color: rgb(255, 255, 255);</string>
+      <string notr="true">	font: 13pt &quot;Sitka Small&quot;;
+	color: black;
+	border-radius: 15px;</string>
      </property>
     </widget>
     <widget class="QLineEdit" name="RePasswordLineEdit">
      <property name="geometry">
       <rect>
-       <x>140</x>
+       <x>190</x>
        <y>120</y>
        <width>411</width>
        <height>31</height>
       </rect>
      </property>
      <property name="styleSheet">
-      <string notr="true">background-color: rgb(255, 255, 255);</string>
+      <string notr="true">	font: 13pt &quot;Sitka Small&quot;;
+	color: black;
+	border-radius: 15px;</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="ConfirmButton">
+     <property name="geometry">
+      <rect>
+       <x>250</x>
+       <y>170</y>
+       <width>161</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Sitka Small</family>
+       <pointsize>15</pointsize>
+       <italic>false</italic>
+       <bold>false</bold>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton {
+	font: 15pt &quot;Sitka Small&quot;;
+	color: white;
+	background-color: rgb(0, 85, 0);
+	border-radius: 15px;
+}
+
+QPushButton:hover {
+	color: #64AB25;
+	background: #333;
+	border-radius: 15px;
+}</string>
+     </property>
+     <property name="text">
+      <string>CONFIRM</string>
      </property>
     </widget>
    </widget>
+   <widget class="QLabel" name="label_7">
+    <property name="geometry">
+     <rect>
+      <x>-10</x>
+      <y>-380</y>
+      <width>921</width>
+      <height>791</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="pixmap">
+     <pixmap resource="qrc file/Bg.qrc">:/Bg/Background.jpg</pixmap>
+    </property>
+    <property name="scaledContents">
+     <bool>true</bool>
+    </property>
+   </widget>
+   <zorder>label_7</zorder>
+   <zorder>PageLabel</zorder>
+   <zorder>InfoLabel</zorder>
+   <zorder>frame</zorder>
   </widget>
-  <widget class="QMenuBar" name="menubar">
-   <property name="geometry">
-    <rect>
-     <x>0</x>
-     <y>0</y>
-     <width>646</width>
-     <height>22</height>
-    </rect>
-   </property>
-  </widget>
-  <widget class="QStatusBar" name="statusbar"/>
  </widget>
- <resources/>
+ <resources>
+  <include location="qrc file/Bg.qrc"/>
+  <include location="qrc file/Bg.qrc"/>
+ </resources>
  <connections/>
 </ui>

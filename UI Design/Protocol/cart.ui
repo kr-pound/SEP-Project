@@ -6,58 +6,36 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1013</width>
-    <height>681</height>
+    <width>982</width>
+    <height>618</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>MainWindow</string>
   </property>
   <widget class="QWidget" name="centralwidget">
-   <widget class="QLabel" name="label">
-    <property name="geometry">
-     <rect>
-      <x>40</x>
-      <y>10</y>
-      <width>131</width>
-      <height>61</height>
-     </rect>
-    </property>
-    <property name="font">
-     <font>
-      <family>Franklin Gothic Medium Cond</family>
-      <pointsize>48</pointsize>
-     </font>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">color: white;
-background-color : &quot;rgb(0, 0, 0)&quot;;
-border-radius: 15px;
-</string>
-    </property>
-    <property name="text">
-     <string>Cart:</string>
-    </property>
-   </widget>
    <widget class="QPushButton" name="pushButton_2">
     <property name="geometry">
      <rect>
-      <x>760</x>
+      <x>730</x>
       <y>560</y>
-      <width>221</width>
-      <height>61</height>
+      <width>191</width>
+      <height>41</height>
      </rect>
     </property>
     <property name="font">
      <font>
-      <family>Franklin Gothic Medium Cond</family>
-      <pointsize>36</pointsize>
+      <family>Sitka</family>
+      <pointsize>18</pointsize>
+      <italic>false</italic>
+      <bold>true</bold>
      </font>
     </property>
     <property name="styleSheet">
      <string notr="true">QPushButton {
+	font: 700 18pt &quot;Sitka&quot;;
 	color: white;
-	background: #64AB25;
+	background-color: rgb(0, 85, 0);
 	border-radius: 15px;
 }
 
@@ -74,10 +52,10 @@ QPushButton:hover {
    <widget class="QFrame" name="ProductFrame1">
     <property name="geometry">
      <rect>
-      <x>50</x>
-      <y>80</y>
+      <x>40</x>
+      <y>140</y>
       <width>441</width>
-      <height>121</height>
+      <height>111</height>
      </rect>
     </property>
     <property name="styleSheet">
@@ -96,16 +74,17 @@ QPushButton:hover {
      <property name="geometry">
       <rect>
        <x>310</x>
-       <y>80</y>
+       <y>70</y>
        <width>111</width>
        <height>31</height>
       </rect>
      </property>
      <property name="font">
       <font>
-       <family>Franklin Gothic Medium Cond</family>
+       <family>Sitka</family>
        <pointsize>12</pointsize>
-       <bold>false</bold>
+       <italic>false</italic>
+       <bold>true</bold>
        <stylestrategy>PreferDefault</stylestrategy>
        <kerning>true</kerning>
       </font>
@@ -134,7 +113,7 @@ QPushButton:hover {
      <property name="geometry">
       <rect>
        <x>310</x>
-       <y>50</y>
+       <y>40</y>
        <width>111</width>
        <height>16</height>
       </rect>
@@ -175,7 +154,7 @@ QPushButton:hover {
      <property name="geometry">
       <rect>
        <x>20</x>
-       <y>20</y>
+       <y>10</y>
        <width>131</width>
        <height>91</height>
       </rect>
@@ -193,7 +172,7 @@ QPushButton:hover {
      <property name="geometry">
       <rect>
        <x>170</x>
-       <y>90</y>
+       <y>80</y>
        <width>121</width>
        <height>16</height>
       </rect>
@@ -212,25 +191,27 @@ QPushButton:hover {
    <widget class="QPushButton" name="BackButton">
     <property name="geometry">
      <rect>
-      <x>40</x>
+      <x>60</x>
       <y>570</y>
-      <width>111</width>
+      <width>131</width>
       <height>31</height>
      </rect>
     </property>
     <property name="font">
      <font>
-      <family>Franklin Gothic Medium Cond</family>
+      <family>Sitka</family>
       <pointsize>12</pointsize>
-      <bold>false</bold>
+      <italic>false</italic>
+      <bold>true</bold>
       <stylestrategy>PreferDefault</stylestrategy>
       <kerning>true</kerning>
      </font>
     </property>
     <property name="styleSheet">
      <string notr="true">QPushButton {
+font: 700 12pt &quot;Sitka&quot;;
 	color: white;
-	background: #64AB25;
+	background-color: rgb(0, 85, 0);
 	border-radius: 15px;
 }
 
@@ -250,25 +231,27 @@ QPushButton:hover {
    <widget class="QPushButton" name="ReloadButton">
     <property name="geometry">
      <rect>
-      <x>860</x>
-      <y>510</y>
-      <width>111</width>
+      <x>60</x>
+      <y>530</y>
+      <width>131</width>
       <height>31</height>
      </rect>
     </property>
     <property name="font">
      <font>
-      <family>Franklin Gothic Medium Cond</family>
+      <family>Sitka</family>
       <pointsize>12</pointsize>
-      <bold>false</bold>
+      <italic>false</italic>
+      <bold>true</bold>
       <stylestrategy>PreferDefault</stylestrategy>
       <kerning>true</kerning>
      </font>
     </property>
     <property name="styleSheet">
      <string notr="true">QPushButton {
-	color: black;
-	background: lightgray;
+font: 700 12pt &quot;Sitka&quot;;
+color: white;
+	background-color: rgb(0, 85, 0);
 	border-radius: 15px;
 }
 
@@ -282,16 +265,16 @@ QPushButton:hover {
 </string>
     </property>
     <property name="text">
-     <string>Reload</string>
+     <string>Calculate Price</string>
     </property>
    </widget>
    <widget class="QFrame" name="ProductFrame2">
     <property name="geometry">
      <rect>
-      <x>530</x>
-      <y>80</y>
+      <x>520</x>
+      <y>140</y>
       <width>441</width>
-      <height>121</height>
+      <height>111</height>
      </rect>
     </property>
     <property name="styleSheet">
@@ -310,16 +293,17 @@ QPushButton:hover {
      <property name="geometry">
       <rect>
        <x>310</x>
-       <y>80</y>
+       <y>70</y>
        <width>111</width>
        <height>31</height>
       </rect>
      </property>
      <property name="font">
       <font>
-       <family>Franklin Gothic Medium Cond</family>
+       <family>Sitka</family>
        <pointsize>12</pointsize>
-       <bold>false</bold>
+       <italic>false</italic>
+       <bold>true</bold>
        <stylestrategy>PreferDefault</stylestrategy>
        <kerning>true</kerning>
       </font>
@@ -348,7 +332,7 @@ QPushButton:hover {
      <property name="geometry">
       <rect>
        <x>310</x>
-       <y>50</y>
+       <y>40</y>
        <width>111</width>
        <height>16</height>
       </rect>
@@ -389,7 +373,7 @@ QPushButton:hover {
      <property name="geometry">
       <rect>
        <x>20</x>
-       <y>20</y>
+       <y>10</y>
        <width>131</width>
        <height>91</height>
       </rect>
@@ -407,7 +391,7 @@ QPushButton:hover {
      <property name="geometry">
       <rect>
        <x>170</x>
-       <y>90</y>
+       <y>80</y>
        <width>121</width>
        <height>16</height>
       </rect>
@@ -426,10 +410,10 @@ QPushButton:hover {
    <widget class="QFrame" name="ProductFrame3">
     <property name="geometry">
      <rect>
-      <x>50</x>
-      <y>220</y>
+      <x>40</x>
+      <y>270</y>
       <width>441</width>
-      <height>121</height>
+      <height>111</height>
      </rect>
     </property>
     <property name="styleSheet">
@@ -448,16 +432,17 @@ QPushButton:hover {
      <property name="geometry">
       <rect>
        <x>310</x>
-       <y>80</y>
+       <y>70</y>
        <width>111</width>
        <height>31</height>
       </rect>
      </property>
      <property name="font">
       <font>
-       <family>Franklin Gothic Medium Cond</family>
+       <family>Sitka</family>
        <pointsize>12</pointsize>
-       <bold>false</bold>
+       <italic>false</italic>
+       <bold>true</bold>
        <stylestrategy>PreferDefault</stylestrategy>
        <kerning>true</kerning>
       </font>
@@ -486,7 +471,7 @@ QPushButton:hover {
      <property name="geometry">
       <rect>
        <x>310</x>
-       <y>50</y>
+       <y>40</y>
        <width>111</width>
        <height>16</height>
       </rect>
@@ -527,7 +512,7 @@ QPushButton:hover {
      <property name="geometry">
       <rect>
        <x>20</x>
-       <y>20</y>
+       <y>10</y>
        <width>131</width>
        <height>91</height>
       </rect>
@@ -545,7 +530,7 @@ QPushButton:hover {
      <property name="geometry">
       <rect>
        <x>170</x>
-       <y>90</y>
+       <y>80</y>
        <width>121</width>
        <height>16</height>
       </rect>
@@ -564,10 +549,10 @@ QPushButton:hover {
    <widget class="QFrame" name="ProductFrame5">
     <property name="geometry">
      <rect>
-      <x>50</x>
-      <y>360</y>
+      <x>40</x>
+      <y>400</y>
       <width>441</width>
-      <height>121</height>
+      <height>111</height>
      </rect>
     </property>
     <property name="styleSheet">
@@ -586,16 +571,17 @@ QPushButton:hover {
      <property name="geometry">
       <rect>
        <x>310</x>
-       <y>80</y>
+       <y>70</y>
        <width>111</width>
        <height>31</height>
       </rect>
      </property>
      <property name="font">
       <font>
-       <family>Franklin Gothic Medium Cond</family>
+       <family>Sitka</family>
        <pointsize>12</pointsize>
-       <bold>false</bold>
+       <italic>false</italic>
+       <bold>true</bold>
        <stylestrategy>PreferDefault</stylestrategy>
        <kerning>true</kerning>
       </font>
@@ -624,7 +610,7 @@ QPushButton:hover {
      <property name="geometry">
       <rect>
        <x>310</x>
-       <y>50</y>
+       <y>40</y>
        <width>111</width>
        <height>16</height>
       </rect>
@@ -665,7 +651,7 @@ QPushButton:hover {
      <property name="geometry">
       <rect>
        <x>20</x>
-       <y>20</y>
+       <y>10</y>
        <width>131</width>
        <height>91</height>
       </rect>
@@ -683,7 +669,7 @@ QPushButton:hover {
      <property name="geometry">
       <rect>
        <x>170</x>
-       <y>90</y>
+       <y>80</y>
        <width>121</width>
        <height>16</height>
       </rect>
@@ -702,10 +688,10 @@ QPushButton:hover {
    <widget class="QFrame" name="ProductFrame4">
     <property name="geometry">
      <rect>
-      <x>530</x>
-      <y>220</y>
+      <x>520</x>
+      <y>270</y>
       <width>441</width>
-      <height>121</height>
+      <height>111</height>
      </rect>
     </property>
     <property name="styleSheet">
@@ -724,16 +710,17 @@ QPushButton:hover {
      <property name="geometry">
       <rect>
        <x>310</x>
-       <y>80</y>
+       <y>70</y>
        <width>111</width>
        <height>31</height>
       </rect>
      </property>
      <property name="font">
       <font>
-       <family>Franklin Gothic Medium Cond</family>
+       <family>Sitka</family>
        <pointsize>12</pointsize>
-       <bold>false</bold>
+       <italic>false</italic>
+       <bold>true</bold>
        <stylestrategy>PreferDefault</stylestrategy>
        <kerning>true</kerning>
       </font>
@@ -762,7 +749,7 @@ QPushButton:hover {
      <property name="geometry">
       <rect>
        <x>310</x>
-       <y>50</y>
+       <y>40</y>
        <width>111</width>
        <height>16</height>
       </rect>
@@ -803,7 +790,7 @@ QPushButton:hover {
      <property name="geometry">
       <rect>
        <x>20</x>
-       <y>20</y>
+       <y>10</y>
        <width>131</width>
        <height>91</height>
       </rect>
@@ -821,7 +808,7 @@ QPushButton:hover {
      <property name="geometry">
       <rect>
        <x>170</x>
-       <y>90</y>
+       <y>80</y>
        <width>121</width>
        <height>16</height>
       </rect>
@@ -840,10 +827,10 @@ QPushButton:hover {
    <widget class="QFrame" name="ProductFrame6">
     <property name="geometry">
      <rect>
-      <x>530</x>
-      <y>360</y>
+      <x>520</x>
+      <y>400</y>
       <width>441</width>
-      <height>121</height>
+      <height>111</height>
      </rect>
     </property>
     <property name="styleSheet">
@@ -862,16 +849,17 @@ QPushButton:hover {
      <property name="geometry">
       <rect>
        <x>310</x>
-       <y>80</y>
+       <y>70</y>
        <width>111</width>
        <height>31</height>
       </rect>
      </property>
      <property name="font">
       <font>
-       <family>Franklin Gothic Medium Cond</family>
+       <family>Sitka</family>
        <pointsize>12</pointsize>
-       <bold>false</bold>
+       <italic>false</italic>
+       <bold>true</bold>
        <stylestrategy>PreferDefault</stylestrategy>
        <kerning>true</kerning>
       </font>
@@ -900,7 +888,7 @@ QPushButton:hover {
      <property name="geometry">
       <rect>
        <x>310</x>
-       <y>50</y>
+       <y>40</y>
        <width>111</width>
        <height>16</height>
       </rect>
@@ -941,7 +929,7 @@ QPushButton:hover {
      <property name="geometry">
       <rect>
        <x>20</x>
-       <y>20</y>
+       <y>10</y>
        <width>131</width>
        <height>91</height>
       </rect>
@@ -959,7 +947,7 @@ QPushButton:hover {
      <property name="geometry">
       <rect>
        <x>170</x>
-       <y>90</y>
+       <y>80</y>
        <width>121</width>
        <height>16</height>
       </rect>
@@ -978,24 +966,26 @@ QPushButton:hover {
    <widget class="QPushButton" name="LeftButton">
     <property name="geometry">
      <rect>
-      <x>530</x>
-      <y>510</y>
+      <x>390</x>
+      <y>560</y>
       <width>41</width>
       <height>41</height>
      </rect>
     </property>
     <property name="font">
      <font>
-      <family>Franklin Gothic Medium Cond</family>
+      <family>Sitka</family>
       <pointsize>12</pointsize>
-      <bold>false</bold>
+      <italic>false</italic>
+      <bold>true</bold>
       <stylestrategy>PreferDefault</stylestrategy>
       <kerning>true</kerning>
      </font>
     </property>
     <property name="styleSheet">
      <string notr="true">QPushButton {
-	background: lightgray;
+font: 700 12pt &quot;Sitka&quot;;
+	background: white;
 	border-radius: 20px;
 	image: url(:/others/Arrow/leftArrow.png);
 }
@@ -1015,8 +1005,8 @@ QPushButton:hover {
    <widget class="QPushButton" name="RightButton">
     <property name="geometry">
      <rect>
-      <x>700</x>
-      <y>510</y>
+      <x>570</x>
+      <y>560</y>
       <width>41</width>
       <height>41</height>
      </rect>
@@ -1032,7 +1022,7 @@ QPushButton:hover {
     </property>
     <property name="styleSheet">
      <string notr="true">QPushButton {
-	background: lightgray;
+	background: white;
 	border-radius: 20px;
 	image: url(:/others/Arrow/rightArrow.png);
 }
@@ -1052,17 +1042,22 @@ QPushButton:hover {
    <widget class="QLabel" name="TotalLabel">
     <property name="geometry">
      <rect>
-      <x>620</x>
-      <y>580</y>
+      <x>750</x>
+      <y>520</y>
       <width>121</width>
       <height>41</height>
      </rect>
     </property>
     <property name="font">
      <font>
-      <family>Franklin Gothic Medium Cond</family>
-      <pointsize>16</pointsize>
+      <family>Sitka</family>
+      <pointsize>15</pointsize>
+      <italic>false</italic>
+      <bold>true</bold>
      </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">font: 700 15pt &quot;Sitka&quot;;</string>
     </property>
     <property name="text">
      <string>Total:</string>
@@ -1071,17 +1066,22 @@ QPushButton:hover {
    <widget class="QLabel" name="PageLabel">
     <property name="geometry">
      <rect>
-      <x>580</x>
-      <y>520</y>
-      <width>111</width>
-      <height>16</height>
+      <x>440</x>
+      <y>570</y>
+      <width>121</width>
+      <height>31</height>
      </rect>
     </property>
     <property name="font">
      <font>
-      <family>Franklin Gothic Medium Cond</family>
+      <family>Sitka</family>
       <pointsize>12</pointsize>
+      <italic>false</italic>
+      <bold>true</bold>
      </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">font: 700 12pt &quot;Sitka&quot;;</string>
     </property>
     <property name="text">
      <string>Page: 1/1</string>
@@ -1090,20 +1090,95 @@ QPushButton:hover {
      <set>Qt::AlignCenter</set>
     </property>
    </widget>
-  </widget>
-  <widget class="QStatusBar" name="statusbar"/>
-  <widget class="QMenuBar" name="menubar">
-   <property name="geometry">
-    <rect>
-     <x>0</x>
-     <y>0</y>
-     <width>1013</width>
-     <height>22</height>
-    </rect>
-   </property>
+   <widget class="QLabel" name="label_2">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>0</y>
+      <width>1131</width>
+      <height>691</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-image: url(:/Bg/Background.jpg);</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="pixmap">
+     <pixmap resource="qrc file/Bg.qrc">:/Bg/Background.jpg</pixmap>
+    </property>
+    <property name="scaledContents">
+     <bool>true</bool>
+    </property>
+   </widget>
+   <widget class="QGraphicsView" name="graphicsView">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>110</y>
+      <width>1011</width>
+      <height>731</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QFrame {
+	
+	background-color: rgb(237, 236, 233);
+	border-radius: 50px;
+}</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="Label">
+    <property name="geometry">
+     <rect>
+      <x>70</x>
+      <y>0</y>
+      <width>851</width>
+      <height>101</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Sitka</family>
+      <pointsize>50</pointsize>
+      <italic>true</italic>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QLabel {
+	color: rgb(245, 245, 245);
+	background-color: rgba(255, 255, 255, 0);
+}</string>
+    </property>
+    <property name="text">
+     <string>Cart</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <zorder>label_2</zorder>
+   <zorder>graphicsView</zorder>
+   <zorder>pushButton_2</zorder>
+   <zorder>ProductFrame1</zorder>
+   <zorder>BackButton</zorder>
+   <zorder>ReloadButton</zorder>
+   <zorder>ProductFrame2</zorder>
+   <zorder>ProductFrame3</zorder>
+   <zorder>ProductFrame5</zorder>
+   <zorder>ProductFrame4</zorder>
+   <zorder>ProductFrame6</zorder>
+   <zorder>LeftButton</zorder>
+   <zorder>RightButton</zorder>
+   <zorder>TotalLabel</zorder>
+   <zorder>PageLabel</zorder>
+   <zorder>Label</zorder>
   </widget>
  </widget>
  <resources>
+  <include location="qrc file/Bg.qrc"/>
   <include location="pic.qrc"/>
  </resources>
  <connections/>

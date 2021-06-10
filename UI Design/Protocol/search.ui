@@ -1160,7 +1160,7 @@ QPushButton:hover {
     <property name="geometry">
      <rect>
       <x>380</x>
-      <y>20</y>
+      <y>10</y>
       <width>281</width>
       <height>101</height>
      </rect>
@@ -1170,12 +1170,11 @@ QPushButton:hover {
       <family>Sitka</family>
       <pointsize>50</pointsize>
       <italic>false</italic>
-      <bold>false</bold>
+      <bold>true</bold>
      </font>
     </property>
     <property name="styleSheet">
      <string notr="true">QLabel {
-	font: 50pt &quot;Sitka&quot;;
 	color: rgb(245, 245, 245);
  background-color: rgba(255, 255, 255, 0);
 }</string>
@@ -1199,7 +1198,7 @@ QPushButton:hover {
     <property name="font">
      <font>
       <family>Sitka</family>
-      <pointsize>12</pointsize>
+      <pointsize>11</pointsize>
       <italic>false</italic>
       <bold>true</bold>
       <stylestrategy>PreferDefault</stylestrategy>
@@ -1208,7 +1207,7 @@ QPushButton:hover {
     </property>
     <property name="styleSheet">
      <string notr="true">QPushButton {
-	font: 700 12pt &quot;Sitka&quot;;
+	font: 700 11pt &quot;Sitka&quot;;
 	color: black;
 	background:  rgb(245, 245, 245);
 	border-radius: 15px;
@@ -1227,32 +1226,6 @@ QPushButton:hover {
      <string>View Cart</string>
     </property>
    </widget>
-   <widget class="QLabel" name="label">
-    <property name="geometry">
-     <rect>
-      <x>170</x>
-      <y>130</y>
-      <width>731</width>
-      <height>20</height>
-     </rect>
-    </property>
-    <property name="font">
-     <font>
-      <family>Sitka Small</family>
-      <pointsize>13</pointsize>
-      <italic>false</italic>
-      <bold>false</bold>
-     </font>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">font: 13pt &quot;Sitka Small&quot;;
-color: rgb(255, 255, 255);
-background-color: rgba(255, 255, 255, 0);</string>
-    </property>
-    <property name="text">
-     <string>Welcome to Fresh! We only have fresh stuff here. All the items are organic &amp; natural.</string>
-    </property>
-   </widget>
    <widget class="QPushButton" name="RefreshButton">
     <property name="geometry">
      <rect>
@@ -1265,7 +1238,7 @@ background-color: rgba(255, 255, 255, 0);</string>
     <property name="font">
      <font>
       <family>Sitka</family>
-      <pointsize>12</pointsize>
+      <pointsize>11</pointsize>
       <italic>false</italic>
       <bold>true</bold>
       <stylestrategy>PreferDefault</stylestrategy>
@@ -1274,7 +1247,7 @@ background-color: rgba(255, 255, 255, 0);</string>
     </property>
     <property name="styleSheet">
      <string notr="true">QPushButton {
- font: 700 12pt &quot;Sitka&quot;;
+ font: 700 11pt &quot;Sitka&quot;;
 	color: black;
 	background:  rgb(245, 245, 245);
 	border-radius: 15px;
@@ -1305,7 +1278,7 @@ QPushButton:hover {
     <property name="font">
      <font>
       <family>Sitka</family>
-      <pointsize>12</pointsize>
+      <pointsize>11</pointsize>
       <italic>false</italic>
       <bold>true</bold>
       <stylestrategy>PreferDefault</stylestrategy>
@@ -1314,7 +1287,7 @@ QPushButton:hover {
     </property>
     <property name="styleSheet">
      <string notr="true">QPushButton {
-	font: 700 12pt &quot;Sitka&quot;;
+	font: 700 11pt &quot;Sitka&quot;;
 	color: black;
 	background:  rgb(245, 245, 245);
 	border-radius: 15px;
@@ -1394,6 +1367,34 @@ QPushButton:hover {
      <set>Qt::AlignCenter</set>
     </property>
    </widget>
+   <widget class="QLabel" name="Label">
+    <property name="geometry">
+     <rect>
+      <x>80</x>
+      <y>120</y>
+      <width>811</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Sitka Small</family>
+      <pointsize>11</pointsize>
+      <italic>true</italic>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: rgb(255, 255, 255);
+background-color: rgba(255, 255, 255, 0);</string>
+    </property>
+    <property name="text">
+     <string>Welcome to Fresh! We only have fresh stuff here. All the items are organic &amp; natural.</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
    <zorder>label_2</zorder>
    <zorder>textBrowser</zorder>
    <zorder>ProductFrame1</zorder>
@@ -1405,10 +1406,10 @@ QPushButton:hover {
    <zorder>LeftButton</zorder>
    <zorder>BrandLabel</zorder>
    <zorder>CartButton</zorder>
-   <zorder>label</zorder>
    <zorder>RefreshButton</zorder>
    <zorder>SellProductButton</zorder>
    <zorder>PageLabel</zorder>
+   <zorder>Label</zorder>
   </widget>
  </widget>
  <resources>

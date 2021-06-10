@@ -522,15 +522,14 @@ class Ui_MainWindow(object):
         self.LeftButton.setText("")
         self.LeftButton.setObjectName("LeftButton")
         self.BrandLabel = QtWidgets.QLabel(self.centralwidget)
-        self.BrandLabel.setGeometry(QtCore.QRect(380, 20, 281, 101))
+        self.BrandLabel.setGeometry(QtCore.QRect(380, 10, 281, 101))
         font = QtGui.QFont()
         font.setFamily("Sitka")
         font.setPointSize(50)
-        font.setBold(False)
+        font.setBold(True)
         font.setItalic(False)
         self.BrandLabel.setFont(font)
         self.BrandLabel.setStyleSheet("QLabel {\n"
-"    font: 50pt \"Sitka\";\n"
 "    color: rgb(245, 245, 245);\n"
 " background-color: rgba(255, 255, 255, 0);\n"
 "}")
@@ -540,14 +539,14 @@ class Ui_MainWindow(object):
         self.CartButton.setGeometry(QtCore.QRect(850, 20, 111, 31))
         font = QtGui.QFont()
         font.setFamily("Sitka")
-        font.setPointSize(12)
+        font.setPointSize(11)
         font.setBold(True)
         font.setItalic(False)
         font.setKerning(True)
         font.setStyleStrategy(QtGui.QFont.PreferDefault)
         self.CartButton.setFont(font)
         self.CartButton.setStyleSheet("QPushButton {\n"
-"    font: 700 12pt \"Sitka\";\n"
+"    font: 700 11pt \"Sitka\";\n"
 "    color: black;\n"
 "    background:  rgb(245, 245, 245);\n"
 "    border-radius: 15px;\n"
@@ -562,30 +561,18 @@ class Ui_MainWindow(object):
 "\n"
 "")
         self.CartButton.setObjectName("CartButton")
-        self.label = QtWidgets.QLabel(self.centralwidget)
-        self.label.setGeometry(QtCore.QRect(170, 130, 731, 20))
-        font = QtGui.QFont()
-        font.setFamily("Sitka Small")
-        font.setPointSize(13)
-        font.setBold(False)
-        font.setItalic(False)
-        self.label.setFont(font)
-        self.label.setStyleSheet("font: 13pt \"Sitka Small\";\n"
-"color: rgb(255, 255, 255);\n"
-"background-color: rgba(255, 255, 255, 0);")
-        self.label.setObjectName("label")
         self.RefreshButton = QtWidgets.QPushButton(self.centralwidget)
         self.RefreshButton.setGeometry(QtCore.QRect(850, 60, 111, 31))
         font = QtGui.QFont()
         font.setFamily("Sitka")
-        font.setPointSize(12)
+        font.setPointSize(11)
         font.setBold(True)
         font.setItalic(False)
         font.setKerning(True)
         font.setStyleStrategy(QtGui.QFont.PreferDefault)
         self.RefreshButton.setFont(font)
         self.RefreshButton.setStyleSheet("QPushButton {\n"
-" font: 700 12pt \"Sitka\";\n"
+" font: 700 11pt \"Sitka\";\n"
 "    color: black;\n"
 "    background:  rgb(245, 245, 245);\n"
 "    border-radius: 15px;\n"
@@ -604,14 +591,14 @@ class Ui_MainWindow(object):
         self.SellProductButton.setGeometry(QtCore.QRect(30, 30, 111, 31))
         font = QtGui.QFont()
         font.setFamily("Sitka")
-        font.setPointSize(12)
+        font.setPointSize(11)
         font.setBold(True)
         font.setItalic(False)
         font.setKerning(True)
         font.setStyleStrategy(QtGui.QFont.PreferDefault)
         self.SellProductButton.setFont(font)
         self.SellProductButton.setStyleSheet("QPushButton {\n"
-"    font: 700 12pt \"Sitka\";\n"
+"    font: 700 11pt \"Sitka\";\n"
 "    color: black;\n"
 "    background:  rgb(245, 245, 245);\n"
 "    border-radius: 15px;\n"
@@ -649,6 +636,18 @@ class Ui_MainWindow(object):
         self.PageLabel.setFont(font)
         self.PageLabel.setAlignment(QtCore.Qt.AlignCenter)
         self.PageLabel.setObjectName("PageLabel")
+        self.Label = QtWidgets.QLabel(self.centralwidget)
+        self.Label.setGeometry(QtCore.QRect(80, 120, 811, 20))
+        font = QtGui.QFont()
+        font.setFamily("Sitka Small")
+        font.setPointSize(11)
+        font.setBold(True)
+        font.setItalic(True)
+        self.Label.setFont(font)
+        self.Label.setStyleSheet("color: rgb(255, 255, 255);\n"
+"background-color: rgba(255, 255, 255, 0);")
+        self.Label.setAlignment(QtCore.Qt.AlignCenter)
+        self.Label.setObjectName("Label")
         self.label_2.raise_()
         self.textBrowser.raise_()
         self.ProductFrame1.raise_()
@@ -660,10 +659,10 @@ class Ui_MainWindow(object):
         self.LeftButton.raise_()
         self.BrandLabel.raise_()
         self.CartButton.raise_()
-        self.label.raise_()
         self.RefreshButton.raise_()
         self.SellProductButton.raise_()
         self.PageLabel.raise_()
+        self.Label.raise_()
         MainWindow.setCentralWidget(self.centralwidget)
 
         self.retranslateUi(MainWindow)
@@ -719,10 +718,10 @@ class Ui_MainWindow(object):
         self.ProductDecrease5.setText(_translate("MainWindow", "-"))
         self.BrandLabel.setText(_translate("MainWindow", "Fresh"))
         self.CartButton.setText(_translate("MainWindow", "View Cart"))
-        self.label.setText(_translate("MainWindow", "Welcome to Fresh! We only have fresh stuff here. All the items are organic & natural."))
         self.RefreshButton.setText(_translate("MainWindow", "Refresh"))
         self.SellProductButton.setText(_translate("MainWindow", "Sell Product"))
         self.PageLabel.setText(_translate("MainWindow", "Page: 0/0"))
+        self.Label.setText(_translate("MainWindow", "Welcome to Fresh! We only have fresh stuff here. All the items are organic & natural."))
 import Bg_rc
 import pic_rc
 

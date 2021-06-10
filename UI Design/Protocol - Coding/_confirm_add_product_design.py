@@ -14,18 +14,21 @@ from PyQt5 import QtCore, QtGui, QtWidgets
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
         MainWindow.setObjectName("MainWindow")
-        MainWindow.resize(659, 263)
+        MainWindow.resize(640, 219)
+        MainWindow.setStyleSheet("")
         self.centralwidget = QtWidgets.QWidget(MainWindow)
         self.centralwidget.setObjectName("centralwidget")
         self.CloseButton = QtWidgets.QPushButton(self.centralwidget)
-        self.CloseButton.setGeometry(QtCore.QRect(410, 120, 181, 91))
+        self.CloseButton.setGeometry(QtCore.QRect(440, 100, 121, 51))
         font = QtGui.QFont()
-        font.setFamily("Franklin Gothic Medium Cond")
-        font.setPointSize(36)
+        font.setFamily("Sitka Small")
+        font.setPointSize(22)
+        font.setBold(True)
+        font.setItalic(False)
         self.CloseButton.setFont(font)
         self.CloseButton.setStyleSheet("QPushButton {\n"
 "    color: white;\n"
-"    background: #64AB25;\n"
+"    background-color: rgb(0, 85, 0);\n"
 "    border-radius: 15px;\n"
 "}\n"
 "\n"
@@ -36,28 +39,45 @@ class Ui_MainWindow(object):
 "}")
         self.CloseButton.setObjectName("CloseButton")
         self.TotalLabel = QtWidgets.QLabel(self.centralwidget)
-        self.TotalLabel.setGeometry(QtCore.QRect(70, 20, 341, 41))
+        self.TotalLabel.setGeometry(QtCore.QRect(20, 10, 421, 51))
         font = QtGui.QFont()
-        font.setFamily("Franklin Gothic Medium Cond")
-        font.setPointSize(16)
+        font.setFamily("Sitka Small")
+        font.setPointSize(28)
+        font.setBold(True)
+        font.setItalic(True)
         self.TotalLabel.setFont(font)
+        self.TotalLabel.setStyleSheet("background-color: rgba(255, 255, 255, 0);")
         self.TotalLabel.setObjectName("TotalLabel")
         self.TotalLabel_2 = QtWidgets.QLabel(self.centralwidget)
-        self.TotalLabel_2.setGeometry(QtCore.QRect(70, 60, 441, 41))
+        self.TotalLabel_2.setGeometry(QtCore.QRect(20, 60, 661, 41))
         font = QtGui.QFont()
-        font.setFamily("Franklin Gothic Medium Cond")
-        font.setPointSize(16)
+        font.setFamily("Sitka Small")
+        font.setPointSize(11)
+        font.setBold(True)
+        font.setItalic(False)
         self.TotalLabel_2.setFont(font)
-        self.TotalLabel_2.setStyleSheet("color: red;")
+        self.TotalLabel_2.setStyleSheet("background-color: rgba(255, 255, 255, 0);")
         self.TotalLabel_2.setObjectName("TotalLabel_2")
+        self.label = QtWidgets.QLabel(self.centralwidget)
+        self.label.setGeometry(QtCore.QRect(0, -20, 791, 481))
+        self.label.setStyleSheet("background-image: url(:/Bg/Background.jpg);")
+        self.label.setText("")
+        self.label.setPixmap(QtGui.QPixmap(":/Bg/Background.jpg"))
+        self.label.setScaledContents(True)
+        self.label.setObjectName("label")
+        self.graphicsView = QtWidgets.QGraphicsView(self.centralwidget)
+        self.graphicsView.setGeometry(QtCore.QRect(-40, -50, 631, 221))
+        self.graphicsView.setStyleSheet("QFrame {\n"
+"    background-color: rgb(237, 236, 233);\n"
+"    border-radius: 50px;\n"
+"}")
+        self.graphicsView.setObjectName("graphicsView")
+        self.label.raise_()
+        self.graphicsView.raise_()
+        self.CloseButton.raise_()
+        self.TotalLabel.raise_()
+        self.TotalLabel_2.raise_()
         MainWindow.setCentralWidget(self.centralwidget)
-        self.menubar = QtWidgets.QMenuBar(MainWindow)
-        self.menubar.setGeometry(QtCore.QRect(0, 0, 659, 22))
-        self.menubar.setObjectName("menubar")
-        MainWindow.setMenuBar(self.menubar)
-        self.statusbar = QtWidgets.QStatusBar(MainWindow)
-        self.statusbar.setObjectName("statusbar")
-        MainWindow.setStatusBar(self.statusbar)
 
         self.retranslateUi(MainWindow)
         QtCore.QMetaObject.connectSlotsByName(MainWindow)
@@ -65,9 +85,10 @@ class Ui_MainWindow(object):
     def retranslateUi(self, MainWindow):
         _translate = QtCore.QCoreApplication.translate
         MainWindow.setWindowTitle(_translate("MainWindow", "MainWindow"))
-        self.CloseButton.setText(_translate("MainWindow", "CLOSE"))
-        self.TotalLabel.setText(_translate("MainWindow", "Successfully added data"))
+        self.CloseButton.setText(_translate("MainWindow", "OK"))
+        self.TotalLabel.setText(_translate("MainWindow", "Successfully"))
         self.TotalLabel_2.setText(_translate("MainWindow", "The product store will be update on the next time runs"))
+import Bg_rc
 
 
 if __name__ == "__main__":

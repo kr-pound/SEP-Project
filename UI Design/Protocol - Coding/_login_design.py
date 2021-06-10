@@ -65,17 +65,16 @@ class Ui_MainWindow(object):
         self.Password.setClearButtonEnabled(True)
         self.Password.setObjectName("Password")
         self.LoginButton = QtWidgets.QPushButton(self.LoginFrame)
-        self.LoginButton.setGeometry(QtCore.QRect(290, 420, 151, 51))
+        self.LoginButton.setGeometry(QtCore.QRect(290, 440, 151, 51))
         font = QtGui.QFont()
         font.setFamily("Sitka Small")
         font.setPointSize(10)
-        font.setBold(False)
+        font.setBold(True)
         font.setItalic(False)
         font.setKerning(True)
         font.setStyleStrategy(QtGui.QFont.PreferDefault)
         self.LoginButton.setFont(font)
         self.LoginButton.setStyleSheet("QPushButton {\n"
-"    font: 10pt \"Sitka Small\";\n"
 "    color: rgb(255, 255, 255);\n"
 "    background-color: rgb(85, 170, 0);\n"
 "    border-radius: 15px;;\n"
@@ -91,15 +90,14 @@ class Ui_MainWindow(object):
 "")
         self.LoginButton.setObjectName("LoginButton")
         self.CreateAccountButton = QtWidgets.QPushButton(self.LoginFrame)
-        self.CreateAccountButton.setGeometry(QtCore.QRect(90, 420, 151, 51))
+        self.CreateAccountButton.setGeometry(QtCore.QRect(90, 440, 151, 51))
         font = QtGui.QFont()
         font.setFamily("Sitka Small")
         font.setPointSize(10)
-        font.setBold(False)
+        font.setBold(True)
         font.setItalic(False)
         self.CreateAccountButton.setFont(font)
         self.CreateAccountButton.setStyleSheet("QPushButton {\n"
-"    font: 10pt \"Sitka Small\";\n"
 "    color: rgb(255, 255, 255);\n"
 "    background-color: rgb(85, 170, 0);\n"
 "    border-radius: 15px;\n"
@@ -124,22 +122,21 @@ class Ui_MainWindow(object):
         self.label_5.setText("")
         self.label_5.setObjectName("label_5")
         self.label = QtWidgets.QLabel(self.LoginFrame)
-        self.label.setGeometry(QtCore.QRect(170, -20, 201, 201))
+        self.label.setGeometry(QtCore.QRect(150, -30, 231, 231))
         self.label.setStyleSheet("")
         self.label.setText("")
         self.label.setPixmap(QtGui.QPixmap(":/Logo/Logo.png"))
         self.label.setScaledContents(True)
         self.label.setObjectName("label")
         self.WelcomeLabel = QtWidgets.QLabel(self.LoginFrame)
-        self.WelcomeLabel.setGeometry(QtCore.QRect(30, 150, 471, 71))
+        self.WelcomeLabel.setGeometry(QtCore.QRect(30, 160, 471, 71))
         font = QtGui.QFont()
         font.setFamily("Sitka Small")
         font.setPointSize(20)
         font.setBold(False)
-        font.setItalic(False)
+        font.setItalic(True)
         self.WelcomeLabel.setFont(font)
-        self.WelcomeLabel.setStyleSheet("font: 20pt \"Sitka Small\";\n"
-"color: rgb(0, 85, 0);\n"
+        self.WelcomeLabel.setStyleSheet("color: rgb(0, 85, 0);\n"
 "background-color: rgba(255, 255, 255, 0);")
         self.WelcomeLabel.setAlignment(QtCore.Qt.AlignCenter)
         self.WelcomeLabel.setObjectName("WelcomeLabel")
@@ -147,15 +144,24 @@ class Ui_MainWindow(object):
         self.WelcomeLabel_2.setGeometry(QtCore.QRect(20, 370, 491, 21))
         font = QtGui.QFont()
         font.setFamily("Sitka Small")
-        font.setPointSize(8)
+        font.setPointSize(9)
         font.setBold(False)
         font.setItalic(False)
         self.WelcomeLabel_2.setFont(font)
-        self.WelcomeLabel_2.setStyleSheet("font: 8pt \"Sitka Small\";\n"
-"\n"
-"background-color: rgba(255, 255, 255, 0);")
+        self.WelcomeLabel_2.setStyleSheet("background-color: rgba(255, 255, 255, 0);")
         self.WelcomeLabel_2.setAlignment(QtCore.Qt.AlignCenter)
         self.WelcomeLabel_2.setObjectName("WelcomeLabel_2")
+        self.WelcomeLabel_3 = QtWidgets.QLabel(self.LoginFrame)
+        self.WelcomeLabel_3.setGeometry(QtCore.QRect(20, 390, 491, 21))
+        font = QtGui.QFont()
+        font.setFamily("Sitka Small")
+        font.setPointSize(9)
+        font.setBold(False)
+        font.setItalic(False)
+        self.WelcomeLabel_3.setFont(font)
+        self.WelcomeLabel_3.setStyleSheet("background-color: rgba(255, 255, 255, 0);")
+        self.WelcomeLabel_3.setAlignment(QtCore.Qt.AlignCenter)
+        self.WelcomeLabel_3.setObjectName("WelcomeLabel_3")
         self.label_4 = QtWidgets.QLabel(self.centralwidget)
         self.label_4.setGeometry(QtCore.QRect(-290, -180, 921, 791))
         self.label_4.setText("")
@@ -178,7 +184,8 @@ class Ui_MainWindow(object):
         self.LoginButton.setText(_translate("MainWindow", "Login"))
         self.CreateAccountButton.setText(_translate("MainWindow", "Create Account"))
         self.WelcomeLabel.setText(_translate("MainWindow", "Welcome to Fresh!"))
-        self.WelcomeLabel_2.setText(_translate("MainWindow", "Please create an account if you don\'t have one before start using."))
+        self.WelcomeLabel_2.setText(_translate("MainWindow", "Please create an account "))
+        self.WelcomeLabel_3.setText(_translate("MainWindow", "if you don\'t have one before start using."))
 import Bg_rc
 import Logo_rc
 
