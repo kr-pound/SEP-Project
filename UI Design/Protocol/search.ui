@@ -6,228 +6,31 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1014</width>
-    <height>680</height>
+    <width>982</width>
+    <height>618</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>MainWindow</string>
   </property>
+  <property name="styleSheet">
+   <string notr="true">background-color: rgb(255, 255, 255);</string>
+  </property>
   <widget class="QWidget" name="centralwidget">
-   <widget class="QLabel" name="label">
-    <property name="geometry">
-     <rect>
-      <x>20</x>
-      <y>200</y>
-      <width>941</width>
-      <height>51</height>
-     </rect>
-    </property>
-    <property name="font">
-     <font>
-      <pointsize>18</pointsize>
-     </font>
-    </property>
-    <property name="text">
-     <string>Welcome to Fresh! We only have fresh stuff here. All the items are organic &amp; natural.</string>
-    </property>
-   </widget>
-   <widget class="QFrame" name="CoverFrame">
-    <property name="geometry">
-     <rect>
-      <x>150</x>
-      <y>20</y>
-      <width>711</width>
-      <height>161</height>
-     </rect>
-    </property>
-    <property name="focusPolicy">
-     <enum>Qt::NoFocus</enum>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">QFrame {
-	background: Black;
-	border-radius: 40px;
-}</string>
-    </property>
-    <property name="frameShape">
-     <enum>QFrame::StyledPanel</enum>
-    </property>
-    <property name="frameShadow">
-     <enum>QFrame::Raised</enum>
-    </property>
-    <widget class="QLineEdit" name="KeywordInput">
-     <property name="geometry">
-      <rect>
-       <x>210</x>
-       <y>100</y>
-       <width>301</width>
-       <height>31</height>
-      </rect>
-     </property>
-     <property name="font">
-      <font>
-       <pointsize>16</pointsize>
-       <italic>true</italic>
-      </font>
-     </property>
-     <property name="focusPolicy">
-      <enum>Qt::StrongFocus</enum>
-     </property>
-     <property name="contextMenuPolicy">
-      <enum>Qt::DefaultContextMenu</enum>
-     </property>
-     <property name="whatsThis">
-      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;br/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-     </property>
-     <property name="styleSheet">
-      <string notr="true">QLineEdit {
-	background: white;
-	border: none;
-	border-radius: 10px;
-	color: #717072;
-}</string>
-     </property>
-     <property name="text">
-      <string>  Type keywords</string>
-     </property>
-     <property name="echoMode">
-      <enum>QLineEdit::Normal</enum>
-     </property>
-     <property name="cursorPosition">
-      <number>15</number>
-     </property>
-     <property name="dragEnabled">
-      <bool>true</bool>
-     </property>
-     <property name="readOnly">
-      <bool>false</bool>
-     </property>
-     <property name="placeholderText">
-      <string/>
-     </property>
-     <property name="clearButtonEnabled">
-      <bool>false</bool>
-     </property>
-    </widget>
-    <widget class="QToolButton" name="Search">
-     <property name="geometry">
-      <rect>
-       <x>480</x>
-       <y>100</y>
-       <width>31</width>
-       <height>31</height>
-      </rect>
-     </property>
-     <property name="styleSheet">
-      <string notr="true">QToolButton {
-	background: transparent;
-}</string>
-     </property>
-     <property name="text">
-      <string>...</string>
-     </property>
-     <property name="icon">
-      <iconset>
-       <normaloff>:/search/search--v2.png</normaloff>:/search/search--v2.png</iconset>
-     </property>
-    </widget>
-    <widget class="QLabel" name="CoverLabel">
-     <property name="geometry">
-      <rect>
-       <x>210</x>
-       <y>20</y>
-       <width>301</width>
-       <height>31</height>
-      </rect>
-     </property>
-     <property name="font">
-      <font>
-       <family>Rockwell Condensed</family>
-       <pointsize>22</pointsize>
-      </font>
-     </property>
-     <property name="styleSheet">
-      <string notr="true">QLabel {
-	color: white;
-}</string>
-     </property>
-     <property name="text">
-      <string>Agricultural products</string>
-     </property>
-     <property name="alignment">
-      <set>Qt::AlignCenter</set>
-     </property>
-    </widget>
-    <widget class="QLabel" name="DescriptionLabel">
-     <property name="geometry">
-      <rect>
-       <x>210</x>
-       <y>60</y>
-       <width>301</width>
-       <height>31</height>
-      </rect>
-     </property>
-     <property name="font">
-      <font>
-       <family>Script MT Bold</family>
-       <pointsize>16</pointsize>
-       <bold>true</bold>
-      </font>
-     </property>
-     <property name="styleSheet">
-      <string notr="true">QLabel {
-	color: white;
-}</string>
-     </property>
-     <property name="text">
-      <string>100+ Fresh Item for you</string>
-     </property>
-     <property name="alignment">
-      <set>Qt::AlignCenter</set>
-     </property>
-    </widget>
-    <widget class="QLabel" name="BrandLabel">
-     <property name="geometry">
-      <rect>
-       <x>10</x>
-       <y>10</y>
-       <width>71</width>
-       <height>31</height>
-      </rect>
-     </property>
-     <property name="font">
-      <font>
-       <family>Script MT Bold</family>
-       <pointsize>16</pointsize>
-       <bold>true</bold>
-      </font>
-     </property>
-     <property name="styleSheet">
-      <string notr="true">QLabel {
-	color: white;
-}</string>
-     </property>
-     <property name="text">
-      <string>Fresh</string>
-     </property>
-     <property name="alignment">
-      <set>Qt::AlignCenter</set>
-     </property>
-    </widget>
-   </widget>
    <widget class="QFrame" name="ProductFrame1">
     <property name="geometry">
      <rect>
-      <x>90</x>
-      <y>270</y>
+      <x>70</x>
+      <y>210</y>
       <width>151</width>
-      <height>331</height>
+      <height>361</height>
      </rect>
     </property>
     <property name="styleSheet">
      <string notr="true">QFrame {
-	background: lightgray;
+	color: rgb(255, 255, 255);
+	
+	background-color: rgb(0, 121, 0);
 	border-radius: 30px;
 }</string>
     </property>
@@ -248,7 +51,7 @@
      </property>
      <property name="styleSheet">
       <string notr="true">QLabel {
-	image: url(:/);
+	image: url(:/)
 }</string>
      </property>
      <property name="text">
@@ -301,7 +104,7 @@ p, li { white-space: pre-wrap; }
      <property name="geometry">
       <rect>
        <x>20</x>
-       <y>290</y>
+       <y>310</y>
        <width>111</width>
        <height>31</height>
       </rect>
@@ -317,8 +120,8 @@ p, li { white-space: pre-wrap; }
      </property>
      <property name="styleSheet">
       <string notr="true">QPushButton {
-	color: white;
-	background: #64AB25;
+	color: rgb(0, 85, 0);
+	background-color: rgb(255, 255, 255);
 	border-radius: 15px;
 }
 
@@ -339,7 +142,7 @@ QPushButton:hover {
      <property name="geometry">
       <rect>
        <x>20</x>
-       <y>260</y>
+       <y>270</y>
        <width>111</width>
        <height>16</height>
       </rect>
@@ -350,8 +153,11 @@ QPushButton:hover {
        <pointsize>12</pointsize>
       </font>
      </property>
+     <property name="styleSheet">
+      <string notr="true">color: rgb(255, 255, 255);</string>
+     </property>
      <property name="text">
-      <string>Buy: 0</string>
+      <string>Buy: 1</string>
      </property>
      <property name="alignment">
       <set>Qt::AlignCenter</set>
@@ -361,7 +167,7 @@ QPushButton:hover {
      <property name="geometry">
       <rect>
        <x>110</x>
-       <y>250</y>
+       <y>270</y>
        <width>21</width>
        <height>24</height>
       </rect>
@@ -373,7 +179,8 @@ QPushButton:hover {
      </property>
      <property name="styleSheet">
       <string notr="true">QPushButton {
-	background: lightgray;
+	color: rgb(0, 85, 0);
+	background-color: rgb(255, 255, 255);
 }</string>
      </property>
      <property name="text">
@@ -384,7 +191,7 @@ QPushButton:hover {
      <property name="geometry">
       <rect>
        <x>20</x>
-       <y>250</y>
+       <y>270</y>
        <width>21</width>
        <height>24</height>
       </rect>
@@ -396,7 +203,8 @@ QPushButton:hover {
      </property>
      <property name="styleSheet">
       <string notr="true">QPushButton {
-	background: lightgray;
+	color: rgb(0, 85, 0);
+	background-color: rgb(255, 255, 255);
 }</string>
      </property>
      <property name="text">
@@ -414,7 +222,7 @@ QPushButton:hover {
      </property>
      <property name="styleSheet">
       <string notr="true">QLabel {
-	image: url(:/);
+	image: url(:);
 }</string>
      </property>
      <property name="text">
@@ -425,15 +233,16 @@ QPushButton:hover {
    <widget class="QFrame" name="ProductFrame3">
     <property name="geometry">
      <rect>
-      <x>430</x>
-      <y>270</y>
+      <x>410</x>
+      <y>210</y>
       <width>151</width>
-      <height>331</height>
+      <height>361</height>
      </rect>
     </property>
     <property name="styleSheet">
      <string notr="true">QFrame {
-	background: lightgray;
+	color: rgb(255, 255, 255);
+	background-color: rgb(0, 121, 0);
 	border-radius: 30px;
 }</string>
     </property>
@@ -507,7 +316,7 @@ p, li { white-space: pre-wrap; }
      <property name="geometry">
       <rect>
        <x>20</x>
-       <y>290</y>
+       <y>310</y>
        <width>111</width>
        <height>31</height>
       </rect>
@@ -523,8 +332,8 @@ p, li { white-space: pre-wrap; }
      </property>
      <property name="styleSheet">
       <string notr="true">QPushButton {
-	color: white;
-	background: #64AB25;
+	color: rgb(0, 85, 0);
+	background-color: rgb(255, 255, 255);
 	border-radius: 15px;
 }
 
@@ -545,7 +354,7 @@ QPushButton:hover {
      <property name="geometry">
       <rect>
        <x>20</x>
-       <y>260</y>
+       <y>270</y>
        <width>111</width>
        <height>16</height>
       </rect>
@@ -557,7 +366,7 @@ QPushButton:hover {
       </font>
      </property>
      <property name="text">
-      <string>Buy: 0</string>
+      <string>Buy: 1</string>
      </property>
      <property name="alignment">
       <set>Qt::AlignCenter</set>
@@ -567,7 +376,7 @@ QPushButton:hover {
      <property name="geometry">
       <rect>
        <x>110</x>
-       <y>250</y>
+       <y>270</y>
        <width>21</width>
        <height>24</height>
       </rect>
@@ -579,7 +388,7 @@ QPushButton:hover {
      </property>
      <property name="styleSheet">
       <string notr="true">QPushButton {
-	background: lightgray;
+	background: white;
 }</string>
      </property>
      <property name="text">
@@ -590,7 +399,7 @@ QPushButton:hover {
      <property name="geometry">
       <rect>
        <x>20</x>
-       <y>250</y>
+       <y>270</y>
        <width>21</width>
        <height>24</height>
       </rect>
@@ -602,7 +411,7 @@ QPushButton:hover {
      </property>
      <property name="styleSheet">
       <string notr="true">QPushButton {
-	background: lightgray;
+	background: white;
 }</string>
      </property>
      <property name="text">
@@ -620,7 +429,7 @@ QPushButton:hover {
      </property>
      <property name="styleSheet">
       <string notr="true">QLabel {
-	image: url(:/);
+	image: url(:);
 }</string>
      </property>
      <property name="text">
@@ -631,15 +440,16 @@ QPushButton:hover {
    <widget class="QFrame" name="ProductFrame2">
     <property name="geometry">
      <rect>
-      <x>260</x>
-      <y>270</y>
+      <x>240</x>
+      <y>210</y>
       <width>151</width>
-      <height>331</height>
+      <height>361</height>
      </rect>
     </property>
     <property name="styleSheet">
      <string notr="true">QFrame {
-	background: lightgray;
+	color: rgb(255, 255, 255);
+	background-color: rgb(0, 121, 0);
 	border-radius: 30px;
 }</string>
     </property>
@@ -713,7 +523,7 @@ p, li { white-space: pre-wrap; }
      <property name="geometry">
       <rect>
        <x>20</x>
-       <y>290</y>
+       <y>310</y>
        <width>111</width>
        <height>31</height>
       </rect>
@@ -729,8 +539,8 @@ p, li { white-space: pre-wrap; }
      </property>
      <property name="styleSheet">
       <string notr="true">QPushButton {
-	color: white;
-	background: #64AB25;
+	color: rgb(0, 85, 0);
+	background-color: rgb(255, 255, 255);
 	border-radius: 15px;
 }
 
@@ -751,7 +561,7 @@ QPushButton:hover {
      <property name="geometry">
       <rect>
        <x>20</x>
-       <y>260</y>
+       <y>270</y>
        <width>111</width>
        <height>16</height>
       </rect>
@@ -763,7 +573,7 @@ QPushButton:hover {
       </font>
      </property>
      <property name="text">
-      <string>Buy: 0</string>
+      <string>Buy: 1</string>
      </property>
      <property name="alignment">
       <set>Qt::AlignCenter</set>
@@ -773,7 +583,7 @@ QPushButton:hover {
      <property name="geometry">
       <rect>
        <x>110</x>
-       <y>250</y>
+       <y>270</y>
        <width>21</width>
        <height>24</height>
       </rect>
@@ -785,7 +595,7 @@ QPushButton:hover {
      </property>
      <property name="styleSheet">
       <string notr="true">QPushButton {
-	background: lightgray;
+	background: white;
 }</string>
      </property>
      <property name="text">
@@ -796,7 +606,7 @@ QPushButton:hover {
      <property name="geometry">
       <rect>
        <x>20</x>
-       <y>250</y>
+       <y>270</y>
        <width>21</width>
        <height>24</height>
       </rect>
@@ -808,7 +618,7 @@ QPushButton:hover {
      </property>
      <property name="styleSheet">
       <string notr="true">QPushButton {
-	background: lightgray;
+	background: white;
 }</string>
      </property>
      <property name="text">
@@ -826,7 +636,7 @@ QPushButton:hover {
      </property>
      <property name="styleSheet">
       <string notr="true">QLabel {
-	image: url(:/);
+	image: url(:);
 }</string>
      </property>
      <property name="text">
@@ -837,15 +647,16 @@ QPushButton:hover {
    <widget class="QFrame" name="ProductFrame4">
     <property name="geometry">
      <rect>
-      <x>600</x>
-      <y>270</y>
+      <x>580</x>
+      <y>210</y>
       <width>151</width>
-      <height>331</height>
+      <height>361</height>
      </rect>
     </property>
     <property name="styleSheet">
      <string notr="true">QFrame {
-	background: lightgray;
+	color: rgb(255, 255, 255);
+	background-color: rgb(0, 121, 0);
 	border-radius: 30px;
 }</string>
     </property>
@@ -919,7 +730,7 @@ p, li { white-space: pre-wrap; }
      <property name="geometry">
       <rect>
        <x>20</x>
-       <y>290</y>
+       <y>310</y>
        <width>111</width>
        <height>31</height>
       </rect>
@@ -935,8 +746,8 @@ p, li { white-space: pre-wrap; }
      </property>
      <property name="styleSheet">
       <string notr="true">QPushButton {
-	color: white;
-	background: #64AB25;
+	color: rgb(0, 85, 0);
+	background-color: rgb(255, 255, 255);
 	border-radius: 15px;
 }
 
@@ -957,7 +768,7 @@ QPushButton:hover {
      <property name="geometry">
       <rect>
        <x>20</x>
-       <y>260</y>
+       <y>270</y>
        <width>111</width>
        <height>16</height>
       </rect>
@@ -969,7 +780,7 @@ QPushButton:hover {
       </font>
      </property>
      <property name="text">
-      <string>Buy: 0</string>
+      <string>Buy: 1</string>
      </property>
      <property name="alignment">
       <set>Qt::AlignCenter</set>
@@ -979,7 +790,7 @@ QPushButton:hover {
      <property name="geometry">
       <rect>
        <x>110</x>
-       <y>250</y>
+       <y>270</y>
        <width>21</width>
        <height>24</height>
       </rect>
@@ -991,7 +802,7 @@ QPushButton:hover {
      </property>
      <property name="styleSheet">
       <string notr="true">QPushButton {
-	background: lightgray;
+	background: white;
 }</string>
      </property>
      <property name="text">
@@ -1002,7 +813,7 @@ QPushButton:hover {
      <property name="geometry">
       <rect>
        <x>20</x>
-       <y>250</y>
+       <y>270</y>
        <width>21</width>
        <height>24</height>
       </rect>
@@ -1014,7 +825,7 @@ QPushButton:hover {
      </property>
      <property name="styleSheet">
       <string notr="true">QPushButton {
-	background: lightgray;
+	background: white;
 }</string>
      </property>
      <property name="text">
@@ -1032,7 +843,7 @@ QPushButton:hover {
      </property>
      <property name="styleSheet">
       <string notr="true">QLabel {
-	image: url(:/);
+	image: url(:);
 }</string>
      </property>
      <property name="text">
@@ -1043,15 +854,16 @@ QPushButton:hover {
    <widget class="QFrame" name="ProductFrame5">
     <property name="geometry">
      <rect>
-      <x>770</x>
-      <y>270</y>
+      <x>750</x>
+      <y>210</y>
       <width>151</width>
-      <height>331</height>
+      <height>361</height>
      </rect>
     </property>
     <property name="styleSheet">
      <string notr="true">QFrame {
-	background: lightgray;
+	color: rgb(255, 255, 255);
+	background-color: rgb(0, 121, 0);
 	border-radius: 30px;
 }</string>
     </property>
@@ -1125,7 +937,7 @@ p, li { white-space: pre-wrap; }
      <property name="geometry">
       <rect>
        <x>20</x>
-       <y>290</y>
+       <y>310</y>
        <width>111</width>
        <height>31</height>
       </rect>
@@ -1141,8 +953,8 @@ p, li { white-space: pre-wrap; }
      </property>
      <property name="styleSheet">
       <string notr="true">QPushButton {
-	color: white;
-	background: #64AB25;
+	color: rgb(0, 85, 0);
+	background-color: rgb(255, 255, 255);
 	border-radius: 15px;
 }
 
@@ -1163,7 +975,7 @@ QPushButton:hover {
      <property name="geometry">
       <rect>
        <x>20</x>
-       <y>260</y>
+       <y>270</y>
        <width>111</width>
        <height>16</height>
       </rect>
@@ -1175,7 +987,7 @@ QPushButton:hover {
       </font>
      </property>
      <property name="text">
-      <string>Buy: 0</string>
+      <string>Buy: 1</string>
      </property>
      <property name="alignment">
       <set>Qt::AlignCenter</set>
@@ -1185,7 +997,7 @@ QPushButton:hover {
      <property name="geometry">
       <rect>
        <x>110</x>
-       <y>250</y>
+       <y>270</y>
        <width>21</width>
        <height>24</height>
       </rect>
@@ -1197,7 +1009,7 @@ QPushButton:hover {
      </property>
      <property name="styleSheet">
       <string notr="true">QPushButton {
-	background: lightgray;
+	background: white;
 }</string>
      </property>
      <property name="text">
@@ -1208,7 +1020,7 @@ QPushButton:hover {
      <property name="geometry">
       <rect>
        <x>20</x>
-       <y>250</y>
+       <y>270</y>
        <width>21</width>
        <height>24</height>
       </rect>
@@ -1220,7 +1032,7 @@ QPushButton:hover {
      </property>
      <property name="styleSheet">
       <string notr="true">QPushButton {
-	background: lightgray;
+	background: white;
 }</string>
      </property>
      <property name="text">
@@ -1238,7 +1050,7 @@ QPushButton:hover {
      </property>
      <property name="styleSheet">
       <string notr="true">QLabel {
-	image: url(:/);
+	image: url(:);
 }</string>
      </property>
      <property name="text">
@@ -1246,49 +1058,11 @@ QPushButton:hover {
      </property>
     </widget>
    </widget>
-   <widget class="QPushButton" name="CartButton">
-    <property name="geometry">
-     <rect>
-      <x>880</x>
-      <y>20</y>
-      <width>111</width>
-      <height>31</height>
-     </rect>
-    </property>
-    <property name="font">
-     <font>
-      <family>Franklin Gothic Medium Cond</family>
-      <pointsize>12</pointsize>
-      <bold>false</bold>
-      <stylestrategy>PreferDefault</stylestrategy>
-      <kerning>true</kerning>
-     </font>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">QPushButton {
-	color: black;
-	background: lightgray;
-	border-radius: 15px;
-}
-
-QPushButton:hover {
-	color: black;
-	background: lightblue;
-	border-radius: 15px;
-}
-
-
-</string>
-    </property>
-    <property name="text">
-     <string>View Cart</string>
-    </property>
-   </widget>
    <widget class="QPushButton" name="RightButton">
     <property name="geometry">
      <rect>
-      <x>950</x>
-      <y>390</y>
+      <x>920</x>
+      <y>370</y>
       <width>41</width>
       <height>41</height>
      </rect>
@@ -1304,7 +1078,8 @@ QPushButton:hover {
     </property>
     <property name="styleSheet">
      <string notr="true">QPushButton {
-	background: lightgray;
+	
+	background-color: rgb(255, 255, 255);
 	border-radius: 20px;
 	image: url(:/others/Arrow/rightArrow.png);
 }
@@ -1324,8 +1099,8 @@ QPushButton:hover {
    <widget class="QPushButton" name="LeftButton">
     <property name="geometry">
      <rect>
-      <x>20</x>
-      <y>390</y>
+      <x>10</x>
+      <y>370</y>
       <width>41</width>
       <height>41</height>
      </rect>
@@ -1341,7 +1116,7 @@ QPushButton:hover {
     </property>
     <property name="styleSheet">
      <string notr="true">QPushButton {
-	background: lightgray;
+	background-color: rgb(255, 255, 255);
 	border-radius: 20px;
 	image: url(:/others/Arrow/leftArrow.png);
 }
@@ -1358,28 +1133,127 @@ QPushButton:hover {
      <string/>
     </property>
    </widget>
-   <widget class="QPushButton" name="RefreshButton">
+   <widget class="QLabel" name="BrandLabel">
     <property name="geometry">
      <rect>
-      <x>880</x>
-      <y>70</y>
+      <x>380</x>
+      <y>20</y>
+      <width>281</width>
+      <height>101</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Sitka</family>
+      <pointsize>50</pointsize>
+      <italic>false</italic>
+      <bold>false</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QLabel {
+	font: 50pt &quot;Sitka&quot;;
+	color: rgb(245, 245, 245);
+ background-color: rgba(255, 255, 255, 0);
+}</string>
+    </property>
+    <property name="text">
+     <string>Fresh</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="CartButton">
+    <property name="geometry">
+     <rect>
+      <x>850</x>
+      <y>20</y>
       <width>111</width>
       <height>31</height>
      </rect>
     </property>
     <property name="font">
      <font>
-      <family>Franklin Gothic Medium Cond</family>
+      <family>Sitka</family>
       <pointsize>12</pointsize>
-      <bold>false</bold>
+      <italic>false</italic>
+      <bold>true</bold>
       <stylestrategy>PreferDefault</stylestrategy>
       <kerning>true</kerning>
      </font>
     </property>
     <property name="styleSheet">
      <string notr="true">QPushButton {
+	font: 700 12pt &quot;Sitka&quot;;
 	color: black;
-	background: lightgray;
+	background:  rgb(245, 245, 245);
+	border-radius: 15px;
+}
+
+QPushButton:hover {
+	color: black;
+	background: lightblue;
+	border-radius: 15px;
+}
+
+
+</string>
+    </property>
+    <property name="text">
+     <string>View Cart</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label">
+    <property name="geometry">
+     <rect>
+      <x>170</x>
+      <y>130</y>
+      <width>731</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Sitka Small</family>
+      <pointsize>13</pointsize>
+      <italic>false</italic>
+      <bold>false</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">font: 13pt &quot;Sitka Small&quot;;
+color: rgb(255, 255, 255);
+background-color: rgba(255, 255, 255, 0);</string>
+    </property>
+    <property name="text">
+     <string>Welcome to Fresh! We only have fresh stuff here. All the items are organic &amp; natural.</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="RefreshButton">
+    <property name="geometry">
+     <rect>
+      <x>850</x>
+      <y>60</y>
+      <width>111</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Sitka</family>
+      <pointsize>12</pointsize>
+      <italic>false</italic>
+      <bold>true</bold>
+      <stylestrategy>PreferDefault</stylestrategy>
+      <kerning>true</kerning>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton {
+ font: 700 12pt &quot;Sitka&quot;;
+	color: black;
+	background:  rgb(245, 245, 245);
 	border-radius: 15px;
 }
 
@@ -1399,25 +1273,27 @@ QPushButton:hover {
    <widget class="QPushButton" name="SellProductButton">
     <property name="geometry">
      <rect>
-      <x>20</x>
-      <y>20</y>
+      <x>30</x>
+      <y>30</y>
       <width>111</width>
       <height>31</height>
      </rect>
     </property>
     <property name="font">
      <font>
-      <family>Franklin Gothic Medium Cond</family>
+      <family>Sitka</family>
       <pointsize>12</pointsize>
-      <bold>false</bold>
+      <italic>false</italic>
+      <bold>true</bold>
       <stylestrategy>PreferDefault</stylestrategy>
       <kerning>true</kerning>
      </font>
     </property>
     <property name="styleSheet">
      <string notr="true">QPushButton {
+	font: 700 12pt &quot;Sitka&quot;;
 	color: black;
-	background: lightgray;
+	background:  rgb(245, 245, 245);
 	border-radius: 15px;
 }
 
@@ -1434,11 +1310,50 @@ QPushButton:hover {
      <string>Sell Product</string>
     </property>
    </widget>
+   <widget class="QLabel" name="label_2">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>0</y>
+      <width>1021</width>
+      <height>671</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-image: url(:/serch_pic/josefin-HtCgLIDy-2U-unsplash.jpg);</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="pixmap">
+     <pixmap resource="qrc file/Bg.qrc">:/Bg/Background.jpg</pixmap>
+    </property>
+    <property name="scaledContents">
+     <bool>true</bool>
+    </property>
+   </widget>
+   <widget class="QTextBrowser" name="textBrowser">
+    <property name="geometry">
+     <rect>
+      <x>-10</x>
+      <y>160</y>
+      <width>1001</width>
+      <height>541</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QFrame {
+	
+	background-color: rgb(237, 236, 233);
+	border-radius: 50px;
+}</string>
+    </property>
+   </widget>
    <widget class="QLabel" name="PageLabel">
     <property name="geometry">
      <rect>
-      <x>450</x>
-      <y>620</y>
+      <x>430</x>
+      <y>590</y>
       <width>111</width>
       <height>16</height>
      </rect>
@@ -1456,20 +1371,25 @@ QPushButton:hover {
      <set>Qt::AlignCenter</set>
     </property>
    </widget>
+   <zorder>label_2</zorder>
+   <zorder>textBrowser</zorder>
+   <zorder>ProductFrame1</zorder>
+   <zorder>ProductFrame3</zorder>
+   <zorder>ProductFrame2</zorder>
+   <zorder>ProductFrame4</zorder>
+   <zorder>ProductFrame5</zorder>
+   <zorder>RightButton</zorder>
+   <zorder>LeftButton</zorder>
+   <zorder>BrandLabel</zorder>
+   <zorder>CartButton</zorder>
+   <zorder>label</zorder>
+   <zorder>RefreshButton</zorder>
+   <zorder>SellProductButton</zorder>
+   <zorder>PageLabel</zorder>
   </widget>
-  <widget class="QMenuBar" name="menubar">
-   <property name="geometry">
-    <rect>
-     <x>0</x>
-     <y>0</y>
-     <width>1014</width>
-     <height>22</height>
-    </rect>
-   </property>
-  </widget>
-  <widget class="QStatusBar" name="statusbar"/>
  </widget>
  <resources>
+  <include location="qrc file/Bg.qrc"/>
   <include location="pic.qrc"/>
  </resources>
  <connections/>
