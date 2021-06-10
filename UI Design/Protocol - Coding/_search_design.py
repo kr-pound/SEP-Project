@@ -539,14 +539,14 @@ class Ui_MainWindow(object):
         self.CartButton.setGeometry(QtCore.QRect(850, 20, 111, 31))
         font = QtGui.QFont()
         font.setFamily("Sitka")
-        font.setPointSize(11)
+        font.setPointSize(10)
         font.setBold(True)
         font.setItalic(False)
         font.setKerning(True)
         font.setStyleStrategy(QtGui.QFont.PreferDefault)
         self.CartButton.setFont(font)
         self.CartButton.setStyleSheet("QPushButton {\n"
-"    font: 700 11pt \"Sitka\";\n"
+"    font: 700 10pt \"Sitka\";\n"
 "    color: black;\n"
 "    background:  rgb(245, 245, 245);\n"
 "    border-radius: 15px;\n"
@@ -565,14 +565,14 @@ class Ui_MainWindow(object):
         self.RefreshButton.setGeometry(QtCore.QRect(850, 60, 111, 31))
         font = QtGui.QFont()
         font.setFamily("Sitka")
-        font.setPointSize(11)
+        font.setPointSize(10)
         font.setBold(True)
         font.setItalic(False)
         font.setKerning(True)
         font.setStyleStrategy(QtGui.QFont.PreferDefault)
         self.RefreshButton.setFont(font)
         self.RefreshButton.setStyleSheet("QPushButton {\n"
-" font: 700 11pt \"Sitka\";\n"
+" font: 700 10pt \"Sitka\";\n"
 "    color: black;\n"
 "    background:  rgb(245, 245, 245);\n"
 "    border-radius: 15px;\n"
@@ -591,14 +591,14 @@ class Ui_MainWindow(object):
         self.SellProductButton.setGeometry(QtCore.QRect(30, 30, 111, 31))
         font = QtGui.QFont()
         font.setFamily("Sitka")
-        font.setPointSize(11)
+        font.setPointSize(9)
         font.setBold(True)
         font.setItalic(False)
         font.setKerning(True)
         font.setStyleStrategy(QtGui.QFont.PreferDefault)
         self.SellProductButton.setFont(font)
         self.SellProductButton.setStyleSheet("QPushButton {\n"
-"    font: 700 11pt \"Sitka\";\n"
+"    font: 700 9pt \"Sitka\";\n"
 "    color: black;\n"
 "    background:  rgb(245, 245, 245);\n"
 "    border-radius: 15px;\n"

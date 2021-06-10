@@ -73,13 +73,13 @@
 }</string>
      </property>
      <property name="text">
-      <string>Username</string>
+      <string/>
      </property>
      <property name="echoMode">
       <enum>QLineEdit::Normal</enum>
      </property>
      <property name="cursorPosition">
-      <number>8</number>
+      <number>0</number>
      </property>
      <property name="dragEnabled">
       <bool>true</bool>
@@ -88,7 +88,7 @@
       <bool>false</bool>
      </property>
      <property name="placeholderText">
-      <string/>
+      <string>Username</string>
      </property>
      <property name="clearButtonEnabled">
       <bool>true</bool>
@@ -120,13 +120,16 @@
       <string/>
      </property>
      <property name="text">
-      <string>Password</string>
+      <string/>
      </property>
      <property name="echoMode">
       <enum>QLineEdit::Password</enum>
      </property>
      <property name="dragEnabled">
       <bool>true</bool>
+     </property>
+     <property name="placeholderText">
+      <string>Password</string>
      </property>
      <property name="clearButtonEnabled">
       <bool>true</bool>

@@ -18,15 +18,15 @@ class Ui_MainWindow(object):
         self.centralwidget = QtWidgets.QWidget(MainWindow)
         self.centralwidget.setObjectName("centralwidget")
         self.pushButton_2 = QtWidgets.QPushButton(self.centralwidget)
-        self.pushButton_2.setGeometry(QtCore.QRect(730, 560, 191, 41))
+        self.pushButton_2.setGeometry(QtCore.QRect(730, 550, 191, 51))
         font = QtGui.QFont()
         font.setFamily("Sitka")
-        font.setPointSize(18)
+        font.setPointSize(14)
         font.setBold(True)
         font.setItalic(False)
         self.pushButton_2.setFont(font)
         self.pushButton_2.setStyleSheet("QPushButton {\n"
-"    font: 700 18pt \"Sitka\";\n"
+"    font: 700 14pt \"Sitka\";\n"
 "    color: white;\n"
 "    background-color: rgb(0, 85, 0);\n"
 "    border-radius: 15px;\n"
@@ -107,14 +107,14 @@ class Ui_MainWindow(object):
         self.BackButton.setGeometry(QtCore.QRect(60, 570, 131, 31))
         font = QtGui.QFont()
         font.setFamily("Sitka")
-        font.setPointSize(12)
+        font.setPointSize(10)
         font.setBold(True)
         font.setItalic(False)
         font.setKerning(True)
         font.setStyleStrategy(QtGui.QFont.PreferDefault)
         self.BackButton.setFont(font)
         self.BackButton.setStyleSheet("QPushButton {\n"
-"font: 700 12pt \"Sitka\";\n"
+"font: 700 10pt \"Sitka\";\n"
 "    color: white;\n"
 "    background-color: rgb(0, 85, 0);\n"
 "    border-radius: 15px;\n"
@@ -133,14 +133,14 @@ class Ui_MainWindow(object):
         self.ReloadButton.setGeometry(QtCore.QRect(60, 530, 131, 31))
         font = QtGui.QFont()
         font.setFamily("Sitka")
-        font.setPointSize(12)
+        font.setPointSize(8)
         font.setBold(True)
         font.setItalic(False)
         font.setKerning(True)
         font.setStyleStrategy(QtGui.QFont.PreferDefault)
         self.ReloadButton.setFont(font)
         self.ReloadButton.setStyleSheet("QPushButton {\n"
-"font: 700 12pt \"Sitka\";\n"
+"font: 700 8pt \"Sitka\";\n"
 "color: white;\n"
 "    background-color: rgb(0, 85, 0);\n"
 "    border-radius: 15px;\n"
@@ -531,14 +531,14 @@ class Ui_MainWindow(object):
         self.RightButton.setText("")
         self.RightButton.setObjectName("RightButton")
         self.TotalLabel = QtWidgets.QLabel(self.centralwidget)
-        self.TotalLabel.setGeometry(QtCore.QRect(750, 520, 121, 41))
+        self.TotalLabel.setGeometry(QtCore.QRect(750, 500, 121, 61))
         font = QtGui.QFont()
         font.setFamily("Sitka")
-        font.setPointSize(15)
+        font.setPointSize(12)
         font.setBold(True)
         font.setItalic(False)
         self.TotalLabel.setFont(font)
-        self.TotalLabel.setStyleSheet("font: 700 15pt \"Sitka\";")
+        self.TotalLabel.setStyleSheet("font: 700 12pt \"Sitka\";")
         self.TotalLabel.setObjectName("TotalLabel")
         self.PageLabel = QtWidgets.QLabel(self.centralwidget)
         self.PageLabel.setGeometry(QtCore.QRect(440, 570, 121, 31))

@@ -1198,7 +1198,7 @@ QPushButton:hover {
     <property name="font">
      <font>
       <family>Sitka</family>
-      <pointsize>11</pointsize>
+      <pointsize>10</pointsize>
       <italic>false</italic>
       <bold>true</bold>
       <stylestrategy>PreferDefault</stylestrategy>
@@ -1207,7 +1207,7 @@ QPushButton:hover {
     </property>
     <property name="styleSheet">
      <string notr="true">QPushButton {
-	font: 700 11pt &quot;Sitka&quot;;
+	font: 700 10pt &quot;Sitka&quot;;
 	color: black;
 	background:  rgb(245, 245, 245);
 	border-radius: 15px;
@@ -1238,7 +1238,7 @@ QPushButton:hover {
     <property name="font">
      <font>
       <family>Sitka</family>
-      <pointsize>11</pointsize>
+      <pointsize>10</pointsize>
       <italic>false</italic>
       <bold>true</bold>
       <stylestrategy>PreferDefault</stylestrategy>
@@ -1247,7 +1247,7 @@ QPushButton:hover {
     </property>
     <property name="styleSheet">
      <string notr="true">QPushButton {
- font: 700 11pt &quot;Sitka&quot;;
+ font: 700 10pt &quot;Sitka&quot;;
 	color: black;
 	background:  rgb(245, 245, 245);
 	border-radius: 15px;
@@ -1278,7 +1278,7 @@ QPushButton:hover {
     <property name="font">
      <font>
       <family>Sitka</family>
-      <pointsize>11</pointsize>
+      <pointsize>9</pointsize>
       <italic>false</italic>
       <bold>true</bold>
       <stylestrategy>PreferDefault</stylestrategy>
@@ -1287,7 +1287,7 @@ QPushButton:hover {
     </property>
     <property name="styleSheet">
      <string notr="true">QPushButton {
-	font: 700 11pt &quot;Sitka&quot;;
+	font: 700 9pt &quot;Sitka&quot;;
 	color: black;
 	background:  rgb(245, 245, 245);
 	border-radius: 15px;

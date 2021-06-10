@@ -18,22 +18,22 @@
     <property name="geometry">
      <rect>
       <x>730</x>
-      <y>560</y>
+      <y>550</y>
       <width>191</width>
-      <height>41</height>
+      <height>51</height>
      </rect>
     </property>
     <property name="font">
      <font>
       <family>Sitka</family>
-      <pointsize>18</pointsize>
+      <pointsize>14</pointsize>
       <italic>false</italic>
       <bold>true</bold>
      </font>
     </property>
     <property name="styleSheet">
      <string notr="true">QPushButton {
-	font: 700 18pt &quot;Sitka&quot;;
+	font: 700 14pt &quot;Sitka&quot;;
 	color: white;
 	background-color: rgb(0, 85, 0);
 	border-radius: 15px;
@@ -200,7 +200,7 @@ QPushButton:hover {
     <property name="font">
      <font>
       <family>Sitka</family>
-      <pointsize>12</pointsize>
+      <pointsize>10</pointsize>
       <italic>false</italic>
       <bold>true</bold>
       <stylestrategy>PreferDefault</stylestrategy>
@@ -209,7 +209,7 @@ QPushButton:hover {
     </property>
     <property name="styleSheet">
      <string notr="true">QPushButton {
-font: 700 12pt &quot;Sitka&quot;;
+font: 700 10pt &quot;Sitka&quot;;
 	color: white;
 	background-color: rgb(0, 85, 0);
 	border-radius: 15px;
@@ -240,7 +240,7 @@ QPushButton:hover {
     <property name="font">
      <font>
       <family>Sitka</family>
-      <pointsize>12</pointsize>
+      <pointsize>8</pointsize>
       <italic>false</italic>
       <bold>true</bold>
       <stylestrategy>PreferDefault</stylestrategy>
@@ -249,7 +249,7 @@ QPushButton:hover {
     </property>
     <property name="styleSheet">
      <string notr="true">QPushButton {
-font: 700 12pt &quot;Sitka&quot;;
+font: 700 8pt &quot;Sitka&quot;;
 color: white;
 	background-color: rgb(0, 85, 0);
 	border-radius: 15px;
@@ -1043,21 +1043,21 @@ QPushButton:hover {
     <property name="geometry">
      <rect>
       <x>750</x>
-      <y>520</y>
+      <y>500</y>
       <width>121</width>
-      <height>41</height>
+      <height>61</height>
      </rect>
     </property>
     <property name="font">
      <font>
       <family>Sitka</family>
-      <pointsize>15</pointsize>
+      <pointsize>12</pointsize>
       <italic>false</italic>
       <bold>true</bold>
      </font>
     </property>
     <property name="styleSheet">
-     <string notr="true">font: 700 15pt &quot;Sitka&quot;;</string>
+     <string notr="true">font: 700 12pt &quot;Sitka&quot;;</string>
     </property>
     <property name="text">
      <string>Total:</string>

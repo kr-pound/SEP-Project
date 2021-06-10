@@ -41,11 +41,11 @@ class Ui_MainWindow(object):
 "    color: #717072;\n"
 "    border-bottom: 1px solid #717072;\n"
 "}")
+        self.Username.setText("")
         self.Username.setEchoMode(QtWidgets.QLineEdit.Normal)
-        self.Username.setCursorPosition(8)
+        self.Username.setCursorPosition(0)
         self.Username.setDragEnabled(True)
         self.Username.setReadOnly(False)
-        self.Username.setPlaceholderText("")
         self.Username.setClearButtonEnabled(True)
         self.Username.setObjectName("Username")
         self.Password = QtWidgets.QLineEdit(self.LoginFrame)
@@ -60,6 +60,7 @@ class Ui_MainWindow(object):
 "    border-bottom: 1px solid #717072;\n"
 "}")
         self.Password.setInputMask("")
+        self.Password.setText("")
         self.Password.setEchoMode(QtWidgets.QLineEdit.Password)
         self.Password.setDragEnabled(True)
         self.Password.setClearButtonEnabled(True)
@@ -179,8 +180,8 @@ class Ui_MainWindow(object):
         _translate = QtCore.QCoreApplication.translate
         MainWindow.setWindowTitle(_translate("MainWindow", "MainWindow"))
         self.Username.setWhatsThis(_translate("MainWindow", "<html><head/><body><p><br/></p></body></html>"))
-        self.Username.setText(_translate("MainWindow", "Username"))
-        self.Password.setText(_translate("MainWindow", "Password"))
+        self.Username.setPlaceholderText(_translate("MainWindow", "Username"))
+        self.Password.setPlaceholderText(_translate("MainWindow", "Password"))
         self.LoginButton.setText(_translate("MainWindow", "Login"))
         self.CreateAccountButton.setText(_translate("MainWindow", "Create Account"))
         self.WelcomeLabel.setText(_translate("MainWindow", "Welcome to Fresh!"))

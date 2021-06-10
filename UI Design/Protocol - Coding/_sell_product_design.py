@@ -142,7 +142,7 @@ class Ui_MainWindow(object):
         self.PageLabel.setGeometry(QtCore.QRect(30, 20, 581, 61))
         font = QtGui.QFont()
         font.setFamily("Sitka")
-        font.setPointSize(36)
+        font.setPointSize(32)
         font.setBold(True)
         font.setItalic(True)
         self.PageLabel.setFont(font)

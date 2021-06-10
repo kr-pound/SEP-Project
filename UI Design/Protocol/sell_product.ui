@@ -320,7 +320,7 @@ p, li { white-space: pre-wrap; }
     <property name="font">
      <font>
       <family>Sitka</family>
-      <pointsize>36</pointsize>
+      <pointsize>32</pointsize>
       <italic>true</italic>
       <bold>true</bold>
      </font>
