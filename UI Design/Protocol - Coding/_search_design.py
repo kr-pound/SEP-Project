@@ -22,8 +22,7 @@ class Ui_MainWindow(object):
         self.ProductFrame1.setGeometry(QtCore.QRect(70, 210, 151, 361))
         self.ProductFrame1.setStyleSheet("QFrame {\n"
 "    color: rgb(255, 255, 255);\n"
-"    \n"
-"    background-color: rgb(0, 121, 0);\n"
+"    background-color: lightgray;\n"
 "    border-radius: 30px;\n"
 "}")
         self.ProductFrame1.setFrameShape(QtWidgets.QFrame.StyledPanel)
@@ -61,8 +60,8 @@ class Ui_MainWindow(object):
         font.setStyleStrategy(QtGui.QFont.PreferDefault)
         self.BuyingButton1.setFont(font)
         self.BuyingButton1.setStyleSheet("QPushButton {\n"
-"    color: rgb(0, 85, 0);\n"
-"    background-color: rgb(255, 255, 255);\n"
+"    color: white;\n"
+"    background: rgb(0, 121, 0);\n"
 "    border-radius: 15px;\n"
 "}\n"
 "\n"
@@ -81,7 +80,7 @@ class Ui_MainWindow(object):
         font.setFamily("Franklin Gothic Medium Cond")
         font.setPointSize(12)
         self.ProductAmount1.setFont(font)
-        self.ProductAmount1.setStyleSheet("color: rgb(255, 255, 255);")
+        self.ProductAmount1.setStyleSheet("color: black;")
         self.ProductAmount1.setAlignment(QtCore.Qt.AlignCenter)
         self.ProductAmount1.setObjectName("ProductAmount1")
         self.ProductIncrease1 = QtWidgets.QPushButton(self.ProductFrame1)
@@ -90,8 +89,7 @@ class Ui_MainWindow(object):
         font.setBold(True)
         self.ProductIncrease1.setFont(font)
         self.ProductIncrease1.setStyleSheet("QPushButton {\n"
-"    color: rgb(0, 85, 0);\n"
-"    background-color: rgb(255, 255, 255);\n"
+"    background: white;\n"
 "}")
         self.ProductIncrease1.setObjectName("ProductIncrease1")
         self.ProductDecrease1 = QtWidgets.QPushButton(self.ProductFrame1)
@@ -100,8 +98,7 @@ class Ui_MainWindow(object):
         font.setBold(True)
         self.ProductDecrease1.setFont(font)
         self.ProductDecrease1.setStyleSheet("QPushButton {\n"
-"    color: rgb(0, 85, 0);\n"
-"    background-color: rgb(255, 255, 255);\n"
+"    background: white;\n"
 "}")
         self.ProductDecrease1.setObjectName("ProductDecrease1")
         self.TickMark1 = QtWidgets.QLabel(self.ProductFrame1)
@@ -115,7 +112,7 @@ class Ui_MainWindow(object):
         self.ProductFrame3.setGeometry(QtCore.QRect(410, 210, 151, 361))
         self.ProductFrame3.setStyleSheet("QFrame {\n"
 "    color: rgb(255, 255, 255);\n"
-"    background-color: rgb(0, 121, 0);\n"
+"    background-color: lightgray;\n"
 "    border-radius: 30px;\n"
 "}")
         self.ProductFrame3.setFrameShape(QtWidgets.QFrame.StyledPanel)
@@ -153,8 +150,8 @@ class Ui_MainWindow(object):
         font.setStyleStrategy(QtGui.QFont.PreferDefault)
         self.BuyingButton3.setFont(font)
         self.BuyingButton3.setStyleSheet("QPushButton {\n"
-"    color: rgb(0, 85, 0);\n"
-"    background-color: rgb(255, 255, 255);\n"
+"    color: white;\n"
+"    background: rgb(0, 121, 0);\n"
 "    border-radius: 15px;\n"
 "}\n"
 "\n"
@@ -173,6 +170,7 @@ class Ui_MainWindow(object):
         font.setFamily("Franklin Gothic Medium Cond")
         font.setPointSize(12)
         self.ProductAmount3.setFont(font)
+        self.ProductAmount3.setStyleSheet("color: black;")
         self.ProductAmount3.setAlignment(QtCore.Qt.AlignCenter)
         self.ProductAmount3.setObjectName("ProductAmount3")
         self.ProductIncrease3 = QtWidgets.QPushButton(self.ProductFrame3)
@@ -204,7 +202,7 @@ class Ui_MainWindow(object):
         self.ProductFrame2.setGeometry(QtCore.QRect(240, 210, 151, 361))
         self.ProductFrame2.setStyleSheet("QFrame {\n"
 "    color: rgb(255, 255, 255);\n"
-"    background-color: rgb(0, 121, 0);\n"
+"    background-color: lightgray;\n"
 "    border-radius: 30px;\n"
 "}")
         self.ProductFrame2.setFrameShape(QtWidgets.QFrame.StyledPanel)
@@ -242,8 +240,8 @@ class Ui_MainWindow(object):
         font.setStyleStrategy(QtGui.QFont.PreferDefault)
         self.BuyingButton2.setFont(font)
         self.BuyingButton2.setStyleSheet("QPushButton {\n"
-"    color: rgb(0, 85, 0);\n"
-"    background-color: rgb(255, 255, 255);\n"
+"    color: white;\n"
+"    background: rgb(0, 121, 0);\n"
 "    border-radius: 15px;\n"
 "}\n"
 "\n"
@@ -253,7 +251,6 @@ class Ui_MainWindow(object):
 "    border-radius: 15px;\n"
 "}\n"
 "\n"
-"\n"
 "")
         self.BuyingButton2.setObjectName("BuyingButton2")
         self.ProductAmount2 = QtWidgets.QLabel(self.ProductFrame2)
@@ -262,6 +259,7 @@ class Ui_MainWindow(object):
         font.setFamily("Franklin Gothic Medium Cond")
         font.setPointSize(12)
         self.ProductAmount2.setFont(font)
+        self.ProductAmount2.setStyleSheet("color: black;")
         self.ProductAmount2.setAlignment(QtCore.Qt.AlignCenter)
         self.ProductAmount2.setObjectName("ProductAmount2")
         self.ProductIncrease2 = QtWidgets.QPushButton(self.ProductFrame2)
@@ -293,7 +291,7 @@ class Ui_MainWindow(object):
         self.ProductFrame4.setGeometry(QtCore.QRect(580, 210, 151, 361))
         self.ProductFrame4.setStyleSheet("QFrame {\n"
 "    color: rgb(255, 255, 255);\n"
-"    background-color: rgb(0, 121, 0);\n"
+"    background-color: lightgray;\n"
 "    border-radius: 30px;\n"
 "}")
         self.ProductFrame4.setFrameShape(QtWidgets.QFrame.StyledPanel)
@@ -331,8 +329,8 @@ class Ui_MainWindow(object):
         font.setStyleStrategy(QtGui.QFont.PreferDefault)
         self.BuyingButton4.setFont(font)
         self.BuyingButton4.setStyleSheet("QPushButton {\n"
-"    color: rgb(0, 85, 0);\n"
-"    background-color: rgb(255, 255, 255);\n"
+"    color: white;\n"
+"    background: rgb(0, 121, 0);\n"
 "    border-radius: 15px;\n"
 "}\n"
 "\n"
@@ -351,6 +349,7 @@ class Ui_MainWindow(object):
         font.setFamily("Franklin Gothic Medium Cond")
         font.setPointSize(12)
         self.ProductAmount4.setFont(font)
+        self.ProductAmount4.setStyleSheet("color: black;")
         self.ProductAmount4.setAlignment(QtCore.Qt.AlignCenter)
         self.ProductAmount4.setObjectName("ProductAmount4")
         self.ProductIncrease4 = QtWidgets.QPushButton(self.ProductFrame4)
@@ -382,7 +381,7 @@ class Ui_MainWindow(object):
         self.ProductFrame5.setGeometry(QtCore.QRect(750, 210, 151, 361))
         self.ProductFrame5.setStyleSheet("QFrame {\n"
 "    color: rgb(255, 255, 255);\n"
-"    background-color: rgb(0, 121, 0);\n"
+"    background-color: lightgray;\n"
 "    border-radius: 30px;\n"
 "}")
         self.ProductFrame5.setFrameShape(QtWidgets.QFrame.StyledPanel)
@@ -420,8 +419,8 @@ class Ui_MainWindow(object):
         font.setStyleStrategy(QtGui.QFont.PreferDefault)
         self.BuyingButton5.setFont(font)
         self.BuyingButton5.setStyleSheet("QPushButton {\n"
-"    color: rgb(0, 85, 0);\n"
-"    background-color: rgb(255, 255, 255);\n"
+"    color: white;\n"
+"    background: rgb(0, 121, 0);\n"
 "    border-radius: 15px;\n"
 "}\n"
 "\n"
@@ -440,6 +439,7 @@ class Ui_MainWindow(object):
         font.setFamily("Franklin Gothic Medium Cond")
         font.setPointSize(12)
         self.ProductAmount5.setFont(font)
+        self.ProductAmount5.setStyleSheet("color: black;")
         self.ProductAmount5.setAlignment(QtCore.Qt.AlignCenter)
         self.ProductAmount5.setObjectName("ProductAmount5")
         self.ProductIncrease5 = QtWidgets.QPushButton(self.ProductFrame5)
@@ -477,8 +477,7 @@ class Ui_MainWindow(object):
         font.setStyleStrategy(QtGui.QFont.PreferDefault)
         self.RightButton.setFont(font)
         self.RightButton.setStyleSheet("QPushButton {\n"
-"    \n"
-"    background-color: rgb(255, 255, 255);\n"
+"    background: lightgray;\n"
 "    border-radius: 20px;\n"
 "    image: url(:/others/Arrow/rightArrow.png);\n"
 "}\n"
@@ -487,6 +486,7 @@ class Ui_MainWindow(object):
 "    background: lightgreen;\n"
 "    border-radius: 20px;\n"
 "}\n"
+"\n"
 "\n"
 "\n"
 "")
@@ -502,7 +502,7 @@ class Ui_MainWindow(object):
         font.setStyleStrategy(QtGui.QFont.PreferDefault)
         self.LeftButton.setFont(font)
         self.LeftButton.setStyleSheet("QPushButton {\n"
-"    background-color: rgb(255, 255, 255);\n"
+"    background: lightgray;\n"
 "    border-radius: 20px;\n"
 "    image: url(:/others/Arrow/leftArrow.png);\n"
 "}\n"
@@ -632,7 +632,7 @@ class Ui_MainWindow(object):
         self.textBrowser.setGeometry(QtCore.QRect(-10, 160, 1001, 541))
         self.textBrowser.setStyleSheet("QFrame {\n"
 "    \n"
-"    background-color: rgb(237, 236, 233);\n"
+"    background-color: #FAFAFA;\n"
 "    border-radius: 50px;\n"
 "}")
         self.textBrowser.setObjectName("textBrowser")

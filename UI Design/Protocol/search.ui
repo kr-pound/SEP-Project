@@ -29,8 +29,7 @@
     <property name="styleSheet">
      <string notr="true">QFrame {
 	color: rgb(255, 255, 255);
-	
-	background-color: rgb(0, 121, 0);
+	background-color: lightgray;
 	border-radius: 30px;
 }</string>
     </property>
@@ -120,8 +119,8 @@ p, li { white-space: pre-wrap; }
      </property>
      <property name="styleSheet">
       <string notr="true">QPushButton {
-	color: rgb(0, 85, 0);
-	background-color: rgb(255, 255, 255);
+	color: white;
+	background: rgb(0, 121, 0);
 	border-radius: 15px;
 }
 
@@ -154,7 +153,7 @@ QPushButton:hover {
       </font>
      </property>
      <property name="styleSheet">
-      <string notr="true">color: rgb(255, 255, 255);</string>
+      <string notr="true">color: black;</string>
      </property>
      <property name="text">
       <string>Buy: 1</string>
@@ -179,8 +178,7 @@ QPushButton:hover {
      </property>
      <property name="styleSheet">
       <string notr="true">QPushButton {
-	color: rgb(0, 85, 0);
-	background-color: rgb(255, 255, 255);
+	background: white;
 }</string>
      </property>
      <property name="text">
@@ -203,8 +201,7 @@ QPushButton:hover {
      </property>
      <property name="styleSheet">
       <string notr="true">QPushButton {
-	color: rgb(0, 85, 0);
-	background-color: rgb(255, 255, 255);
+	background: white;
 }</string>
      </property>
      <property name="text">
@@ -242,7 +239,7 @@ QPushButton:hover {
     <property name="styleSheet">
      <string notr="true">QFrame {
 	color: rgb(255, 255, 255);
-	background-color: rgb(0, 121, 0);
+	background-color: lightgray;
 	border-radius: 30px;
 }</string>
     </property>
@@ -332,8 +329,8 @@ p, li { white-space: pre-wrap; }
      </property>
      <property name="styleSheet">
       <string notr="true">QPushButton {
-	color: rgb(0, 85, 0);
-	background-color: rgb(255, 255, 255);
+	color: white;
+	background: rgb(0, 121, 0);
 	border-radius: 15px;
 }
 
@@ -364,6 +361,9 @@ QPushButton:hover {
        <family>Franklin Gothic Medium Cond</family>
        <pointsize>12</pointsize>
       </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">color: black;</string>
      </property>
      <property name="text">
       <string>Buy: 1</string>
@@ -449,7 +449,7 @@ QPushButton:hover {
     <property name="styleSheet">
      <string notr="true">QFrame {
 	color: rgb(255, 255, 255);
-	background-color: rgb(0, 121, 0);
+	background-color: lightgray;
 	border-radius: 30px;
 }</string>
     </property>
@@ -539,8 +539,8 @@ p, li { white-space: pre-wrap; }
      </property>
      <property name="styleSheet">
       <string notr="true">QPushButton {
-	color: rgb(0, 85, 0);
-	background-color: rgb(255, 255, 255);
+	color: white;
+	background: rgb(0, 121, 0);
 	border-radius: 15px;
 }
 
@@ -549,7 +549,6 @@ QPushButton:hover {
 	background: #333;
 	border-radius: 15px;
 }
-
 
 </string>
      </property>
@@ -571,6 +570,9 @@ QPushButton:hover {
        <family>Franklin Gothic Medium Cond</family>
        <pointsize>12</pointsize>
       </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">color: black;</string>
      </property>
      <property name="text">
       <string>Buy: 1</string>
@@ -656,7 +658,7 @@ QPushButton:hover {
     <property name="styleSheet">
      <string notr="true">QFrame {
 	color: rgb(255, 255, 255);
-	background-color: rgb(0, 121, 0);
+	background-color: lightgray;
 	border-radius: 30px;
 }</string>
     </property>
@@ -746,8 +748,8 @@ p, li { white-space: pre-wrap; }
      </property>
      <property name="styleSheet">
       <string notr="true">QPushButton {
-	color: rgb(0, 85, 0);
-	background-color: rgb(255, 255, 255);
+	color: white;
+	background: rgb(0, 121, 0);
 	border-radius: 15px;
 }
 
@@ -778,6 +780,9 @@ QPushButton:hover {
        <family>Franklin Gothic Medium Cond</family>
        <pointsize>12</pointsize>
       </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">color: black;</string>
      </property>
      <property name="text">
       <string>Buy: 1</string>
@@ -863,7 +868,7 @@ QPushButton:hover {
     <property name="styleSheet">
      <string notr="true">QFrame {
 	color: rgb(255, 255, 255);
-	background-color: rgb(0, 121, 0);
+	background-color: lightgray;
 	border-radius: 30px;
 }</string>
     </property>
@@ -953,8 +958,8 @@ p, li { white-space: pre-wrap; }
      </property>
      <property name="styleSheet">
       <string notr="true">QPushButton {
-	color: rgb(0, 85, 0);
-	background-color: rgb(255, 255, 255);
+	color: white;
+	background: rgb(0, 121, 0);
 	border-radius: 15px;
 }
 
@@ -985,6 +990,9 @@ QPushButton:hover {
        <family>Franklin Gothic Medium Cond</family>
        <pointsize>12</pointsize>
       </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">color: black;</string>
      </property>
      <property name="text">
       <string>Buy: 1</string>
@@ -1078,8 +1086,7 @@ QPushButton:hover {
     </property>
     <property name="styleSheet">
      <string notr="true">QPushButton {
-	
-	background-color: rgb(255, 255, 255);
+	background: lightgray;
 	border-radius: 20px;
 	image: url(:/others/Arrow/rightArrow.png);
 }
@@ -1088,6 +1095,7 @@ QPushButton:hover {
 	background: lightgreen;
 	border-radius: 20px;
 }
+
 
 
 </string>
@@ -1116,7 +1124,7 @@ QPushButton:hover {
     </property>
     <property name="styleSheet">
      <string notr="true">QPushButton {
-	background-color: rgb(255, 255, 255);
+	background: lightgray;
 	border-radius: 20px;
 	image: url(:/others/Arrow/leftArrow.png);
 }
@@ -1344,7 +1352,7 @@ QPushButton:hover {
     <property name="styleSheet">
      <string notr="true">QFrame {
 	
-	background-color: rgb(237, 236, 233);
+	background-color: #FAFAFA;
 	border-radius: 50px;
 }</string>
     </property>
