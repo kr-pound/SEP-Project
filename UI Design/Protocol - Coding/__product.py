@@ -32,23 +32,23 @@ class CartProductClass():
     productDescription4 = None
     productDescription5 = None
 
-    productAmount1 = 0
-    productAmount2 = 0
-    productAmount3 = 0
-    productAmount4 = 0
-    productAmount5 = 0
+    productAmount1 = ""
+    productAmount2 = ""
+    productAmount3 = ""
+    productAmount4 = ""
+    productAmount5 = ""
 
-    productPicture1 = None
-    productPicture2 = None
-    productPicture3 = None
-    productPicture4 = None
-    productPicture5 = None
+    productPicture1 = ""
+    productPicture2 = ""
+    productPicture3 = ""
+    productPicture4 = ""
+    productPicture5 = ""
 
-    productTick1 = None
-    productTick2 = None
-    productTick3 = None
-    productTick4 = None
-    productTick5 = None
+    productTick1 = ""
+    productTick2 = ""
+    productTick3 = ""
+    productTick4 = ""
+    productTick5 = ""
 
     productSoldStatus1 = None
     productSoldStatus2 = None

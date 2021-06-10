@@ -18,22 +18,21 @@
     <property name="geometry">
      <rect>
       <x>30</x>
-      <y>30</y>
-      <width>401</width>
-      <height>61</height>
+      <y>-10</y>
+      <width>541</width>
+      <height>81</height>
      </rect>
     </property>
     <property name="font">
      <font>
       <family>Sitka Small</family>
-      <pointsize>40</pointsize>
-      <italic>false</italic>
-      <bold>false</bold>
+      <pointsize>36</pointsize>
+      <italic>true</italic>
+      <bold>true</bold>
      </font>
     </property>
     <property name="styleSheet">
      <string notr="true">color: white;
-font: 40pt &quot;Sitka Small&quot;;
 background-color: rgba(255, 255, 255, 0);</string>
     </property>
     <property name="text">
@@ -43,17 +42,20 @@ background-color: rgba(255, 255, 255, 0);</string>
    <widget class="QLabel" name="InfoLabel">
     <property name="geometry">
      <rect>
-      <x>40</x>
+      <x>30</x>
       <y>80</y>
-      <width>271</width>
+      <width>421</width>
       <height>16</height>
      </rect>
     </property>
     <property name="font">
      <font>
-      <family>Franklin Gothic Medium Cond</family>
+      <family>Franklin Gothic Medium</family>
       <pointsize>12</pointsize>
      </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: rgb(255, 255, 255);</string>
     </property>
     <property name="text">
      <string>Please fill in below to register a new account.</string>
@@ -85,24 +87,24 @@ background-color: rgba(255, 255, 255, 0);</string>
       <rect>
        <x>30</x>
        <y>20</y>
-       <width>111</width>
+       <width>151</width>
        <height>31</height>
       </rect>
      </property>
      <property name="font">
       <font>
        <family>Sitka Small</family>
-       <pointsize>15</pointsize>
+       <pointsize>12</pointsize>
        <italic>false</italic>
        <bold>false</bold>
       </font>
      </property>
      <property name="styleSheet">
-      <string notr="true">font: 15pt &quot;Sitka Small&quot;;
+      <string notr="true">font: 12pt &quot;Sitka Small&quot;;
 background-color: rgba(255, 255, 255, 0);</string>
      </property>
      <property name="text">
-      <string>Username:</string>
+      <string>Username</string>
      </property>
     </widget>
     <widget class="QLabel" name="PasswordLabel">
@@ -110,24 +112,24 @@ background-color: rgba(255, 255, 255, 0);</string>
       <rect>
        <x>30</x>
        <y>70</y>
-       <width>121</width>
+       <width>151</width>
        <height>31</height>
       </rect>
      </property>
      <property name="font">
       <font>
        <family>Sitka Small</family>
-       <pointsize>15</pointsize>
+       <pointsize>12</pointsize>
        <italic>false</italic>
        <bold>false</bold>
       </font>
      </property>
      <property name="styleSheet">
-      <string notr="true">font: 15pt &quot;Sitka Small&quot;;
+      <string notr="true">font: 12pt &quot;Sitka Small&quot;;
 background-color: rgba(255, 255, 255, 0);</string>
      </property>
      <property name="text">
-      <string>Password:</string>
+      <string>Password</string>
      </property>
     </widget>
     <widget class="QLabel" name="RePasswordLabel">
@@ -135,24 +137,24 @@ background-color: rgba(255, 255, 255, 0);</string>
       <rect>
        <x>30</x>
        <y>120</y>
-       <width>141</width>
+       <width>151</width>
        <height>31</height>
       </rect>
      </property>
      <property name="font">
       <font>
        <family>Sitka Small</family>
-       <pointsize>15</pointsize>
+       <pointsize>12</pointsize>
        <italic>false</italic>
        <bold>false</bold>
       </font>
      </property>
      <property name="styleSheet">
-      <string notr="true">font: 15pt &quot;Sitka Small&quot;;
+      <string notr="true">font: 12pt &quot;Sitka Small&quot;;
 background-color: rgba(255, 255, 255, 0);</string>
      </property>
      <property name="text">
-      <string>Re-Password:</string>
+      <string>Re-Password</string>
      </property>
     </widget>
     <widget class="QLineEdit" name="UsernameLineEdit">
