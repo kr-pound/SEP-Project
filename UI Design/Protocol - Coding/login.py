@@ -2,8 +2,6 @@ from PyQt5 import QtCore, QtGui, QtWidgets
 
 from _login_design import Ui_MainWindow as Ui_LoginWindow
 
-import pyrebase
-
 from os import environ
 from __database import database
 

@@ -1,6 +1,5 @@
 from PyQt5 import QtCore, QtGui, QtWidgets
 from _sell_product_design import Ui_MainWindow as Ui_SellProductWindow
-from __product import CartProductClass
 from __database import database
 
 from os import environ

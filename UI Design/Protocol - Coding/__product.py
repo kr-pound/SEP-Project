@@ -1,6 +1,3 @@
-from PyQt5 import QtCore, QtGui, QtWidgets
-
-from os import environ
 from __database import database
 
 #product store in class

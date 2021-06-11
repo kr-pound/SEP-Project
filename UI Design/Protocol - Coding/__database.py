@@ -1,6 +1,3 @@
-from PyQt5 import QtCore, QtGui, QtWidgets
-from google.oauth2 import service_account
-
 #firebase import
 import firebase_admin
 from firebase_admin import credentials
